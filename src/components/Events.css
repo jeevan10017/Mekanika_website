@@ -1,0 +1,178 @@
+.events-section {
+  background-color: whitesmoke;
+  padding: 100px 0;
+}
+
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+}
+
+.event-date {
+  background-color: #ef6c00;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.event-date .month {
+  font-size: 1rem;
+  font-weight: bold;
+  color:rgb(75, 2, 88);
+}
+.event-date .year {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+}
+
+.event-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: rgb(75, 2, 88);
+}
+
+.event-time {
+  font-size: 1rem;
+  color: #666;
+}
+.event-date {
+  display: flex;
+  align-items: center;
+}
+
+.event-date .year {
+  font-size: 14px;
+  margin-left: 5px;
+  color: rgb(75, 2, 88);
+}
+
+.event-description {
+  font-size: 1rem;
+  color: #888;
+}
+.link {
+  color: rgb(75, 2, 88);
+  text-decoration: underline;
+}
+
+.events-section {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.events-cards:hover
+.event-card:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.event-card:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.event-card:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.event-card:nth-child(4) {
+  animation-delay: 2s;
+}
+.event-card:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.event-card:nth-child(6) {
+  animation-delay: 3s;
+}
+
+
+
+.events-section {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.05);
+}
+
+.event-description {
+  margin-top: 10px;
+}
+
+.view-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: rgb(75, 2, 88);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: rgb(54, 2, 63);
+  transform: scale(1.05);
+}
+.event-card {
+  background-color: #f4f2f2;
+  padding: 23px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(30.33% - 30px);
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeInUp 1s ease forwards; }
+  .event-card:hover(){
+transform: 1.02;
+  }
+
+  @media (max-width: 1050px) {
+    .event-cards {
+      justify-content: center;
+    }
+  
+    .event-card {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+

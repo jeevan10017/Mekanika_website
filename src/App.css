@@ -28,11 +28,28 @@
   color: #61dafb;
 }
 
+body{
+  font-family: 'Comfortaa', cursive;
+font-family: 'Open Sans', sans-serif;
+/* font-family: 'Roboto', sans-serif; */
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 400px){
+body{
+  width: 100%;
+}
+}
+@media (max-width: 440px) {
+  body{
+    max-width: 100%;
+    height: auto;
+    /* margin-top: 20px; */
   }
 }
