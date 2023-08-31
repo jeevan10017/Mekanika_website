@@ -11,9 +11,9 @@ const Header = () => {
       </div>
       <nav className="nav">
         <ul>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#about">AboutUs</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="#course-material">Course Material</a></li>
+          <li><a href="#course-material">CourseMaterial</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
       </nav>

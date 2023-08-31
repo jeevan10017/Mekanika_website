@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import image1 from './Images/MechDTalks.jpg';
-import image2 from './Images/ME02.jpg';
+import image2 from './Images/MechDTalks.jpg';
+import image1 from './Images/ME02.jpg';
 import image3 from './Images/ME1.jpg';
 import image4 from './Images/ME003.jpg';
 import image5 from './Images/ME5.jpg';
+// import image6 from './cricket.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
     image3,
     image4,
     image5,
+    // image6,
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -30,6 +32,9 @@ const Home = () => {
 
   return (
     <section className="home-section">
+      {/* <div>
+        <p className="projects-disclaimer">Disclaimer: This is a demowebsite of Mekanika</p>
+       </div> */}
       <div
         className="image-container"
         onMouseEnter={() => setIsHovered(true)}

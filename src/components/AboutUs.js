@@ -6,6 +6,9 @@ const AboutUs = () => {
   return (
     <section id="about" className="about-us-section">
       <div className="container">
+      <div>
+        <p className="projects-disclaimer">Disclaimer: This is a demowebsite of Mekanika</p>
+       </div>
         <div className="section-heading">
           <h2>About Us</h2>
         </div>
