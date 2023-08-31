@@ -32,9 +32,6 @@ const Home = () => {
 
   return (
     <section className="home-section">
-      {/* <div>
-        <p className="projects-disclaimer">Disclaimer: This is a demowebsite of Mekanika</p>
-       </div> */}
       <div
         className="image-container"
         onMouseEnter={() => setIsHovered(true)}

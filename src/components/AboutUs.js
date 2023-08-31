@@ -7,7 +7,7 @@ const AboutUs = () => {
     <section id="about" className="about-us-section">
       <div className="container">
       <div>
-        <p className="projects-disclaimer">Disclaimer: This is a demowebsite of Mekanika</p>
+        <p className="projects-disclaimer">Disclaimer: This is a demowebsite of Mekanika, It is not a fully functional website and is not intended for use by the public</p>
        </div>
         <div className="section-heading">
           <h2>About Us</h2>

@@ -164,7 +164,9 @@
   .event-card:hover(){
 transform: 1.02;
   }
-
+ .manymore h3 p{
+  size: 2rem;
+ }
   @media (max-width: 1050px) {
     .event-cards {
       justify-content: center;

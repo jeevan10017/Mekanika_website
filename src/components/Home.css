@@ -10,7 +10,8 @@
     margin: 0 auto;
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-      width: 100%; 
+    width: 100%; 
+    object-fit: cover;
       
   }
   
@@ -65,10 +66,20 @@
       
     }
     } */
-    @media (max-width: 440px) {
+    @media (max-width: 700px) {
         .home-image {
           max-width: 100%;
           height: auto;
           margin-top: 20px;
         }
+        .image-container {
+        
+          height: 320px; 
+        /* overflow: hidden; */
+        }
+    }
+    @media (max-width: 1200px){
+      .home-image {
+height: 400px;
+      }
     }

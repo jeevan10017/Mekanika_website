@@ -43,3 +43,9 @@
     flex-direction: column;
   }
 }
+/* @media (max-width: 600px) {
+  .footer {
+    /* overflow-x: hidden; */
+    /* max-width: 600px; */
+  /* }
+/* } */ 
