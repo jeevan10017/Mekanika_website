@@ -13,16 +13,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* border-left: 4px solid #c75bcb; */
 }
 
 .project {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 30px;
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   padding: 20px;
   border-left: 4px solid #c75bcb;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  margin-left: 10px;
 }
 
 .project:hover {
