@@ -20,4 +20,10 @@
   .go-to-top-button:focus {
     outline: none;
   }
-  
+  @media (max-width: 450px) {
+    .go-to-top-button {
+      
+      right: 20px;
+      
+    }
+  }
