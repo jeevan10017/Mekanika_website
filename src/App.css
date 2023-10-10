@@ -1,11 +1,13 @@
 .App {
   text-align: center;
   max-width: 100%;
+  font-family: 'Roboto', sans-serif;;
 }
 body{
   /* padding-left: 1rem; */
   /* padding-right: 1rem; */
   max-width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-logo {
@@ -28,6 +30,7 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-link {
@@ -38,6 +41,7 @@ body{
   font-family: 'Comfortaa', cursive;
 font-family: 'Open Sans', sans-serif;
 max-width: 100%;
+
 }
 @keyframes App-logo-spin {
   from {
@@ -59,14 +63,3 @@ body{
     /* margin-top: 20px; */
   }
 }
-/* @media (max-width: 1160px){
-  body{
-    width:100rem;
-  }
-} */
-/* @media (max-width: 440px ){
-  body{
-   max-width: 100%;
-
-  }
-} */

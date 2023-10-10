@@ -1,23 +1,194 @@
-.home-section {
+.home-section   {
     text-align: center;
     padding: 1px 0;
     max-width: 100%;
+    position: relative;
+    background-image: url('./Images/home03.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+   
   }
+  .about-us-section {
+    /* background: url('./Images/home1.jpg') no-repeat center center fixed; */
+    background-size: cover;
+  }
+  .home-section,
+.about-us-section {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* background-color: rgba(0, 0, 0, 0.1);  */
+  /* background-blend-mode:darken;  */
+}
+
+.home-section::before,
+.about-us-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1;
+}
+
+  .home-section {
+    /* Other styles for your home section */
+    position: relative; /* Make sure it's a positioned element */
+  }
+
+
+  .home-section {
+    position: relative;
+  }
+  
+  .home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: -1;
+  }
+  
+  /* Apply the overlay to the text */
+  .home-section h2,
+  .home-section p {
+    color: white; /* Change the text color as needed */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-us-section {
+    position: relative;
+  }
+  
+  .about-us-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    z-index: -1;
+  }
+  
+  /* Apply the overlay to the text */
+  .about-us-section h2,
+  .about-us-section p {
+    color: white; /* Change the text color as needed */
+    position: relative;
+    z-index: 1;
+  }
+  
+
+
+
+
+  .home-section {
+    position: relative;
+    font-family: 'Nova Mono', monospace;
+    
+  }
+  
+  .home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* Adjust the opacity as needed */
+    
+  }
+  
+  /* Apply the overlay to the text */
+  .home-overlay h2,
+  .home-overlay p {
+    color: white; /* Change the text color as needed */
+    position: relative;
+    z-index: -1;
+  }
+  
+  .about-us-section {
+    position: relative;
+   
+  }
+  
+  .about-us-overlay {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.35); /* Adjust the opacity as needed */
+  }
+  
+  /* Apply the overlay to the text */
+  .about-us-overlay h2,
+  .about-us-overlay p {
+    color: rgb(203, 200, 200); /* Change the text color as needed */
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .background-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* height: 100vh; Adjust the height as needed */
+    /* overflow: hidden; */
+  }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* filter: blur(5px); Adjust the blur amount as needed */
+    opacity: 0.7;
+  }
+  
+  .blur-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(171, 169, 169, 0.5); /* Adjust the background color and opacity as needed */
+    /* backdrop-filter: blur(5px); Apply the same blur amount as background image */
+    opacity: 0.7;
+  }
+  
+  /* Rest of your CSS styles for the home component */
   
   .image-container {
     position: relative;
-    max-width: 99.8%; 
-    height: 550px; 
-    margin: 0 auto;
+    max-width: 85.8%; 
+    height: 60vh; 
+    margin: 20px auto;
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     width: 100%; 
     object-fit: cover;
+    border-radius: 20px;
+   
       /* min-width: fit-content; */
   }
   
   .image-container img {
-    width: 100%;
+   width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
@@ -38,10 +209,11 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #fdfbfb;
     opacity: 0;
     transition: opacity 0.3s ease;
-    
+    font-family: 'Major Mono Display', monospace;
+    /* font-family: 'Roboto Mono', monospace; */
   }
   
   .image-container:hover .image-overlay {
@@ -57,32 +229,111 @@
   .overlay-subtext {
     font-size: 24px;
   }
-  /* @media (max-width: 444px){
-    .home-section{
-      min-width: 100%;
+
+
+
+
+.mekanika-title {
+  font-family: 'Your-Premium-Font-Here', sans-serif; 
+  font-size: 100px; 
+ 
+  color: #f90808; 
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+ h2 span{
+  font-family: 'Playfair Display SC', serif; 
+  font-size: 50px; 
+  font-size: 3.3rem;
+  text-shadow: 2px 2px 2px  black;
+  color: #ff0000; 
+  white-space: nowrap; 
+  overflow: hidden; 
+
+  
+}
+
+
+.mekanika-title span {
+  display: inline-block;
+  opacity: 0;
+  animation: mekanikaAnimation 8s linear infinite; 
+  animation-delay: calc(0.5s * var(--index)); 
+}
+
+
+@keyframes mekanikaAnimation {
+  0%, 100% {
+    opacity: 0; 
+    transform: translateX(100%); 
+  }
+  50% {
+    opacity: 1; 
+    transform: translateX(0%); 
+  }
+}
+
+
+.mekanika-title span:nth-child(1) {
+  --index: 1;
+}
+
+.mekanika-title span:nth-child(2) {
+  --index: 2;
+}
+
+.mekanika-title span:nth-child(3) {
+  --index: 3;
+}
+
+.mekanika-title span:nth-child(4) {
+  --index: 4;
+}
+
+.mekanika-title span:nth-child(5) {
+  --index: 5;
+}
+
+.mekanika-title span:nth-child(6) {
+  --index: 6;
+}
+
+.mekanika-title span:nth-child(7) {
+  --index: 7;
+}
+
+.mekanika-title span:nth-child(8) {
+  --index: 8;
+}
+
+/* @media (max-width: 444px){
+  .home-section{
+    min-width: 100%;
+  }
+  .image-container {
+      
+      min-width:100%;
+    
+  }
+  } */
+@media (max-width: 700px) {
+    .home-image {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
     }
     .image-container {
-        
-        min-width:100%;
-      
+    
+      height: 220px; 
+   
     }
-    } */
-    @media (max-width: 700px) {
-        .home-image {
-          max-width: 100%;
-          height: auto;
-          margin-top: 20px;
-        }
-        .image-container {
-        
-          height: 400px; 
-       
-        }
-    }
-    @media (max-width: 450px){
-      .home-image {
-        max-width: 100%;
-height: 300px;
-      }
-    }
-  
+}
+@media (max-width: 450px){
+  .home-image {
+    max-width: 100%;
+    height: 200px;
+  }
+  h2 span{
+    font-size: 2.5rem; 
+  }
+}

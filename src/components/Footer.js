@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
@@ -9,12 +10,24 @@ const Footer = ({ scrollToSection }) => {
     <footer className="footer">
       <div className="container">
     <div className="footer-navigation"/>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#course-material">Course Material</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
+    <ul>
+          <li>
+            <Link to="/Mekanika_website_design">Home</Link>
+          </li>
+          <li>
+
+            <Link to="/about">AboutUs</Link>
+          </li>
+          <li>
+            <Link to="/events">Events</Link>
+          </li>
+          <li>
+            <Link to="/course-materials">CourseMaterials</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+        </ul>
       </div>
       
       <div className="contact-info">
@@ -30,10 +43,10 @@ const Footer = ({ scrollToSection }) => {
       </div>
    
       <div className="copyright">
-        © 2023 Mekanika. All Rights Reserved.
-        <div>
-         Jeevan Kumar Korra
-        </div>
+        <span>
+        &copy; 2023 Mekanika. All Rights Reserved.
+         </span>
+       
       </div>
     </footer>
   );

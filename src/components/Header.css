@@ -1,6 +1,6 @@
 .header {
-  background-color:rgb(75, 2, 88);
-  color: #fff;
+  background-color:rgb(153, 151, 151);
+  color: #f2f1f1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,6 +8,23 @@
   padding: 1rem 2rem;
     top: 0px;
   z-index: 100; 
+  /* opacity: 0.9; */
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+.header:hover {
+  color: #fdfcfc;
+}
+.header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Adjust the opacity as needed */
+  z-index: -1;
+  opacity: 0.9;
 }
 .logo {
   display: flex;
@@ -23,7 +40,7 @@
   margin-right: 10px;
   cursor: pointer;
   border-radius: 5px;
-  /* box-shadow: 0.5rem 0.5rem 0.5rem rgba(65, 33, 72,1); */
+
 }
 
 .logo h1 {
@@ -40,12 +57,17 @@
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 1px;
 }
 
 .nav li {
   margin-right: 1.4rem;
 }
+/* .nav li:hover{
+  margin-right: 1.4rem;
+  background-color: #0a0a09;
+  border-radius: 5px;
+} */
 
 .nav a {
   text-decoration: none;
@@ -55,18 +77,19 @@
  
 }
 
-.nav a:hover {
+.nav :hover {
+  border-radius: 2px solid #ef6c00 ;
   color: #ef6c00;
   
 }
 @media screen and (max-width: 768px) {
   .logo {
-    font-size: 0.8rem; 
+    font-size: 1rem; 
     
   }
   .nav a {
   
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: color 0.3s ease-in-out;
     padding: 0px;
   }
@@ -76,9 +99,9 @@
   }
   .logo img { 
     margin-right: 2px;
-    width: 50px; 
+    max-width: 50px; 
   height: 50px; 
-    /* padding-left: 1rem; */
+ 
  
     border-radius: 6px;
   }
@@ -93,13 +116,13 @@
  @media (max-width: 544px){
   .header{
     padding: 1rem 0.9rem;
-    width: 100%;
+    max-width: 100%;
   }
   
 
-  .nav li {
-    margin-left: 0.7rem;
-  }
+  /* .nav li {
+    margin-left: 1rem;
+  } */
   .logo img { 
     margin-right: 2px;
     padding-left: 1rem;
@@ -108,7 +131,7 @@
   }
   .nav a {
     
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0px;
     margin: 0px;
    
@@ -123,14 +146,14 @@
       margin-right: 2px;
  padding-right: 2px;
       border-radius: 5px;
-      width: 40px; 
+      max-width: 40px; 
       height: 40px; 
       padding: 5px 5px;
     }
   }
   @media(max-width :417px){
     .nav a{
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
     .logo img {
       border-radius: 10px;
@@ -144,16 +167,13 @@
       margin-right: 2px;
  padding-right: 2px;
       border-radius: 5px;
-      width: 40px; 
+      max-width: 40px; 
       height: 40px; 
       padding: 5px 5px;
     }
   } 
-  @media(max-width :417px){
-    .nav a{
-      font-size: 0.7rem;
-    }
-    .logo img {
-      border-radius: 10px;
-    }
-  }
+ 
+
+
+
+
