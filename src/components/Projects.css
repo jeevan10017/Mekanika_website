@@ -120,6 +120,10 @@
   margin-bottom: 20px;
   font-size: 16px;
 }
+.search-bar input{
+  width: 60%;
+ 
+}
 
 .project-container {
   display: flex;
@@ -198,7 +202,7 @@
 
 .projects-section {
   background-color: #dfd3d3;
-  height: 610px; /* Set the fixed height */
+  height: 750px; /* Set the fixed height */
   overflow: hidden; /* Hide overflow content */
   padding: 0;
 }
@@ -219,3 +223,9 @@
   flex: 1; /* Expand this container to fill the available space */
   overflow-y: auto; /* Enable vertical scrolling if content exceeds 400px */
 }
+@media (min-width: 420px) {
+  .projects-section {
+   height: 900px;
+  }
+
+} 

@@ -103,7 +103,7 @@ import image1 from './Images/ME02.jpg';
 import image3 from './Images/ME1.jpg';
 import image4 from './Images/ME003.jpg';
 import image5 from './Images/ME5.jpg';
-import backgroundImage from './Images/home03.jpeg';
+// import backgroundImage from './Images/home08.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -129,7 +129,7 @@ const Home = () => {
   }, [isHovered]);
 
   return (
-    <section className="home-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <section className="home-section"/* style={{ backgroundImage: `url(${backgroundImage})` }}*/>
       <div className="home-overlay"></div>
       <div
         className="image-container"
@@ -145,7 +145,7 @@ const Home = () => {
           <p className="overlay-subtext">Exploring the World of Mechanical Engineering, IIT Kharagpur</p>
         </div>
       </div>
-      <section id="about" className="about-us-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <section id="about" className="about-us-section"/* style={{ backgroundImage: `url(${backgroundImage})` }}*/>
         <div className="about-us-overlay"></div>
         <div className="container">
           <div className="section-heading">

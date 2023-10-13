@@ -86,6 +86,7 @@ import Events from './components/Events';
 import CourseMaterial from './components/CourseMaterial';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import Copyright from './components/Copyright';
 
 function App() {
   return (
@@ -102,6 +103,7 @@ function App() {
         
       </Routes>
       <Footer />
+      <Copyright/>
     </Router>
   );
 }

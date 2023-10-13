@@ -46,3 +46,9 @@
   }
   
 }
+@media (max-width: 420px){
+  .course-material-section {
+    height:800px;
+  }
+  
+}
