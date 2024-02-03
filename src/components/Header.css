@@ -196,7 +196,7 @@
     margin-right: 20px;
   }
   
-  @media (max-width: 550px) {
+  @media (max-width: 670px) {
     .menu-icon {
       display: block; 
       order: 1; 
