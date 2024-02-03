@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
-import Logo from './Mekanika_logo.png';
+import Logos from './Images/MekanikaLogo.png';
 
 const Footer = ({ scrollToSection }) => {
 
@@ -38,21 +38,15 @@ const Footer = ({ scrollToSection }) => {
         <p>Phone: +91 080041 25928</p>
         <p>IIT Kharagpur</p>
         <p>West Bengal 721302</p>
-        {/* <div className="social-links">
-        <a href="https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4"><FontAwesomeIcon icon={faInstagram} /></a>
-        <a href="https://www.linkedin.com/company/mekanika-iit-kharagpur/about/"><FontAwesomeIcon icon={faLinkedin} /></a>
-        <a href="https://www.facebook.com/mekanikaiitkgp/"><FontAwesomeIcon icon={faFacebook} /></a>
-        <a href="https://twitter.com/IITKgp"><FontAwesomeIcon icon={faTwitter} /></a>
-      </div> */}
-        {/* <p>Visitors: {visitorsCount}</p> */}
+       
       </div>
    
       <div className="copyright">
       
       
-      <div className="logo">
-        <div id="log">
-        <img src={Logo} alt="Mekanika Logo" />
+      <div className="Footerlogo">
+        <div id="logoo">
+        <img src={Logos} alt="Mekanika Logo" />
         <h1>Mekanika</h1>
         </div>
       </div>

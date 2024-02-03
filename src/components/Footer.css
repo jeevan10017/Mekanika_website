@@ -45,6 +45,25 @@
   border-radius: 10px; */
   /* display: none; */
 }
+.Footerlogo {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 2px  black;  
+}
+
+.Footerlogo img {
+  width: 60px; 
+  height: 60px; 
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+.Footerlogo h1 {
+  margin: 0;
+  font-family: 'Playfair Display SC', serif;
+  }
 .contact-info p {
   display: flex;
   justify-content: center;
