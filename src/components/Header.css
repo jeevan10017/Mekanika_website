@@ -94,11 +94,6 @@
   }
  
 }
-@media (max-width: 595px){
-  .logo {
-    font-size: 0rem;
-     }
-  }
 
  @media (max-width: 544px){
   .header{
@@ -140,7 +135,7 @@
   }
   @media(max-width :437px){
     .header {
-      height: 70px;
+      height: 50px;
     }
     .nav a{
       font-size: 0.9rem;
@@ -177,7 +172,8 @@
   .menu-icon {
     display: none; 
     cursor: pointer;
-    font-size: 24px; 
+    font-size: 28px; 
+    padding-top: 10px;
   }
   
   .nav {
@@ -197,6 +193,10 @@
   }
   
   @media (max-width: 670px) {
+    .logo img {
+     height: 45px;
+  width: 45px;
+    }
     .menu-icon {
       display: block; 
       order: 1; 
@@ -207,14 +207,16 @@
       display: flex; 
       flex-direction: column; 
       position: fixed;
-      top: 70px;
+      top: 65px;
       right: 100%; 
       width: 100%;
-      background-color: #0a0a0a;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      transition: right 1s ease-in-out; 
+      background-color: #050505;
+      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
+      transition: right 0.8s ease-in-out; 
       z-index: 1; 
       opacity: 0.8;
+      
+      
     }
   
     .nav.open ul {
@@ -223,8 +225,9 @@
   
     .nav li {
       margin: 0;
-      padding: 10px;
+      padding: 10px 0 10px 0;
       text-align: center;
+      font: bolder;
       width: 100%; 
       transition: background-color 0.3s ease-in-out; 
     }
@@ -239,5 +242,5 @@
   
 
 
-
+  
 

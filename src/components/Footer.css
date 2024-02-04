@@ -1,13 +1,15 @@
 .footer {
-  background-color: rgb(198, 197, 197);
+  background-color: rgb(72, 72, 72);
   font-family: 'Roboto', sans-serif;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
   max-width: 100%;
+  color: rgb(190, 189, 189);
 }
+
 /* .footer::before{
   opacity: 0.7;
 } */
@@ -18,11 +20,12 @@
   text-decoration: none;
   text-decoration: solid;
   list-style: none; 
+ 
 }
 .footer li a {
   font-size: 1.2rem;
   text-decoration: none;
-  color: rgb(8, 8, 8);
+  color: rgb(190, 189, 189);
 
 }
 .footer li a:hover {
@@ -37,19 +40,17 @@
   color: rgb(248, 3, 3);
 }
 
-#log img{
+#logoo img{
   margin-top: 20px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px; */
-  /* display: none; */
+
 }
 .Footerlogo {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+  color: rgb(190, 189, 189);
   text-shadow: 2px 2px 2px  black;  
+
 }
 
 .Footerlogo img {
@@ -71,20 +72,22 @@
   margin: 0.7rem 0 ;
   cursor: pointer;
  display: flex;
+ padding-top: 0px;
  font-size: 1.2rem;
 }
 .contact-info h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .instiname{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size:1rem ;
-color: rgb(70, 70, 70);}
+  margin-top: 0px;
+  color: rgb(190, 189, 189)}
 
 .social-links a {
   /* display: flex; */
@@ -94,24 +97,23 @@ color: rgb(70, 70, 70);}
   font-size: 1.6rem;
   text-decoration: none;
   color: #333;
-  margin: 0.8rem;
+  margin: 0.7rem;
   font-size: 1.5rem;
-  color: rgb(114, 114, 114);
+  color: rgb(190, 189, 189);
 }
 .social-links {
   display: flex;
   justify-content: center;
- 
-  /* font-size: 1.6rem; */
   text-decoration: none;
-  color: #333;
+  color: rgb(190, 189, 189);
   margin: 0rem;
-  /* font-size: 1.2rem; */
+ 
 
 }
 .social-links a :hover{
   color: coral;
 }
+
 @media (max-width: 800px) {
   .footer {
     flex-direction: column;
@@ -125,14 +127,8 @@ color: rgb(70, 70, 70);}
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    display: none;
-  }
-  }
-/* @media (max-width: 600px) {
-  .footer {
-    /* overflow-x: hidden; */
-    /* max-width: 600px; */
-  /* }
-/* } */ 
-
     
+  }
+  }
+
+

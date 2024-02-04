@@ -60,8 +60,12 @@
 .about-us-section {
   padding: 80px 0;
   background-color: #fbfafa;
+  
   text-align: center;
   font-family: 'Roboto Mono', monospace;
+  background-image: url(https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/305211864_485413496931465_4855000598672877199_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=kCc_RULwwe8AX8lGFsD&_nc_ht=scontent-bom2-1.xx&oh=00_AfAr40nMb35RAHVpayXO1sRM4Jf2-GNt6dzgG3cAsNf6Tw&oe=65C4AF58);
+  z-index: -1;
+  opacity: 0.9;
 }
 
 .section-heading h2 {
@@ -82,22 +86,24 @@
   max-width: 600px;
   text-align: center;
   margin-top: 20px;
+
 }
 
 .text p {
   font-size: 22px;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #080808;
+  color: #fcfafa;
   font-weight: bold;
 }
 
 .image img {
   max-width: 90%;
   height: 100%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   margin-top: 10px;
+  opacity: 0.9;
 }
 
 @media (max-width: 900px) {
@@ -118,7 +124,6 @@
     font-size: 19px;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #090909;
     font-weight: bold;
   }
 }

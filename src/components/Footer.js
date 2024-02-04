@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 import Logos from './Images/MekanikaLogo.png';
 
@@ -12,7 +12,7 @@ const Footer = ({ scrollToSection }) => {
       <div className="container">
     <div className="footer-navigation"/>
     <ul>
-    <div><b><h2>Quick Links</h2></b></div>
+    <div className='Quicklinks'><b><h2>Quick Links</h2></b>
           <li>
             <Link to="/Mekanika_website_design">Home</Link>
           </li>
@@ -29,8 +29,10 @@ const Footer = ({ scrollToSection }) => {
           <li>
             <Link to="/projects">Projects</Link>
           </li>
+          </div>
         </ul>
       </div>
+     
       
       <div className="contact-info">
       <div><b><h2>Contact us</h2></b></div>
@@ -58,7 +60,7 @@ const Footer = ({ scrollToSection }) => {
         <a href="https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4"><FontAwesomeIcon icon={faInstagram} /></a>
         <a href="https://www.linkedin.com/company/mekanika-iit-kharagpur/about/"><FontAwesomeIcon icon={faLinkedin} /></a>
         <a href="https://www.facebook.com/mekanikaiitkgp/"><FontAwesomeIcon icon={faFacebook} /></a>
-        <a href="https://twitter.com/IITKgp"><FontAwesomeIcon icon={faTwitter} /></a>
+        <a href="https://medium.com/@mekanika2022"><FontAwesomeIcon icon={faMedium} /></a>
       </div>
       </div>
       </div>

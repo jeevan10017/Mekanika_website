@@ -6,10 +6,11 @@
   font-family: 'Roboto', sans-serif;
 }
 .course-material-section {
-  background-image: url(https://images.pexels.com/photos/8423073/pexels-photo-8423073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-image: url(https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/305211864_485413496931465_4855000598672877199_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=kCc_RULwwe8AX8lGFsD&_nc_ht=scontent-bom2-1.xx&oh=00_AfAr40nMb35RAHVpayXO1sRM4Jf2-GNt6dzgG3cAsNf6Tw&oe=65C4AF58);
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  position: relative;
 }
 
 .section-title {

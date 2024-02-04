@@ -140,10 +140,10 @@ const Home = () => {
           src={images[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
         />
-        <div className="image-overlay">
+        {/* <div className="image-overlay">
           <h2 className="overlay-text">Welcome to Mekanika</h2>
           <p className="overlay-subtext">Exploring the World of Mechanical Engineering, IIT Kharagpur</p>
-        </div>
+        </div> */}
       </div>
       <section id="about" className="about-us-section"/* style={{ backgroundImage: `url(${backgroundImage})` }}*/>
         <div className="about-us-overlay"></div>
