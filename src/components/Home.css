@@ -338,3 +338,31 @@
     font-size: 2.5rem; 
   }
 }
+
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  z-index: 1;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}

@@ -10,9 +10,6 @@
   color: rgb(190, 189, 189);
 }
 
-/* .footer::before{
-  opacity: 0.7;
-} */
 .footer li {
   display: flex;
   justify-content: center;
@@ -131,4 +128,25 @@
   }
   }
 
-
+  .footer-navigation {
+    text-align: center;
+  }
+  
+  
+  .Quicklinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .Quicklinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Quicklinks ul li {
+    margin-bottom: 5px;
+  }
+  

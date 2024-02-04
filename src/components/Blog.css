@@ -1,0 +1,102 @@
+.blog-container {
+    margin: auto;
+    max-width: 100%;
+    padding: 20px;
+    background-image: url(https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/305211864_485413496931465_4855000598672877199_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=kCc_RULwwe8AX8lGFsD&_nc_ht=scontent-bom2-1.xx&oh=00_AfAr40nMb35RAHVpayXO1sRM4Jf2-GNt6dzgG3cAsNf6Tw&oe=65C4AF58);
+  }
+  
+  .blog-section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #121213; /* Blue Color */
+  }
+  
+  .blog-section-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #282727;
+  }
+  
+  .blog-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .blog-card {
+    border: 1px solid #868484;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    background-image: url(https://storage.googleapis.com/5paisa-prod-storage/files/2022-01/download.png);
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .blog-meta {
+    padding: 10px;
+    background-color: #3a3939;
+  }
+  
+  .blog-date {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .blog-category {
+    margin-left: 10px;
+    padding: 5px 8px;
+    background-color: #f79e95;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #fff;
+  }
+  
+  .blog-content {
+    padding: 20px;
+  }
+  
+  .blog-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #03421d; /* Green Color */
+    margin-bottom: 10px;
+  }
+  
+  .blog-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .blog-author {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .blog-author-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 5%;
+    margin-right: 10px;
+  }
+  
+  .blog-author-info {
+    flex-grow: 1;
+  }
+  
+  .blog-author-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #010508; /* Blue Color */
+  }
+  
+  .blog-author-role {
+    font-size: 12px;
+    color: #888;
+  }
+  

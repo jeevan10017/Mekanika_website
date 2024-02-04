@@ -2,6 +2,7 @@
   background-color: rgb(155, 243, 174);
   padding: 100px 0;
   font-family: 'Roboto', sans-serif;
+  color: #faf8f8;
 }
 #events{
   background-image: url(https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/305211864_485413496931465_4855000598672877199_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=kCc_RULwwe8AX8lGFsD&_nc_ht=scontent-bom2-1.xx&oh=00_AfAr40nMb35RAHVpayXO1sRM4Jf2-GNt6dzgG3cAsNf6Tw&oe=65C4AF58);
@@ -82,7 +83,7 @@
   color: #888;
 }
 .link {
-  color: rgb(75, 2, 88);
+  color: rgb(224, 160, 235);
   text-decoration: underline;
 }
 
@@ -115,13 +116,13 @@
   animation-delay: 0.6s;
 }
 .event-card:nth-child(4) {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 .event-card:nth-child(5) {
   animation-delay: 1.2s;
 }
 .event-card:nth-child(6) {
-  animation-delay: 0.9s;
+  animation-delay: 1.5s;
 }
 
 
