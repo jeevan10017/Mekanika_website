@@ -4,6 +4,7 @@
   padding: 2rem;
   display: flex;
   justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
   text-decoration: none;
   max-width: 100%;
