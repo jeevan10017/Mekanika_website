@@ -126,10 +126,13 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    filter: brightness(90%);
   }
  
   .image-container:hover img {
-    transform: scale(1.1);
+    filter: brightness(100%);
+    filter: contrast(110%);
+    overflow: hidden;
   }
   
   
@@ -157,6 +160,7 @@
   color: #1a1717; 
   white-space: nowrap; 
   overflow: hidden; 
+  filter: contrast(200%);
 }
  h2 span{
   font-family: 'Playfair Display SC', serif; 
@@ -167,8 +171,8 @@
   white-space: nowrap; 
   overflow: hidden; 
 
-  
 }
+
 
 
 .mekanika-title span {
@@ -176,6 +180,7 @@
   opacity: 0;
   animation: mekanikaAnimation 8s linear infinite; 
   animation-delay: calc(0.5s * var(--index)); 
+  
 }
 
 
@@ -276,7 +281,9 @@
   opacity: 0.7;
   border-radius: 50%;
   padding: 10px;
+  margin: 10px;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
 }
 
 .left {
@@ -286,3 +293,40 @@
 .right {
   right: 10px;
 }
+.home-section {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.image-container:hover .arrow {
+  opacity: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.image-slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+
+}
+
+.image-slider img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+
+}
+

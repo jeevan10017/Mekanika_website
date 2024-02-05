@@ -42,12 +42,18 @@
 }
 
 .image img {
-  max-width: 85%;
+  max-width: 80%;
   height: 100%;
   box-shadow: 5px 9px 15px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   margin-top: 10px;
-  opacity: 0.9;
+  filter: brightness(90%);
+  filter: contrast(150%);
+  cursor: pointer;
+}
+.image img :hover{
+  filter: brightness(100%);
+  filter: contrast(180%);
 }
 
 @media (max-width: 900px) {
