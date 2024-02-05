@@ -16,7 +16,7 @@ function App() {
         <Header />
       <Routes>
 
-        <Route path="/website" element={<Home />} />
+        <Route path="/Mekanika_website_design" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Events />} />
