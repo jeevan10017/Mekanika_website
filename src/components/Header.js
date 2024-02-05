@@ -31,7 +31,7 @@ const Header = () => {
      
         </div>
         <ul>
-          <li><Link to="/Mekanika_webpage" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/website" onClick={closeMenu}>Home</Link></li>
           <li><Link to="/blogs" onClick={closeMenu}>Blogs</Link></li>
           <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
           <li><Link to="/course-material" onClick={closeMenu}>CourseMaterial</Link></li>

@@ -14,7 +14,7 @@ const Footer = ({ scrollToSection }) => {
             <b><h2>Quick Links</h2></b>
             <ul>
               <li>
-                <Link to="/Mekanika_webpage">Home</Link>
+                <Link to="/website">Home</Link>
               </li>
               <li>
                 <Link to="/blogs">Blogs</Link>
