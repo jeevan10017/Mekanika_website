@@ -11,7 +11,6 @@ import './Home.css';
 
 const Home = () => {
   const images = [image1, image2, image3, image4, image5];
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const showNextImage = () => {
@@ -22,17 +21,27 @@ const Home = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
+  const [isHovered, setIsHovered] = useState(false);
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    let interval;
+
+    if (!isHovered) {
+      interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000);
+    }
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered, setCurrentImageIndex, images.length]);
 
   return (
     <section className="home-section">
-      <div className="image-container">
+      <div
+        className="image-container"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <FontAwesomeIcon
           icon={faChevronLeft}
           className="arrow left"

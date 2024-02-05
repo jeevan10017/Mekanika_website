@@ -204,11 +204,11 @@
       flex-direction: column; 
       position: fixed;
       top: 65px;
-      right: 100%; 
+      left: 100%; 
       width: 100%;
       background-color: #050505;
-      box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.8);
-      transition: right 0.8s ease-in-out; 
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+      transition: left 0.5s ease-in-out; 
       z-index: 1; 
       opacity: 0.8;
       
@@ -216,7 +216,7 @@
     }
   
     .nav.open ul {
-      right: 0; 
+      left: 0; 
     }
   
     .nav li {
@@ -232,7 +232,7 @@
       background-color: #020000; 
     }
     .slide-in {
-      right: 0;
+      left: 0;
     }
   }
   
