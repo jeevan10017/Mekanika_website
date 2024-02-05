@@ -15,14 +15,14 @@ function App() {
     <Router>
         <Header />
       <Routes>
-        {/* Set the Home component as the default route */}
-      
-        <Route path="/Mekanika_website_design" element={<Home />} />
+
+        <Route path="/Mekanika_webpage" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Events />} />
         <Route path="/course-material" element={<CourseMaterial />} />
         <Route path="/projects" element={<Projects />} />
+
         
       </Routes>
       <Footer />

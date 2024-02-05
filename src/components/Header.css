@@ -8,9 +8,9 @@
   padding: 1rem 2rem;
     top: 0px;
   z-index: 100; 
-  /* opacity: 0.9; */
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .logo {

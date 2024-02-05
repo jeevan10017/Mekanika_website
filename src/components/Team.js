@@ -1,7 +1,6 @@
 import React from 'react';
-import './Team.css'; // Include your Team component CSS file
+import './Team.css'; 
 
-// Import team member images
 import teamMember1Image from './demopho.jpg';
 import teamMember2Image from './demopho.jpg';
 

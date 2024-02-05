@@ -1,68 +1,11 @@
-/* 
-.about-us-section {
-  padding: 80px 0;
-  background-color: #f8f8f8;
-  text-align: center;
-}
 
-.section-heading h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: rgb(75, 2, 88);
-}
-
-.content {
-  display: flex;
-  flex-direction: row; 
-  align-items: center;
-  margin-top: 40px;
-  max-width: 100%;
-}
-
-.text {
-  max-width: 600px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.text p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.image img {
-  max-width: 90%;
-  height: 100%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-
-@media (max-width: 900px) {
-  .content {
-    flex-direction: column;
-  }
-
-  .image img {
-    margin-top: 0; 
-  }
-}
-@media (max-width: 444px){
-  about-us-section {
-    max-width: 100%;
-  }
-  } */
-
-  /* About Us Section */
 .about-us-section {
   padding: 80px 0;
   background-color: #fbfafa;
-  
+  letter-spacing:1px;
+  word-spacing: 4px;
   text-align: center;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Protest Revolution', sans-serif;
   background-image: url(https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/305211864_485413496931465_4855000598672877199_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=kCc_RULwwe8AX8lGFsD&_nc_ht=scontent-bom2-1.xx&oh=00_AfAr40nMb35RAHVpayXO1sRM4Jf2-GNt6dzgG3cAsNf6Tw&oe=65C4AF58);
   z-index: -1;
   opacity: 0.9;
@@ -83,7 +26,7 @@
 }
 
 .text {
-  max-width: 600px;
+  max-width: 550px;
   text-align: center;
   margin-top: 20px;
 
@@ -98,9 +41,9 @@
 }
 
 .image img {
-  max-width: 90%;
+  max-width: 85%;
   height: 100%;
-  box-shadow: 0px 9px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 9px 15px rgba(0, 0, 0, 0.8);
   border-radius: 8px;
   margin-top: 10px;
   opacity: 0.9;
@@ -128,19 +71,3 @@
   }
 }
 
-/* Animation for MEKANIKA Title
-.mekanika-animation {
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-10px);
-
-/* CSS for Animating Individual Letters */

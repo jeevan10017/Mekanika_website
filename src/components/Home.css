@@ -5,11 +5,10 @@
     position: relative;
     background-image: url('./Mekanika_logo.png') no-repeat center center fixed;
     background-size: cover;
-    font-family: 'Roboto', sans-serif;
-   /* background-color:#f90808 ; */
+  
+
   }
   .about-us-section {
-    /* background: url('./Images/home1.jpg') no-repeat center center fixed; */
     background-size: cover;
   }
   .home-section,
@@ -18,8 +17,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-color: rgba(0, 0, 0, 0.1);  */
-  /* background-blend-mode:darken;  */
 }
 
 .home-section::before,
@@ -35,8 +32,7 @@
 }
 
   .home-section {
-    /* Other styles for your home section */
-    position: relative; /* Make sure it's a positioned element */
+    position: relative;
   }
 
 
@@ -51,14 +47,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.0); /* Adjust the opacity as needed */
+    background: rgba(0, 0, 0, 0.0); 
     z-index: -1;
   }
-  
-  /* Apply the overlay to the text */
+
   .home-section h2,
   .home-section p {
-    color: rgb(12, 0, 0); /* Change the text color as needed */
+    color: rgb(12, 0, 0);
     position: relative;
     z-index: 1;
   }
@@ -78,17 +73,13 @@
     z-index: -1;
   }
   
-  /* Apply the overlay to the text */
+ 
   .about-us-section h2,
   .about-us-section p {
-    color: white; /* Change the text color as needed */
+    color: white; 
     position: relative;
     z-index: 1;
   }
-  
-
-
-
 
   .home-section {
     position: relative;
@@ -96,54 +87,12 @@
     
   }
   
-  /* .home-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.0);
-  }
-  .home-overlay h2,
-  .home-overlay p {
-    color: white; 
-    position: relative;
-    z-index: -1;
-  }
-   */
   .about-us-section {
     position: relative;
    
   }
-  
-  .about-us-overlay {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0); /* Adjust the opacity as needed */
-  }
-  
-  /* Apply the overlay to the text */
-  .about-us-overlay h2,
-  .about-us-overlay p {
-    color: rgb(203, 200, 200); /* Change the text color as needed */
-    position: relative;
-    z-index: 1;
-  }
-  
-  
-  .background-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /* height: 100vh; Adjust the height as needed */
-    /* overflow: hidden; */
-  }
-  
+ 
+ 
   .background-image {
     width: 100%;
     height: auto;
@@ -152,7 +101,6 @@
     top: 0;
     left: 0;
     z-index: -1;
-    /* filter: blur(5px); Adjust the blur amount as needed */
     opacity: 0.7;
   }
   
@@ -181,8 +129,7 @@
     box-shadow: 0px 4px 8px rgb(24, 24, 24);
     width: 100%; 
     object-fit: cover;
-   
-      /* min-width: fit-content; */
+
   }
   
   .image-container img {
@@ -354,9 +301,10 @@
   cursor: pointer;
   color: white;
   z-index: 1;
+  opacity: 0.7;
   border-radius: 50%;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .left {
