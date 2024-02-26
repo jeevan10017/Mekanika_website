@@ -1,5 +1,3 @@
-// CourseMaterial.js
-
 import React from 'react';
 import './CourseMaterial.css';
 
