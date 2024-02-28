@@ -8,7 +8,7 @@ const Blogs = () => {
       title: 'Tata Steel',
       href: 'https://medium.com/@mekanika2022/core-expedition-aniketh-s-gund-tata-steel-d181f46cdfcf',
       description:
-        'One should know the core subjects completely. Apart from that Tata is not much concerned about any software or extracurricular activities. As it is a management trainee position, the position is more aligned towards the overall handling of the teams and some technical stuff.',
+        'One should know the core subjects completely. Apart from that Tata is not much concerned about any software or extracurricular activities. As it is a management trainee position, the position is more aligned towards the overall handling of the teams and some technical stuff...',
       date: 'Jan 24, 2024',
       datetime: 'Jan 24',
       category: { title: 'Core Expedition', href: 'https://medium.com/@mekanika2022/core-expedition-aniketh-s-gund-tata-steel-d181f46cdfcf' },
@@ -25,7 +25,7 @@ const Blogs = () => {
       title: 'Tata Steel',
       href: 'https://medium.com/@mekanika2022/core-expedition-aniketh-s-gund-tata-steel-d181f46cdfcf',
       description:
-        'One should know the core subjects completely. Apart from that Tata is not much concerned about any software or extracurricular activities. As it is a management trainee position, the position is more aligned towards the overall handling of the teams and some technical stuff.',
+        'One should know the core subjects completely. Apart from that Tata is not much concerned about any software or extracurricular activities. As it is a management trainee position, the position is more aligned towards the overall handling of the teams and some technical stuff...',
       date: 'Jan 24, 2024',
       datetime: 'Jan 24',
       category: { title: 'Core Expedition', href: 'https://medium.com/@mekanika2022/core-expedition-aniketh-s-gund-tata-steel-d181f46cdfcf' },
@@ -42,7 +42,7 @@ const Blogs = () => {
       title: 'Tata Steel',
       href: 'https://medium.com/@mekanika2022/core-expedition-aniketh-s-gund-tata-steel-d181f46cdfcf',
       description:
-        'One should know the core subjects completely. Apart from that Tata is not much concerned about any software or extracurricular activities. As it is a management trainee position, the position is more aligned towards the overall handling of the teams and some technical stuff.',
+        'One should know the core subjects completely. Apart from that Tata is not much concerned about any software or extracurricular activities. As it is a management trainee position, the position is more aligned towards the overall handling of the teams and some technical stuff...',
       date: 'Jan 24, 2024',
       datetime: 'Jan 24',
       category: { title: 'Core Expedition', href: 'https://medium.com/@mekanika2022/core-expedition-aniketh-s-gund-tata-steel-d181f46cdfcf' },
