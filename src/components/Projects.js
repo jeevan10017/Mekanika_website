@@ -468,10 +468,10 @@ const Projects = () => {
       }
     };
 
-    filterProjects(); // Call the filter function when the component mounts
+    filterProjects(); 
 
     return () => {
-      // Clear any cleanup if necessary
+      
     };
   }, [searchTerm]);
 

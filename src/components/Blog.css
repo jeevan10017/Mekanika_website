@@ -24,6 +24,9 @@
   gap: 20px;
   margin-top: 20px;
 }
+.blog-card:hover{
+ box-shadow:  #FFD700 0px 0px 10px 0px;
+}
 
 .blog-card {
   border: 1px solid #2c2c2c;

@@ -27,8 +27,11 @@
   
 }
 
+
 .event-card:hover {
   transform: translateY(-10px);
+  box-shadow: rgb(240, 223, 127) 0px 0px 20px 0px;
+  
 }
 
 .event-date {
@@ -135,6 +138,7 @@
 
 .event-card:hover {
   transform: translateY(-5px);
+  transform: scale(1.03);
 }
 
 .event-image img {
@@ -181,6 +185,7 @@
   .event-card:hover(){
 transform: 1.02;
   }
+
 
   @media (max-width: 1050px) {
     .event-cards {

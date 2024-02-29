@@ -29,17 +29,21 @@
   width: 300px;
   margin: 20px;
   padding: 20px;
-  background-color: #b8ccd1;
+  background-color: #333636;
   border-radius: 8px;
   text-decoration: none;
-  color: #333;
+  color: gold;
+  font-weight:400;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .course-material-card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
+  color: rgb(250, 219, 44);
+  font-weight:600;
+  background-color: #272727;
 }
 @media (max-width: 800px){
   .course-material-section {
