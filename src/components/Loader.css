@@ -1,0 +1,54 @@
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    
+  }
+  
+  .loader-icon1 {
+    font-size: 10rem;
+    color: gold;
+    animation: rotate 2s linear infinite;
+    margin-bottom: 4rem;
+ 
+  }
+  .loader-icon2 {
+    font-size: 8rem;
+    color: gold; 
+    animation: rotateAntiClockwise 2s linear infinite; 
+    margin-top: 7rem;
+  }
+  .loader-icon3 {
+    font-size: 5rem;
+    color: gold; 
+    animation: rotate 2s linear infinite;
+  }
+ 
+ 
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateAntiClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }

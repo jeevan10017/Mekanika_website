@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url(./components/Mekanika_logo.png); */
-  background-image: url(https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/305211864_485413496931465_4855000598672877199_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=8p7cxwi1s5wAX_zbfEE&_nc_ht=scontent-bom2-1.xx&oh=00_AfBaVYRZ4cviKMIJqyaxMcU3fHyg3XGDC15xedjLD9TYhw&oe=65E25918);
+  background-image: url(./components/Mekanika_logo.png);
+  /* background-image: url(https://scontent-bom2-1.xx.fbcdn.net/v/t39.30808-6/305211864_485413496931465_4855000598672877199_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=8p7cxwi1s5wAX_zbfEE&_nc_ht=scontent-bom2-1.xx&oh=00_AfBaVYRZ4cviKMIJqyaxMcU3fHyg3XGDC15xedjLD9TYhw&oe=65E25918); */
   
   background-attachment: fixed;
 }

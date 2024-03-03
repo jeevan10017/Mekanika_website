@@ -13,9 +13,22 @@ const Home = () => {
   const images = [image1, image2, image3, image4, image5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // const showNextImage = () => {
+  //   setCurrentImageIndex((prevIndex) => {
+  //     if (prevIndex === images.length - 1) {
+  //       // If it's the last image, reset to the first image
+  //       return 0;
+  //     } else {
+  //       // Otherwise, move to the next image
+  //       return prevIndex + 1;
+  //     }
+  //   });
+  // };
   const showNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
+  
+  
 
   const showPrevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);

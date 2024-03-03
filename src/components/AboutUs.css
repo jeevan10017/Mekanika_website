@@ -54,6 +54,7 @@
 .image img :hover{
   filter: brightness(100%);
   filter: contrast(180%);
+  transition-duration: 0.5s;
 }
 
 @media (max-width: 900px) {
