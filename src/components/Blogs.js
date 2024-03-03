@@ -1,5 +1,5 @@
 import React from 'react';
-import './Blog.css';
+import './Blogs.css';
 
 const Blogs = () => {
   const posts = [
