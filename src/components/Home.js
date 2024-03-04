@@ -10,6 +10,8 @@ import image5 from './Images/ME5.jpg';
 import './Home.css';
 
 const Home = () => {
+ 
+  
   const images = [image1, image2, image3, image4, image5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -47,8 +49,37 @@ const Home = () => {
 
     return () => clearInterval(interval);
   }, [isHovered, setCurrentImageIndex, images.length]);
+  useEffect(() => {
+    const element = document.documentElement;
+
+    if (element.requestFullscreen) {
+      element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { /* Firefox */
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { /* IE/Edge */
+      element.msRequestFullscreen();
+    }
+
+    return () => {
+      // Optionally exit full-screen when the component unmounts
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) { /* Firefox */
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE/Edge */
+        document.msExitFullscreen();
+      }
+    };
+  }, []); // Empty dependency array to run the effect only once when the component mounts
+
+
 
   return (
+    <>
     <section className="home-section">
       <div
         className="image-container"
@@ -108,7 +139,12 @@ const Home = () => {
         </div>
       </section>
     </section>
+        <button onClick={() => document.documentElement.requestFullscreen()}>
+        Enter Fullscreen
+      </button>
+    </>
   );
-}
+};
+ 
 
 export default Home;
