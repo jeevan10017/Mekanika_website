@@ -4,8 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 import Logos from './Images/MekanikaLogo.png';
+import ImageLoader from './imageLoader';
 
 const Footer = ({ scrollToSection }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      const delay = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(delay);
+  }, []);
   return (
     <footer className="footer">
       <div className="container">
@@ -45,9 +55,14 @@ const Footer = ({ scrollToSection }) => {
       </div>
   
       <div className="copyright">
+        
         <div className="Footerlogo">
+        
           <div id="logoo">
+            <>
+            {loading && <ImageLoader />}
             <img src={Logos} alt="Mekanika Logo" />
+            </>
             <h1>Mekanika</h1>
           </div>
         </div>

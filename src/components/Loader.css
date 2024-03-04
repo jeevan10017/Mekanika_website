@@ -16,21 +16,21 @@
   
   .loader-icon1 {
     font-size: 10rem;
-    color: gold;
+    color: rgba(208, 158, 30, 0.7) ;
     animation: rotate 2s linear infinite;
     margin-bottom: 4rem;
  
   }
   .loader-icon2 {
     font-size: 8rem;
-    color: gold; 
-    animation: rotateAntiClockwise 2s linear infinite; 
+    color: rgba(208, 158, 30, 0.7) ; 
+    animation: rotateAntiClockwise 1.8s linear infinite; 
     margin-top: 7rem;
   }
   .loader-icon3 {
     font-size: 5rem;
-    color: gold; 
-    animation: rotate 2s linear infinite;
+    color: rgba(208, 158, 30, 0.7) ; 
+    animation: rotate 1.5s linear infinite;
   }
  
  

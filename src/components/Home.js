@@ -8,6 +8,7 @@ import image3 from './Images/ME1.jpg';
 import image4 from './Images/ME003.jpg';
 import image5 from './Images/ME5.jpg';
 import './Home.css';
+import ImageLoader from './imageLoader';
 
 const Home = () => {
  
@@ -50,6 +51,17 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [isHovered, setCurrentImageIndex, images.length]);
 
+  //loading image
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      const delay = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(delay);
+  }, []);
+
 
 
   return (
@@ -65,11 +77,14 @@ const Home = () => {
           className="arrow left"
           onClick={showPrevImage}
         />
+        <>
+        {loading && <ImageLoader />}
         <div className="image-slider" style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
           {images.map((img, index) => (
             <img key={index} src={img} alt={`Image ${index + 1}`} />
           ))}
         </div>
+        </>
         <FontAwesomeIcon
           icon={faChevronRight}
           className="arrow right"
