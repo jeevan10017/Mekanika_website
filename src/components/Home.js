@@ -15,6 +15,28 @@ const Home = () => {
   
   const images = [image1, image2, image3, image4, image5];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState(0);
+ 
+
+  //touch events
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    if (touchStartX - e.touches[0].clientX > 50) {
+      // Swipes left
+      showNextImage();
+    } else if (e.touches[0].clientX - touchStartX > 50) {
+      // Swipes right
+      showPrevImage();
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setTouchStartX(0);
+  };
+
 
   // const showNextImage = () => {
   //   setCurrentImageIndex((prevIndex) => {
@@ -36,6 +58,8 @@ const Home = () => {
   const showPrevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
+
+  //hover events
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -67,8 +91,11 @@ const Home = () => {
   return (
     
     <section className="home-section">
-      <div
+           <div
         className="image-container"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

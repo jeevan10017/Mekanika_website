@@ -440,14 +440,14 @@ const projectData = [
     ],
   },
  
-  // Add more projects here...
+  
 ];
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProjects, setFilteredProjects] = useState(projectData);
 
   useEffect(() => {
-    // Create a function to filter the projects
+    // function to filter the projects
     const filterProjects = () => {
       if (searchTerm === '') {
         setFilteredProjects(projectData);
