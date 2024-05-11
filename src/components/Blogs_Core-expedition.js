@@ -142,7 +142,7 @@ const BlogData = [
         ],
         blogTitle1: " Intern @ JLR",
         Link:"https://medium.com/@mekanika2022/core-expedition-manish-s-jlr-4efae6406790",
-        blogDescription1: "For the finance domain, you should start before that because you need to study new topics apart from your coursework which requires a certain amount of time. So I believe starting 6–8 months before the internship season is an appropriate time.."
+        blogDescription1: "For me, the resources that I referred to mostly were the textbooks that are recommended by professors. So, I mainly read through the chapters of the textbook. Practicing GATE questions will also help."
     },
     {
         id1: 10,

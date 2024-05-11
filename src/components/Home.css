@@ -164,8 +164,8 @@
 }
  h2 span{
   font-family: 'Playfair Display SC', serif; 
-  font-size: 50px; 
-  font-size: 3.3rem;
+  /* font-size: 36px;  */
+  font-size: 3rem;
   text-shadow: 2px 2px 2px  black;
   color: #ff0000; 
   white-space: nowrap; 

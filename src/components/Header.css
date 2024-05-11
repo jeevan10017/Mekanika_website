@@ -12,6 +12,7 @@
   cursor: pointer;
   font-family: 'IBM Plex Sans', sans-serif;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo {
@@ -33,7 +34,7 @@
 
 .logo h1 {
   margin: 0;
-  
+  font-size:xx-large;
   font-family: 'Playfair Display SC', serif;
   
   }

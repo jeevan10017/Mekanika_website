@@ -12,7 +12,7 @@
 }
 
 .section-heading h2 {
-  font-size: 36px;
+  font-size:2px;
   margin-bottom: 20px;
   color: rgb(75, 2, 88);
 }
@@ -44,6 +44,7 @@
   backdrop-filter: blur(2px);
   padding: 5px;
   border-radius: 30px;
+  /* font-family: 'Roboto', sans-serif; */
 }
 
 .image img {
