@@ -147,6 +147,7 @@
     cursor:pointer;
     border-radius: 10px;
     transition: background-color 1s , padding-left 1s , padding-right 1s , color-1s;
+    text-decoration: none;
 }
 .button:hover{
     color: #f7f4f2;

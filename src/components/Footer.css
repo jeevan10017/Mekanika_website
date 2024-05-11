@@ -98,12 +98,11 @@
   margin: 0.7rem;
   font-size: 1.5rem;
   color: rgb(190, 189, 189);
-  transition: font-size 1s ;
+  transition: transform 2s ease-in-out ;
 }
 
 .social-links a :hover{
-
-  font-size: 1.6rem;
+  transform: translateY(-3px);
   
 }
 .social-links {
