@@ -7,7 +7,7 @@ Welcome to the Mekanika website design README! This document provides an overvie
 1. **Home Page**: Introduces users to Mekanika, showcasing key information and images through a carousel.
 2. **About Us Page**: Provides detailed information about Mekanika, its mission, and its team.
 3. **Events Page**: Displays past events organized by Mekanika, allowing users to learn more and register.
-4. **Course Materials Page**: Offers access to course materials related to mechanical engineering students of IIT KGP.
+4. **Course Materials Page**: access to course materials of mechanical engineering department students of their respective semester 1 to 8 .
 5. **Projects Page**: Showcases various projects undertaken by Mechanical Engineering Dept Prof of IIT KGP, providing details and updates.
 6. **Blogs Page**:contains 2 series of blogs INTERN-CHRONICLES and CORE-EXPEDITION of the students who got intern in dept.
 7. **Quick Links**: Offers convenient navigation to key sections of the website from any page.
@@ -32,7 +32,7 @@ Welcome to the Mekanika website design README! This document provides an overvie
   - displaying Past Events
   - Quick Links
 - **Course Materials**
-  - Accessible course materials for mechanical engineering topics
+  - Accessible course materials for mechanical engineering topics from Semester 1 to semester 8.
   - Quick Links
 - **Projects**
   - Showcase of ongoing and past projects of Prof
