@@ -65,10 +65,20 @@ To run the Mekanika website locally:
 
 ## Technologies Used:
 
-- React.js: Frontend framework for building user interfaces.
-- React Router: Library for handling navigation and routing in React applications.
-- FontAwesome: Icon library for adding icons to the website.
-- CSS: Styling language used for designing the website layout and appearance.
+Certainly! Here's an updated section in the README file displaying all the technologies used in the Mekanika website design:
+
+- **React.js**: Frontend framework for building user interfaces.
+- **React Router**: Library for handling navigation and routing in React applications.
+- **FontAwesome**: Icon library for adding icons to the website.
+- **CSS**: Styling language used for designing the website layout and appearance.
+- **HTML**: Markup language used for structuring the web pages.
+- **JavaScript**: Programming language used for adding interactivity and dynamic behavior to the website.
+- **Node.js**: JavaScript runtime environment used for server-side scripting.
+- **npm**: Package manager for installing and managing project dependencies.
+- **Git**: Version control system for tracking changes in the project codebase.
+- **GitHub**: Hosting platform for managing and sharing Git repositories.
+- **Visual Studio Code**: Code editor used for writing and editing code files.
+These technologies were instrumental in developing the Mekanika website, providing the necessary tools and frameworks for building a modern and interactive web experience.
 
 ## Contributors:
 
