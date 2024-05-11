@@ -8,7 +8,8 @@ import CourseMaterial from './components/CourseMaterial';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Copyright from './components/Copyright';
-import Blogs from './components/Blogs';
+import BlogsCE from './components/Blogs_Core-expedition';
+import BlogsIC from './components/Blog_InternChronicles';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
 
         <Route path="/Mekanika_website_design" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/core-expedition" element={<Blogs />} />
+        <Route path="/core-expedition" element={<BlogsCE />} />
+        <Route path="/intern-chronicles" element={<BlogsIC />} />
         <Route path="/events" element={<Events />} />
         <Route path="/course-material" element={<CourseMaterial />} />
         <Route path="/projects" element={<Projects />} />

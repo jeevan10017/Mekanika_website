@@ -98,6 +98,13 @@
   margin: 0.7rem;
   font-size: 1.5rem;
   color: rgb(190, 189, 189);
+  transition: font-size 1s ;
+}
+
+.social-links a :hover{
+
+  font-size: 1.6rem;
+  
 }
 .social-links {
   display: flex;
@@ -105,7 +112,6 @@
   text-decoration: none;
   color: rgb(190, 189, 189);
   margin: 0rem;
- 
 
 }
 .social-links a :hover{
