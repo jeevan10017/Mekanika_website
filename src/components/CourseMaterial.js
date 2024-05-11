@@ -13,7 +13,7 @@ const CourseMaterial = () => {
   return (
     <section id="course-material" className="course-material-section">
       <div className="container">
-        <h2 className="section-title">Course Materials</h2>
+        {/* <h2 className="section-title">Course Materials</h2> */}
         <div className="course-materials">
           {courseMaterials.map((material, index) => (
             <a

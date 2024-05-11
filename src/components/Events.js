@@ -12,7 +12,7 @@ const Events = () => {
   return (
     <section id="events" className="events-section">
       <div className="container">
-        <h2 className="section-title">Past Events</h2>
+        
         <div className="event-cards">
           <div className="event-card">
             <div className="event-date">
