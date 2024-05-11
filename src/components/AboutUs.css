@@ -37,8 +37,13 @@
   line-height: 1.6;
   margin-bottom: 20px;
   color: #fcfafa;
-  font-weight: bold;
-  font-family: 'Protest Revolution', sans-serif;
+  /* font-weight: bold; */
+  /* font-family: 'Protest Revolution', sans-serif; */
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+  padding: 5px;
+  border-radius: 30px;
 }
 
 .image img {
