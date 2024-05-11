@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+## Mekanika Website Design
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Mekanika website design README! This document provides an overview of the features, hierarchy, pages, and more for the Mekanika website.
 
-## Available Scripts
+## Features:
 
-In the project directory, you can run:
+1. **Home Page**: Introduces users to Mekanika, showcasing key information and images through a carousel.
+2. **About Us Page**: Provides detailed information about Mekanika, its mission, and its team.
+3. **Events Page**: Displays past events organized by Mekanika, allowing users to learn more and register.
+4. **Course Materials Page**: Offers access to course materials related to mechanical engineering students of IIT KGP.
+5. **Projects Page**: Showcases various projects undertaken by Mechanical Engineering Dept Prof of IIT KGP, providing details and updates.
+6. **Blogs Page**:contains 2 series of blogs INTERN-CHRONICLES and CORE-EXPEDITION of the students who got intern in dept.
+7. **Quick Links**: Offers convenient navigation to key sections of the website from any page.
+8. **Contact Us**: Provides contact information for users to reach out to Mekanika for inquiries or collaborations.
+9. **Social Media Integration**: Connects users with Mekanika's social media profiles for further engagement.
 
-### `npm start`
+## Hierarchy:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Home**
+  - Carousel with images and brief information
+  - About Us Section
+  - Quick Links
+- **About Us**
+  - Detailed information about Mekanika
+  - Team member profiles
+  - Quick Links
+- **Blogs**
+  - Two series of blogs Intern-Chronicles and Core-Expedition.
+  - Collection of insightful blog posts
+  - Quick Links
+- **Events**
+  - displaying Past Events
+  - Quick Links
+- **Course Materials**
+  - Accessible course materials for mechanical engineering topics
+  - Quick Links
+- **Projects**
+  - Showcase of ongoing and past projects of Prof
+  - Quick Links
+- **Contact Us**
+  - Contact information and form
+  - Quick Links
+- **Footer**
+  - Mekanika logo and social media links
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pages:
 
-### `npm test`
+1. **Home Page**
+2. **About Us Page**
+3.  **Blogs Page**
+4. **Events Page**
+5. **Course Materials Page**
+6. **Projects Page**
+7. **Contact Us Page**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions:
 
-### `npm run build`
+To run the Mekanika website locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Start the development server using `npm start`.
+5. Open your web browser and visit `http://localhost:3000` to view the website.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React.js: Frontend framework for building user interfaces.
+- React Router: Library for handling navigation and routing in React applications.
+- FontAwesome: Icon library for adding icons to the website.
+- CSS: Styling language used for designing the website layout and appearance.
 
-### `npm run eject`
+## Contributors:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- JEEVAN KUMAR KORRA
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [MIT License](LICENSE).
