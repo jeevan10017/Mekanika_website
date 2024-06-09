@@ -88,7 +88,7 @@ const BlogData = [
         id1: 6,
         name1: " Aditya Uppal",
         role1: " PPO @ ITC & ex-KITES Intern",
-        imageUrl1:"https://media.licdn.com/dms/image/D4D03AQGaLsb_nR1nIQ/profile-displayphoto-shrink_400_400/0/1715067438148?e=1720656000&v=beta&t=BAVVsPm7nC8u67C41ynAobwxPYmXHj__W9NEy7WY3qc",
+        imageUrl1:"https://media.licdn.com/dms/image/D4D03AQH9Sy5UQGdQvA/profile-displayphoto-shrink_400_400/0/1715787750771?e=1722470400&v=beta&t=EgzCXL58s_9_raPFKrPAj8b9mtRdM6qa1dfoJdB9PSU",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/aditya-uppal/?originalSubdomain=in", icon: faLinkedin },

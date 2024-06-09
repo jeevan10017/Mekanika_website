@@ -3,7 +3,8 @@
     padding: 1px 0;
     max-width: 100%;
     position: relative;
-    background-image: url('./Mekanika_logo.png') no-repeat center center fixed;
+    background-image: url(../components/Images/lp.png) no-repeat center center fixed;
+  
     background-size: cover;
   
 

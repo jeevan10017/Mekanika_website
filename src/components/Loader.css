@@ -5,6 +5,7 @@
     align-items: center;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../components/Images/lp.png) no-repeat center center fixed;
     position: relative;
     top: 0;
     left: 0;

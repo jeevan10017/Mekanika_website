@@ -34,6 +34,7 @@
 }
 .projects-section {
   background-image: url(Mekanika_logo.png);
+  background-image: url(../components/Images/lp.png) no-repeat center center fixed;
   background-size: cover;
   background-position: center;
   overflow: hidden;
