@@ -1,5 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './Projects.css';
+import {
+  Container,
+  Card,
+  CardContent,
+  Typography,
+  Grid,
+  TextField,
+  IconButton,
+  InputAdornment,
+  CssBaseline,
+} from '@mui/material';
+import Autocomplete from '@mui/lab/Autocomplete';
+import SearchIcon from '@mui/icons-material/Search';
+import MicIcon from '@mui/icons-material/Mic';
+import Fuse from 'fuse.js';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const projectData = [
   {
@@ -442,75 +458,152 @@ const projectData = [
  
   
 ];
+
+const options = {
+  keys: ['title', 'Startdate', 'faculties.name', 'faculties.link'],
+  includeScore: true,
+};
+
+const fuse = new Fuse(projectData, options);
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark',
+    background: {
+      default: '#121212',
+      paper: '#1d1d1d',
+    },
+    text: {
+      primary: '#ffffff',
+      secondary: '#b0b0b0',
+    },
+  },
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& .MuiInputBase-input': {
+            color: '	#F0E68C',
+          },
+          '& .MuiInputLabel-root': {
+            color: '#b0b0b0',
+          },
+          '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#b0b0b0',
+          },
+          '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+            borderColor: '	#F0E68C',
+          },
+        },
+      },
+    },
+  },
+});
+
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProjects, setFilteredProjects] = useState(projectData);
 
   useEffect(() => {
-    // function to filter the projects
-    const filterProjects = () => {
-      if (searchTerm === '') {
-        setFilteredProjects(projectData);
-      } else {
-        const filtered = projectData.filter((project) => {
-          const titleMatch = project.title
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase());
-          const dateMatch = project.Startdate.includes(searchTerm);
-          const facultyMatch = project.faculties.some(
-            (faculty) =>
-              faculty.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-              faculty.link.toLowerCase().includes(searchTerm.toLowerCase())
-          );
-          return titleMatch || dateMatch || facultyMatch;
-        });
-        setFilteredProjects(filtered);
-      }
-    };
-
-    filterProjects(); 
-
-    return () => {
-      
-    };
+    if (searchTerm) {
+      const result = fuse.search(searchTerm);
+      setFilteredProjects(result.map(({ item }) => item));
+    } else {
+      setFilteredProjects(projectData);
+    }
   }, [searchTerm]);
 
+  const handleSearchChange = (event, value) => {
+    setSearchTerm(value);
+  };
+
+  const handleMicClick = () => {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.start();
+
+    recognition.onresult = (event) => {
+      const speechResult = event.results[0][0].transcript;
+      setSearchTerm(speechResult);
+    };
+
+    recognition.onspeechend = () => {
+      recognition.stop();
+    };
+
+    recognition.onerror = (event) => {
+      console.error('Error occurred in recognition: ' + event.error);
+    };
+  };
+
   return (
-    <section id="projects" className="projects-section">
-      <div className="container">
-        <h2 className="section-title">Ongoing Projects</h2>
-        <input
-          type="text"
-          className="search-bar"
-          placeholder="Search projects, dates, faculties..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <div className="project-container">
-          {filteredProjects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div>
-                <strong>Title:</strong> {project.title}
-              </div>
-              <div>
-                <strong>Date Start:</strong> {project.Startdate}
-              </div>
-              <div>
-                <strong>Faculties:</strong>{' '}
-                {project.faculties.map((faculty, i) => (
-                  <span key={i}>
-                    <a href={faculty.link} target="_blank" rel="noopener noreferrer">
-                      {faculty.name}
-                    </a>
-                    {i < project.faculties.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <section id="projects" className="projects-section">
+        <Container>
+          <Typography variant="h4" component="h2" align="center" gutterBottom>
+            Ongoing Projects in Department
+          </Typography>
+          <Autocomplete
+            freeSolo
+            options={projectData.map((project) => project.title)}
+            onInputChange={handleSearchChange}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Search projects, dates, faculties..."
+                variant="outlined"
+                fullWidth
+                fixed
+                InputProps={{
+                  ...params.InputProps,
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={handleMicClick} aria-label="search by voice">
+                        <MicIcon style={{ color: '#ffffff' }} />
+                      </IconButton>
+                      <IconButton aria-label="search">
+                        <SearchIcon style={{ color: '#ffffff' }} />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            )}
+          />
+          <Grid container spacing={4} style={{ marginTop: '20px' }}>
+            {filteredProjects.map((project) => (
+              <Grid item key={project.id} xs={12} sm={6} md={4} className="project-grid-item">
+                <Card className="project-card">
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      <strong>Date Start:</strong> {project.Startdate}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      <strong>Faculties:</strong>
+                      {project.faculties.map((faculty, i) => (
+                        <span key={i}>
+                          <a href={faculty.link} target="_blank" rel="noopener noreferrer" style={{ color: '#dbda74' }}>
+                            {faculty.name}
+                          </a>
+                          {i < project.faculties.length - 1 ? ', ' : ''}
+                        </span>
+                      ))}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </section>
+    </ThemeProvider>
   );
 };
 

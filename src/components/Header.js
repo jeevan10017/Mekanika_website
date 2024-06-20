@@ -1,57 +1,149 @@
 import React, { useState } from 'react';
-import './Header.css';
 import { Link } from 'react-router-dom';
-import Logo from './Mekanika_logo.png';
+import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Button, Box, Drawer, List, ListItem, ListItemText, Divider } from '@mui/material';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { styled } from '@mui/material/styles';
+import Logo from './Mekanika_logo.png';
+
+const LogoContainer = styled(Link)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  textDecoration: 'none',
+  color: 'inherit',
+}));
+
+const LogoImg = styled('img')(({ theme }) => ({
+  width: '50px',
+  height: '50px',
+  marginRight: theme.spacing(1),
+  borderRadius: '5px',
+}));
+
+const NavLinks = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  [theme.breakpoints.down('md')]: {
+    display: 'none',
+  },
+}));
+
+const MenuButton = styled(IconButton)(({ theme }) => ({
+  [theme.breakpoints.up('md')]: {
+    display: 'none',
+  },
+}));
+
+const DropdownMenu = styled(Menu)(({ theme }) => ({
+  '& .MuiPaper-root': {
+    backgroundColor: '#050505',
+    color: '#c6c2c2',
+  },
+}));
+
+const MenuItemStyled = styled(MenuItem)(({ theme }) => ({
+  color: '#c6c2c2',
+}));
+
+const DrawerContent = styled(Box)(({ theme }) => ({
+  width: '60vw',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.8)',
+  color: '#c6c2c2',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    setIsDropdownOpen(false);
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const handleMenuClose = () => {
+    setAnchorEl(null);
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    setIsDropdownOpen(false);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
-    <header className="header">
-      <div className="logo">
-        <img src={Logo} alt="Mekanika Logo" />
-        <h1>Mekanika</h1>
-      </div>
+    <>
+      <AppBar position="sticky" sx={{ background: '#020202', color: '#c6c2c2' }}>
+        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <LogoContainer to="/">
+            <LogoImg src={Logo} alt="Mekanika Logo" />
+            <Typography variant="h6" >Mekanika</Typography>
+          </LogoContainer>
+          <NavLinks>
+            <Button component={Link} to="/Mekanika_website_design" color="inherit">Home</Button>
+            <Button color="inherit" onClick={handleMenuOpen}>Blogs</Button>
+            <DropdownMenu
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+            >
+              <MenuItemStyled component={Link} to="/core-expedition" onClick={handleMenuClose}>Core Expedition</MenuItemStyled>
+              <MenuItemStyled component={Link} to="/intern-chronicles" onClick={handleMenuClose}>Intern Chronicles</MenuItemStyled>
+            </DropdownMenu>
+            <Button component={Link} to="/events" color="inherit">Events</Button>
+            <Button component={Link} to="/course-material" color="inherit">Course Material</Button>
+            <Button component={Link} to="/projects" color="inherit">Projects</Button>
+          </NavLinks>
+          <MenuButton
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            onClick={toggleMobileMenu}
+          >
+            {mobileMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+          </MenuButton>
+        </Toolbar>
+      </AppBar>
 
-      <div className="menu-icon" onClick={toggleMenu}>
-        {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-      </div>
-
-      <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-        <div className="menu-close-icon" onClick={closeMenu}></div>
-        <ul>
-          <li><Link to="/Mekanika_website_design" onClick={closeMenu}>Home</Link></li>
-          <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
-            <span onClick={toggleDropdown}>Blogs</span>
-            <div className="dropdown-content">
-              <Link to="/core-expedition" onClick={closeMenu}>Core Expedition</Link>
-              <Link to="/intern-chronicles" onClick={closeMenu}>Intern Chronicles</Link>
-            </div>
-          </li>
-
-          <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
-          <li><Link to="/course-material" onClick={closeMenu}>Course Material</Link></li>
-          <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
-        </ul>
-      </nav>
-    </header>
+      <Drawer
+        anchor="left"
+        open={mobileMenuOpen}
+        onClose={toggleMobileMenu}
+        PaperProps={{ style: { backgroundColor: 'rgba(0, 0, 0, 0.8)' } }}
+      >
+        <DrawerContent>
+          <List>
+            <ListItem button component={Link} to="/Mekanika_website_design" onClick={toggleMobileMenu}>
+              <ListItemText primary="Home" />
+            </ListItem>
+            <ListItem button onClick={handleMenuOpen}>
+              <ListItemText primary="Blogs" />
+            </ListItem>
+            <Divider style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+            <DropdownMenu
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+            >
+              <MenuItemStyled component={Link} to="/core-expedition" onClick={toggleMobileMenu}>Core Expedition</MenuItemStyled>
+              <MenuItemStyled component={Link} to="/intern-chronicles" onClick={toggleMobileMenu}>Intern Chronicles</MenuItemStyled>
+            </DropdownMenu>
+            <ListItem button component={Link} to="/events" onClick={toggleMobileMenu}>
+              <ListItemText primary="Events" />
+            </ListItem>
+            <ListItem button component={Link} to="/course-material" onClick={toggleMobileMenu}>
+              <ListItemText primary="Course Material" />
+            </ListItem>
+            <ListItem button component={Link} to="/projects" onClick={toggleMobileMenu}>
+              <ListItemText primary="Projects" />
+            </ListItem>
+          </List>
+        </DrawerContent>
+      </Drawer>
+    </>
   );
-}
+};
 
 export default Header;

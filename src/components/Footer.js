@@ -27,7 +27,7 @@ const Footer = ({ scrollToSection }) => {
                 <Link to="/Mekanika_website_design">Home</Link>
               </li>
               <li>
-                <Link to="/blogs">Blogs</Link>
+                <Link to="/core-expedition">Blogs</Link>
               </li>
               <li>
                 <Link to="/about">AboutUs</Link>
@@ -36,7 +36,7 @@ const Footer = ({ scrollToSection }) => {
                 <Link to="/events">Events</Link>
               </li>
               <li>
-                <Link to="/course-materials">CourseMaterials</Link>
+                <Link to="/course-material">CourseMaterials</Link>
               </li>
               <li>
                 <Link to="/projects">Projects</Link>

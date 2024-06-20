@@ -1,5 +1,5 @@
 .footer {
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(45, 42, 42);
   font-family: 'Roboto', sans-serif;
   padding: 2rem;
   display: flex;
@@ -28,14 +28,14 @@
 }
 .footer li a:hover {
   text-decoration: none;
-  color: orangered;
+  color: rgb(236, 215, 25);
 
 }
 .footer-navigation ul li a {
   text-decoration: none;
 }
 .footer-navigation ul li a:hover{
-  color: rgb(248, 3, 3);
+  color: rgb(248, 236, 3);
 }
 
 #logoo img{
@@ -114,7 +114,7 @@
 
 }
 .social-links a :hover{
-  color: coral;
+  color: rgb(255, 242, 0);
 }
 
 @media (max-width: 800px) {
