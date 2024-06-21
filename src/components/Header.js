@@ -65,7 +65,7 @@ const DrawerContent = styled(Box)(({ theme }) => ({
 }));
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
+  // const [, setAnchorEl] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownAnchorEl, setDropdownAnchorEl] = useState(null);
   const location = useLocation();
@@ -95,13 +95,13 @@ const Header = () => {
     }
   }, [location.pathname]);
 
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  // const handleMenuOpen = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleMenuClose = () => {
+  //   setAnchorEl(null);
+  // };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);

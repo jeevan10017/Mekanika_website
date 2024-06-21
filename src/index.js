@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Loader from './components/Loader'; // Import the Loader component
+import Loader from './components/Loader'; 
 import './index.css';
 
 const Root = () => {

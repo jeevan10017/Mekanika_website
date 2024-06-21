@@ -102,9 +102,6 @@ const Events = () => {
             <p className="event-description">Prof. Suman chakraborty for contributing his valuable time to this event. Mr. Chirodeep Bakli and Mr. Aditya Bandyopadhyay for their support in making the workshop a success</p>
             <a href="https://www.dropbox.com/sh/dw2l22584exgkbp/AACCYR3A5ckhpk0sLioemgPEa?dl=0" className="view-button">View</a>
           </div>
-          <div className="manymore">
-            <h4><p>And Many more Events  were conducted <a href="https://www.facebook.com/mekanikaiitkgp?mibextid=ZbWKwL" target="_blank" class="link">Click here</a></p>
-            </h4></div>
         </div>
       </div>
     </section>
