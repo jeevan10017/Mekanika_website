@@ -84,7 +84,7 @@
 
   .home-section {
     position: relative;
-    font-family: 'Nova Mono', monospace;
+    /* font-family: 'Nova Mono', monospace; */
     
   }
   
@@ -141,23 +141,13 @@
     opacity: 1;
   }
   
-  .overlay-text {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .overlay-subtext {
-    font-size: 24px;
-  }
-
+ 
 
 
 
 .mekanika-title {
   font-family: 'Your-Premium-Font-Here', sans-serif; 
   font-size: 100px; 
- 
   color: #1a1717; 
   white-space: nowrap; 
   overflow: hidden; 

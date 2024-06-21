@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Typography } from '@mui/material';
 import TeamImage from './Images/MEO3.jpg';
 import image1 from './Images/ME02.jpg';
 import image2 from './Images/MechDTalks.jpg';
@@ -137,7 +138,7 @@ const Home = () => {
           </div>
           <div className="content">
             <div className="text">
-            <p>
+              <p>
               Mekanika is a passionate community of students and Alummni of Department of Mechanical Engineering at IIT Kharagpur who are dedicated to advancing the field of
               Mechanical engineering. Our mission is to building connections,
               collaboration, and education in the world of Mechanical engineering.
@@ -147,6 +148,7 @@ const Home = () => {
               finding solutions to Mechanical Engineering students by conducting Events. Our team is
               committed to excellence and continuous learning.
             </p>
+           
             </div>
             <div className="image">
               <img src={TeamImage} alt="Our Team" />

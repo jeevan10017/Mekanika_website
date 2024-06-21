@@ -28,7 +28,8 @@
   max-width: 550px;
   text-align: center;
   margin-top: 20px;
-
+/* margin-left: 20px; */
+margin: calc(8% - 20px); 
 }
 
 .text p {
@@ -44,6 +45,8 @@
   padding: 5px;
   border-radius: 30px;
   /* font-family: 'Roboto', sans-serif; */
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 500;
 }
 
 .image img {
@@ -80,7 +83,7 @@
     font-size: 19px;
     line-height: 1.6;
     margin-bottom: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 }
 

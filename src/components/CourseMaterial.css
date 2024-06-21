@@ -187,3 +187,31 @@ text-transform: uppercase;
 }
 
 }
+.accordion-content {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px 20px; 
+}
+
+.course-material-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  color: gold;
+  font-weight: 400;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 1s, box-shadow 0.2s, background-color 1s, color 1s;
+  width: calc(100% - 40px); 
+  margin: 10px; 
+}
+
+.course-material-card:hover {
+  transform: translateY(-3px);
+  background-color: gold;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
