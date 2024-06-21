@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 import Copyright from './components/Copyright';
 import BlogsCE from './components/Blogs_Core-expedition';
 import BlogsIC from './components/Blog_InternChronicles';
-import NotFound from './components/NotFound'; // Create a NotFound component
 
 function App() {
   return (
