@@ -456,15 +456,15 @@ const projectData = [
     ],
   },
  
-  
 ];
 
-const options = {
-  keys: ['title', 'Startdate', 'faculties.name', 'faculties.link'],
+const fuseOptions = {
   includeScore: true,
+  threshold: 0.3, // Balance between strict and lenient matching
+  keys: ['title', 'Startdate', 'faculties.name', 'faculties.link'],
 };
 
-const fuse = new Fuse(projectData, options);
+const fuse = new Fuse(projectData, fuseOptions);
 
 const theme = createTheme({
   palette: {
@@ -483,7 +483,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiInputBase-input': {
-            color: '	#F0E68C',
+            color: '#F0E68C',
           },
           '& .MuiInputLabel-root': {
             color: '#b0b0b0',
@@ -492,7 +492,7 @@ const theme = createTheme({
             borderColor: '#b0b0b0',
           },
           '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '	#F0E68C',
+            borderColor: '#F0E68C',
           },
         },
       },
@@ -505,12 +505,17 @@ const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState(projectData);
 
   useEffect(() => {
-    if (searchTerm) {
-      const result = fuse.search(searchTerm);
-      setFilteredProjects(result.map(({ item }) => item));
-    } else {
-      setFilteredProjects(projectData);
-    }
+    const filterProjects = () => {
+      if (!searchTerm) {
+        setFilteredProjects(projectData);
+      } else {
+        const results = fuse.search(searchTerm);
+        const filtered = results.map(result => result.item);
+        setFilteredProjects(filtered);
+      }
+    };
+
+    filterProjects();
   }, [searchTerm]);
 
   const handleSearchChange = (event, value) => {
