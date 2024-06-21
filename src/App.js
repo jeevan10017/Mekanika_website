@@ -24,7 +24,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/course-material" element={<CourseMaterial />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="*" element={<NotFound />} />  {/* Default route for unmatched paths */}
+        {/* <Route path="*" element={<NotFound />} />  */}
       </Routes>
       <Footer />
       <Copyright/>
