@@ -10,22 +10,21 @@ import Footer from './components/Footer';
 import Copyright from './components/Copyright';
 import BlogsCE from './components/Blogs_Core-expedition';
 import BlogsIC from './components/Blog_InternChronicles';
+import NotFound from './components/NotFound'; // Create a NotFound component
 
 function App() {
   return (
     <Router>
         <Header />
       <Routes>
-
-        <Route path="/Mekanika_website_design" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/core-expedition" element={<BlogsCE />} />
         <Route path="/intern-chronicles" element={<BlogsIC />} />
         <Route path="/events" element={<Events />} />
         <Route path="/course-material" element={<CourseMaterial />} />
         <Route path="/projects" element={<Projects />} />
-
-        
+        <Route path="*" element={<NotFound />} />  {/* Default route for unmatched paths */}
       </Routes>
       <Footer />
       <Copyright/>
