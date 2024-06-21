@@ -159,7 +159,7 @@ const Header = () => {
       >
         <DrawerContent>
           <List>
-            <ListItem button component={Link} to="/Mekanika_website_design" onClick={toggleMobileMenu}>
+            <ListItem button component={Link} to="/" onClick={toggleMobileMenu}>
               <ListItemText primary="Home" />
             </ListItem>
             <ListItem button onClick={handleDropdownOpen}>
