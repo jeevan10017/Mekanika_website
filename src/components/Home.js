@@ -108,7 +108,7 @@ const Home = () => {
         {loading && <ImageLoader />}
         <div className="image-slider" style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
           {images.map((img, index) => (
-            <img key={index} src={img} alt={`Image ${index + 1}`} />
+            <img key={index} src={img} alt={` ${index + 1}`} />
           ))}
         </div>
         </>
