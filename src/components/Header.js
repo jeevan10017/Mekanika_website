@@ -125,7 +125,7 @@ const Header = () => {
           </LogoContainer>
           <MekanikaName variant="h5" sx={{ flexGrow: 1 }}>MEKANIKA</MekanikaName>
           <NavLinks>
-            <Button component={Link} to="/Mekanika_website_design" color="inherit">Home</Button>
+            <Button component={Link} to="/" color="inherit">Home</Button>
             <Button color="inherit" onClick={handleDropdownOpen}>Blogs</Button>
             <DropdownMenu
               anchorEl={dropdownAnchorEl}

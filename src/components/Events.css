@@ -1,18 +1,19 @@
 .events-section {
-  background-color: rgb(155, 243, 174);
-  padding: 100px 0;
+  background-color: #f0ebeb;
+  padding: 100px 20px; 
   font-family: 'Roboto', sans-serif;
   color: #faf8f8;
 }
-#events{
+
+#events {
   background-image: url(Mekanika_logo.png);
   background-size: cover;
   background-position: center;
   overflow: hidden;
   background-attachment: fixed;
 }
+
 #events::before {
-  
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -22,16 +23,26 @@
 .event-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  
+  justify-content: space-evenly;
+  gap: 20px; 
+  margin: 0 -10px; 
 }
 
 
+.event-card {
+  background-color: #09656c;
+  padding: 23px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(28.333% - 30px);
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+  animation: fadeInUp 1s ease forwards;
+}
+
 .event-card:hover {
-  transform: translateY(-10px);
-  box-shadow: rgb(240, 223, 127) 0px 0px 20px 0px;
-  
+  transform: translateY(-10px); 
 }
 
 .event-date {
@@ -49,97 +60,31 @@
 .event-date .month {
   font-size: 1rem;
   font-weight: bold;
-  color:rgb(75, 2, 88);
-}
-.event-date .year {
-  font-size: 0.8rem;
-  font-weight: bold;
+  color: rgb(75, 2, 88);
 }
 
 .event-date .day {
   font-size: 1.5rem;
 }
 
+.event-date .year {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: rgb(75, 2, 88);
+}
+
+
 .event-title {
   font-size: 1.25rem;
   margin-bottom: 10px;
-  color: rgb(75, 2, 88);
+  color:  #ef6c00;
 }
 
 .event-time {
   font-size: 1rem;
-  color: #666;
-}
-.event-date {
-  display: flex;
-  align-items: center;
+  color: #abaaaa;
 }
 
-.event-date .year {
-  font-size: 14px;
-  margin-left: 5px;
-  color: rgb(75, 2, 88);
-}
-
-.event-description {
-  font-size: 1rem;
-  color: #888;
-}
-.link {
-  color: rgb(224, 160, 235);
-  text-decoration: underline;
-}
-
-.events-section {
-  background-color: #edeaea;
-  padding: 100px 0;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.events-cards:hover
-.event-card:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.event-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.event-card:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.event-card:nth-child(4) {
-  animation-delay: 1s;
-}
-.event-card:nth-child(5) {
-  animation-delay: 1.2s;
-}
-.event-card:nth-child(6) {
-  animation-delay: 1.5s;
-}
-
-
-
-.events-section {
-  background-color: #f0ebeb;
-  padding: 100px 0;
-}
-
-
-.event-card:hover {
-  transform: translateY(-5px);
-  transform: scale(1.03);
-}
 
 .event-image img {
   max-width: 100%;
@@ -152,9 +97,13 @@
   transform: scale(1.05);
 }
 
+
 .event-description {
+  font-size: 1rem;
+  color: #cdcaca;
   margin-top: 10px;
 }
+
 
 .view-button {
   display: inline-block;
@@ -172,29 +121,27 @@
   background-color: rgb(54, 2, 63);
   transform: scale(1.05);
 }
-.event-card {
-  background-color: #cddac8;
-  padding: 23px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  width: calc(30.33% - 30px);
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease-in-out;
-  animation: fadeInUp 1s ease forwards; }
-  .event-card:hover(){
-transform: 1.02;
+
+
+@media (max-width: 1050px) {
+  .event-cards {
+    justify-content: center;
   }
 
-
-  @media (max-width: 1050px) {
-    .event-cards {
-      justify-content: center;
-    }
-  
-    .event-card {
-      width: 90%;
-      max-width: 400px;
-    }
+  .event-card {
+    width: 90%;
+    max-width: 400px;
   }
+}
 
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

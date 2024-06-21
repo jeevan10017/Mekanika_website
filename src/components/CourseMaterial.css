@@ -183,7 +183,7 @@ text-transform: uppercase;
   
   
 .course-material-card {
-  width : 350px
+  width : 200px
 }
 
 }
@@ -206,7 +206,7 @@ text-transform: uppercase;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 1s, box-shadow 0.2s, background-color 1s, color 1s;
   width: calc(100% - 40px); 
-  margin: 10px; 
+  margin-bottom: 15px; 
 }
 
 .course-material-card:hover {

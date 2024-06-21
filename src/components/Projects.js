@@ -475,7 +475,7 @@ const theme = createTheme({
     },
     text: {
       primary: '#ffffff',
-      secondary: '#b0b0b0',
+      secondary: '#F0E68C',
     },
   },
   components: {
@@ -492,7 +492,7 @@ const theme = createTheme({
             borderColor: '#b0b0b0',
           },
           '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#F0E68C',
+            borderColor: '#eadc5f',
           },
         },
       },

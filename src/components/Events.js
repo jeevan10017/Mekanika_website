@@ -103,6 +103,9 @@ const Events = () => {
             <a href="https://www.dropbox.com/sh/dw2l22584exgkbp/AACCYR3A5ckhpk0sLioemgPEa?dl=0" className="view-button">View</a>
           </div>
         </div>
+        <div>
+          
+        </div>
       </div>
     </section>
 
