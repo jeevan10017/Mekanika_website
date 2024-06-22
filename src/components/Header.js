@@ -65,7 +65,6 @@ const DrawerContent = styled(Box)(({ theme }) => ({
 }));
 
 const Header = () => {
-  // const [, setAnchorEl] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownAnchorEl, setDropdownAnchorEl] = useState(null);
   const location = useLocation();
@@ -95,14 +94,6 @@ const Header = () => {
     }
   }, [location.pathname]);
 
-  // const handleMenuOpen = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
-
-  // const handleMenuClose = () => {
-  //   setAnchorEl(null);
-  // };
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -113,6 +104,11 @@ const Header = () => {
 
   const handleDropdownClose = () => {
     setDropdownAnchorEl(null);
+  };
+
+  const handleMenuItemClick = () => {
+    handleDropdownClose();
+    setMobileMenuOpen(false);
   };
 
   return (
@@ -133,8 +129,8 @@ const Header = () => {
               open={Boolean(dropdownAnchorEl)}
               onClose={handleDropdownClose}
             >
-              <MenuItemStyled component={Link} to="/core-expedition" onClick={handleDropdownClose}>Core Expedition</MenuItemStyled>
-              <MenuItemStyled component={Link} to="/intern-chronicles" onClick={handleDropdownClose}>Intern Chronicles</MenuItemStyled>
+              <MenuItemStyled component={Link} to="/core-expedition" onClick={handleMenuItemClick}>Core Expedition</MenuItemStyled>
+              <MenuItemStyled component={Link} to="/intern-chronicles" onClick={handleMenuItemClick}>Intern Chronicles</MenuItemStyled>
             </DropdownMenu>
             <Button component={Link} to="/events" color="inherit">Events</Button>
             <Button component={Link} to="/course-material" color="inherit">Course Material</Button>
@@ -172,8 +168,8 @@ const Header = () => {
               open={Boolean(dropdownAnchorEl)}
               onClose={handleDropdownClose}
             >
-              <MenuItemStyled component={Link} to="/core-expedition" onClick={toggleMobileMenu}>Core Expedition</MenuItemStyled>
-              <MenuItemStyled component={Link} to="/intern-chronicles" onClick={toggleMobileMenu}>Intern Chronicles</MenuItemStyled>
+              <MenuItemStyled component={Link} to="/core-expedition" onClick={handleMenuItemClick}>Core Expedition</MenuItemStyled>
+              <MenuItemStyled component={Link} to="/intern-chronicles" onClick={handleMenuItemClick}>Intern Chronicles</MenuItemStyled>
             </DropdownMenu>
             <ListItem button component={Link} to="/events" onClick={toggleMobileMenu}>
               <ListItemText primary="Events" />

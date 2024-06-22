@@ -93,7 +93,7 @@
 }
 
 .semester-accordion {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .semester-accordion .accordion-content {
@@ -111,7 +111,7 @@
   justify-content: center; 
   align-items: center; 
   cursor: pointer;
-  background: linear-gradient(135deg, #3d3e3e 0%, #041b1d 100%);
+  background: linear-gradient(135deg, #3d3e3e 0%, #101111 100%);
   color: #333;
   padding: 15px 15px;
   border-radius: 8px;
@@ -178,7 +178,7 @@ text-transform: uppercase;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: linear-gradient(135deg, #3d3e3e 0%, #041b1d 100%);
+  background: linear-gradient(135deg, #3d3e3e 0%, #101111 100%);
   border-radius: 8px;
   text-decoration: none;
   color: gold;
@@ -187,7 +187,7 @@ text-transform: uppercase;
   transition: transform 1s, box-shadow 0.2s, background-color 1s, color 1s;
   width: calc(100% - 40px); 
   align-items: center;
-  margin-bottom: 15px; 
+  margin-bottom: 10px; 
 }
 
 .course-material-card:hover {

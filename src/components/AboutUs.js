@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './AboutUs.css';
-import TeamImage from './Images/MEO3.jpg';
+import TeamImage from './Images/mekanika_Team.jpg';
 
 
 
