@@ -111,7 +111,7 @@
   justify-content: center; 
   align-items: center; 
   cursor: pointer;
-  background-color: #2a2828;
+  background: linear-gradient(135deg, #3d3e3e 0%, #041b1d 100%);
   color: #333;
   padding: 15px 15px;
   border-radius: 8px;
@@ -123,8 +123,8 @@ text-transform: uppercase;
 }
 
 .accordion-label:hover {
-  background-color: gold;
-  color: #333;
+  background: linear-gradient(135deg, rgb(222, 189, 2) 0%, rgb(61, 52, 4) 100%);
+  color: #1c1c1c;
 }
 
 .accordion-content {
@@ -138,27 +138,7 @@ text-transform: uppercase;
   max-height: 1000px; 
 }
 
-.course-material-card {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  padding: 15px 0; 
-  background-color: #333;
-  border-radius: 8px;
-  text-decoration: none;
-  color: gold ;
-  font-weight: 400;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 1s, box-shadow 0.2s,background-color 1s,color 1s;
-  width: 500px;
-}
 
-.course-material-card:hover {
-  transform: translateY(-3px);
-  background-color: gold;
-  color: #333;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-}
 
 
 @media (min-width: 992px) {
@@ -198,7 +178,7 @@ text-transform: uppercase;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background-color: #333;
+  background: linear-gradient(135deg, #3d3e3e 0%, #041b1d 100%);
   border-radius: 8px;
   text-decoration: none;
   color: gold;
@@ -206,12 +186,13 @@ text-transform: uppercase;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 1s, box-shadow 0.2s, background-color 1s, color 1s;
   width: calc(100% - 40px); 
+  align-items: center;
   margin-bottom: 15px; 
 }
 
 .course-material-card:hover {
   transform: translateY(-3px);
-  background-color: gold;
+  background: linear-gradient(135deg, rgb(222, 189, 2) 0%, rgb(61, 52, 4) 100%);
   color: #333;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }

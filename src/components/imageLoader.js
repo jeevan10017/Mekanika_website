@@ -4,9 +4,9 @@ import './ImageLoader.css';
 const ImageLoader = () => {
   return (
     <div className="image-loader-container">
-    <div class="bg">
-  <div class="loader"></div>
-</div>
+      <div className="bg">
+        <div className="loader"></div>
+      </div>
     </div>
   );
 }
