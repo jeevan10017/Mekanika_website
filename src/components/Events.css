@@ -158,6 +158,7 @@
   opacity: 0; /* Initially hidden */
   transform: translateY(90px); /* Initial position for the animation */
   transition: opacity 0.5s ease, transform 0.5s ease;
+  text-decoration: none;
 }
 
 .event-card.fade-up {
