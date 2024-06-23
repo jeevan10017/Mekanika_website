@@ -117,9 +117,9 @@ const Header = () => {
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <LogoContainer to="/">
             <LogoImg src={Logo} alt="Mekanika Logo" />
-            <Typography variant="h5">MEKANIKA</Typography>
+            <Typography variant="h5">SAI KUMAR</Typography>
           </LogoContainer>
-          <MekanikaName variant="h5" sx={{ flexGrow: 1 }}>MEKANIKA</MekanikaName>
+          <MekanikaName variant="h5" sx={{ flexGrow: 1 }}>SAI KUMAR</MekanikaName>
           <NavLinks>
             <Button component={Link} to="/" color="inherit">Home</Button>
             <Button color="inherit" onClick={handleDropdownOpen}>Blogs</Button>
