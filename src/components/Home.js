@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import TeamImage from './Images/mekanika_Team.jpg';
+import TeamImage from './Images/MEO3.jpg';
 import image1 from './Images/ME02.jpg';
 import image2 from './Images/MechDTalks.jpg';
 import image3 from './Images/ME1.jpg';
@@ -9,6 +9,7 @@ import image4 from './Images/ME003.jpg';
 import image5 from './Images/ME5.jpg';
 import './Home.css';
 import ImageLoader from './imageLoader';
+import Image1 from './Event01.jpg';
 
 const Home = () => {
  

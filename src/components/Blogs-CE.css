@@ -4,7 +4,8 @@
   padding: 32px;
   font-family: 'Times New Roman', Times, serif;
   flex-wrap: wrap; 
-  background-image: url(../components/Images/Designer1.png);
+  /* background-color: #f7f4f2; */
+  /* background-image: url(../components/Images/Designer1.png); */
   background-attachment: fixed;
   background-size: cover;
   

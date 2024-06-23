@@ -180,6 +180,9 @@ const Header = () => {
             <ListItem button component={Link} to="/projects" onClick={toggleMobileMenu}>
               <ListItemText primary="Projects" />
             </ListItem>
+            <ListItem button component={Link} to="/about" onClick={toggleMobileMenu}>
+              <ListItemText primary="AboutUs" />
+            </ListItem>
           </List>
         </DrawerContent>
       </Drawer>

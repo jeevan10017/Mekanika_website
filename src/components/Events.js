@@ -12,9 +12,9 @@ import MATLAB from './MATLAB.jpg';
 const Events = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // duration of the animation
+      duration: 1000, 
       easing: 'ease-in-out',
-      once: true, // whether animation should happen only once - while scrolling down
+      once: true, 
     });
   }, []);
 

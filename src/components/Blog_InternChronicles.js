@@ -40,7 +40,7 @@ const BlogData = [
         id: 3,
         name: " Vanshul Shikkewal",
         role: "DS Intern @ PUMA",
-        imageUrl: "https://media.licdn.com/dms/image/D4D03AQEPxoPTXEtn0A/profile-displayphoto-shrink_400_400/0/1715283203024?e=1720656000&v=beta&t=fwn93cYmnI6zjtp-4355RZZb2iH8sgxW3ECefwRPHm0",
+        imageUrl: "https://media.licdn.com/dms/image/D4D03AQGUaUYWYgKx_Q/profile-displayphoto-shrink_400_400/0/1718258297542?e=1724889600&v=beta&t=L-J2Nb819Of7ie7ohQKeGfJ_E9j9HUiBclR7HyTgono",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/vanshul2723/?originalSubdomain=in", icon: faLinkedin },
