@@ -111,7 +111,7 @@
   .image-container {
     position: relative;
     max-width: 100%; 
-    height: 430px; 
+    height: 530px; 
     margin:  auto;
     margin-top: 0;
     margin-bottom: 1px;
@@ -228,7 +228,7 @@
     }
     .image-container {
     
-      height: 220px; 
+      height: 320px; 
    
     }
 }
@@ -247,7 +247,13 @@
 @media (max-width: 450px){
   .home-image {
     max-width: 100%;
-    height: 150px;
+    height: 250px;
+  }
+  .image-container {
+    padding-Top: 40px;
+    
+    height: 320px; 
+ 
   }
   h2 span{
     font-size: 2.5rem; 

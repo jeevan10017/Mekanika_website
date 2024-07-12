@@ -113,7 +113,16 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ background: '#020202', color: '#c6c2c2' }}>
+      <AppBar sx={{backgroundColor: 'rgba(0, 0, 0, 0.8)', color: '#c6c2c2', marginTop: '15px' ,marginRight:"70px" , width:"90%",borderRadius:"10px",backdropFilter: "blur(3px)",
+      
+            '@media (max-width: 600px)': {
+              margin:0,
+              width:"100%",
+              borderRadius:0,
+              backdropFilter: "none",
+              backgroundColor: 'black',
+            }
+      }}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <LogoContainer to="/">
             <LogoImg src={Logo} alt="Mekanika Logo" />

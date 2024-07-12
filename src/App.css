@@ -1,5 +1,28 @@
-.App {
-  text-align: center;
-  max-width: 100%;
+/* For Chrome, Safari, and Opera */
+*::-webkit-scrollbar {
+  width: 8px;  /* Width of the entire scrollbar */
+  height: 8px; /* Height of the scrollbar if needed for horizontal scrolling */
+}
 
+*::-webkit-scrollbar-track {
+  background: transparent;  /* Color of the scrollbar track */
+  border-radius: 10px;  /* Roundness of the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, gold, orange);  /* Gradient color for the scrollbar thumb */
+  border-radius: 10px;  /* Roundness of the scrollbar thumb */
+  border: 2px solid #0f0e0e;  /* Creates padding around thumb */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adding shadow to the thumb for better visibility */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 217, 2, 0.3) rgba(0, 0, 0, 0.9);
+}
+
+/* Optional: Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
 }
