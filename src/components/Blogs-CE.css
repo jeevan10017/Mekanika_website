@@ -9,6 +9,7 @@
   background-attachment: fixed;
   background-size: cover;
   margin-top: 25px;
+  
 }
 
 .blog-item1 {
@@ -104,6 +105,7 @@ padding-bottom: 10px;
 z-index: 1;
 /* border-left: #ea7311 6px solid; */
 margin-left: 10px;
+
 }
 
 .name {
@@ -121,7 +123,7 @@ margin-left: 10px;
 .blog-description {
   color: #333;
   color: rgb(75, 2, 88);
-  font-size: medium;
+  font-size: 1.5rem;
   line-height: 1.3rem;
   max-height: 4.2em;
   overflow: hidden;
@@ -130,6 +132,9 @@ margin-left: 10px;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   font-family: 'Times New Roman', Times, serif;
+  /* font-family: "Comfortaa", sans-serif; */
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 .button1{
   color: rgb(16, 16, 16);
@@ -211,4 +216,10 @@ margin-left: 10px;
   animation: fadeInOnScroll 1s ease forwards;
   animation-delay: 1s; 
 }
-
+.name{
+  color: rgb(250, 247, 245);
+}
+.blog-description{
+  color: rgb(147, 144, 142);
+  font-size: medium;
+}

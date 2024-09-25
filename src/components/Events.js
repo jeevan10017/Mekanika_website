@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import './Events.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Image1 from './Event01.jpg';
-import Image2 from './Event02.jpg';
-import InternTalk from './InternTalk.jpg';
-import MechDTalk from './MechDTalks.jpg';
-import Cricket from './cricket.jpg';
-import MATLAB from './MATLAB.jpg';
+import Image1 from './Images/Event01.jpg';
+import Image2 from './Images/Event02.jpg';
+import InternTalk from './Images/InternTalk.jpg';
+import MechDTalk from './Images/MechDTalks.jpg';
+import Cricket from './Images/cricket.jpg';
+import MATLAB from './Images/MATLAB.jpg';
+
 
 const Events = () => {
   useEffect(() => {
@@ -21,8 +22,8 @@ const Events = () => {
   return (
     <section id="events" className="events-section">
       <div className="container">
-        <div className="event-cards">
-          <a className="event-card" data-aos="fade-up" href="https://iitkgpacin-my.sharepoint.com/personal/asishpani03_kgpian_iitkgp_ac_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fasishpani03%5Fkgpian%5Fiitkgp%5Fac%5Fin%2FDocuments%2FDSLR%20Photography%2FMEKANIKA%2FKnow%20Your%20Mates&ga=1">
+        <div className="event-cards" data-aos="fade-up">
+          <a className="event-card" data-aos="flip-down" href="https://iitkgpacin-my.sharepoint.com/personal/asishpani03_kgpian_iitkgp_ac_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fasishpani03%5Fkgpian%5Fiitkgp%5Fac%5Fin%2FDocuments%2FDSLR%20Photography%2FMEKANIKA%2FKnow%20Your%20Mates&ga=1">
             <div className="event-date">
               <span className="month">Nov</span>
               <span className="day">28 </span>
@@ -31,7 +32,7 @@ const Events = () => {
             <h3 className="event-title">Know Your Department</h3>
             <p className="event-time">5:30 PM - 8:30 PM</p>
             <div className="event-image">
-              <img src={Image1} alt="Event" />
+              <img src={Image1} alt="Event" data-aos="flip-up"/>
             </div>
             <p className="event-description">It was a fun-filled occasion with a large turnout of freshers. The evening began with a really interesting introduction of freshers, followed by a variety of activities and games</p>
           </a>
@@ -44,7 +45,7 @@ const Events = () => {
             <h3 className="event-title">Mech'D talks</h3>
             <p className="event-time">6:30 PM - 8:30 PM</p>
             <div className="event-image">
-              <img src={MechDTalk} alt="Event" />
+              <img src={MechDTalk} alt="Event" data-aos="flip-up"/>
             </div>
             <p className="event-description">Mekanika had successful conduction of Mech'D talks- a fundae session for Sophomores & Juniors for valuable insights regarding topics ranging from nailing end-sems to utilising the winter break and much mo</p>
           </a>
@@ -57,7 +58,7 @@ const Events = () => {
             <h3 className="event-title">Intern Talk</h3>
             <p className="event-time">8:00 PM - 10:00PM</p>
             <div className="event-image">
-              <img src={InternTalk} alt="Event" />
+              <img src={InternTalk} alt="Event" data-aos="flip-up" />
             </div>
             <p className="event-description">Intern talk was conducted by mekanika for the students who will be having their CDC intern process for following semester. More active participation by the interested students.</p>
           </a>
@@ -70,7 +71,7 @@ const Events = () => {
             <h3 className="event-title">Industrial Trip</h3>
             <p className="event-time">5:30 AM - 5:30 PM</p>
             <div className="event-image">
-              <img src={Image2} alt="Event" />
+              <img src={Image2} alt="Event"data-aos="flip-up" />
             </div>
             <p className="event-description">Mekanika organized an Industrial Trip on 09/03/2020(Monday)by Prof Rajaram Lakkaraju. TATA Motars had gave the Opportunity to students for this event</p>
           </a>
@@ -83,7 +84,7 @@ const Events = () => {
             <h3 className="event-title">Cricket Tournment</h3>
             <p className="event-time">10:00 AM - 05:00 PM</p>
             <div className="event-image">
-              <img src={Cricket} alt="Event" />
+              <img src={Cricket} alt="Event" data-aos="flip-up" />
             </div>
             <p className="event-description">organised a cricket match for the batch of 2017 which saw enthusiastic participation of the to-be alums of our department.</p>
           </a>
@@ -96,7 +97,7 @@ const Events = () => {
             <h3 className="event-title">MatLab Workshop</h3>
             <p className="event-time">5:30 PM - 7:30 PM</p>
             <div className="event-image">
-              <img src={MATLAB} alt="Event" />
+              <img src={MATLAB} alt="Event" data-aos="flip-up"/>
             </div>
             <p className="event-description">Prof. Suman chakraborty for contributing his valuable time to this event. Mr. Chirodeep Bakli and Mr. Aditya Bandyopadhyay for their support in making the workshop a success</p>
           </a>

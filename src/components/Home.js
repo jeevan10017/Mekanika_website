@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -7,49 +8,54 @@ import image2 from './Images/MechDTalks.jpg';
 import image3 from './Images/ME1.jpg';
 import image4 from './Images/ME003.jpg';
 import image5 from './Images/ME5.jpg';
+import image6 from './Images/MATLAB.jpg';
+
 import './Home.css';
-import ImageLoader from './imageLoader';
-import Image1 from './Event01.jpg';
+import AOS from 'aos'; 
+import 'aos/dist/aos.css';
+
 
 const Home = () => {
  
   
-  const images = [image1, image2, image3, image4, image5];
+  const images = [image1, image2, image3, image4, image5, image6];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(0);
- 
+  const [isSwiping, setIsSwiping] = useState(false);
 
-  //touch events
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out',
+    });
+  }, []);
+
+
   const handleTouchStart = (e) => {
     setTouchStartX(e.touches[0].clientX);
+    setIsSwiping(true);
   };
 
   const handleTouchMove = (e) => {
-    if (touchStartX - e.touches[0].clientX > 50) {
-      // Swipes left
+    if (!isSwiping) return;
+
+    const touchEndX = e.touches[0].clientX;
+    const swipeDistance = touchStartX - touchEndX;
+
+    if (swipeDistance > 50) {
       showNextImage();
-    } else if (e.touches[0].clientX - touchStartX > 50) {
-      // Swipes right
+      setIsSwiping(false);
+    } else if (swipeDistance < -50) {
       showPrevImage();
+      setIsSwiping(false);
     }
   };
 
   const handleTouchEnd = () => {
+    setIsSwiping(false);
     setTouchStartX(0);
   };
 
-
-  // const showNextImage = () => {
-  //   setCurrentImageIndex((prevIndex) => {
-  //     if (prevIndex === images.length - 1) {
-  //       // If it's the last image, reset to the first image
-  //       return 0;
-  //     } else {
-  //       // Otherwise, move to the next image
-  //       return prevIndex + 1;
-  //     }
-  //   });
-  // };
   const showNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -60,13 +66,11 @@ const Home = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  //hover events
 
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     let interval;
-
     if (!isHovered) {
       interval = setInterval(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -76,24 +80,12 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [isHovered, setCurrentImageIndex, images.length]);
 
-  //loading image
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-      const delay = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(delay);
-  }, []);
-
-
-
   return (
     
-    <section className="home-section">
+    <section className="home-section" data-aos="fade-down">
            <div
         className="image-container"
+        data-aos="fade-down"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -106,7 +98,6 @@ const Home = () => {
           onClick={showPrevImage}
         />
         <>
-        {loading && <ImageLoader />}
         <div className="image-slider" style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
           {images.map((img, index) => (
             <img key={index} src={img} alt={` ${index + 1}`} />
@@ -124,33 +115,22 @@ const Home = () => {
         <div className="about-us-overlay"></div>
         <div className="container">
 
-          <div className="section-heading">
-            <h2 className="mekanika-title">
-              <span>M</span>
-              <span>E</span>
-              <span>K</span>
-              <span>A</span>
-              <span>N</span>
-              <span>I</span>
-              <span>K</span>
-              <span>A</span>
-            </h2>
-          </div>
+          
           <div className="content">
-            <div className="text">
-              <p>
+            <div className="text" >
+              <p data-aos="fade-right">
               Mekanika is a passionate community of students and Alummni of Department of Mechanical Engineering at IIT Kharagpur who are dedicated to advancing the field of
               Mechanical engineering. Our mission is to building connections,
               collaboration, and education in the world of Mechanical engineering.
             </p>
-            <p>
+            <p data-aos="fade-right">
               We believe in pushing boundaries, exploring new frontiers, and
               finding solutions to Mechanical Engineering students by conducting Events. Our team is
               committed to excellence and continuous learning.
             </p>
            
             </div>
-            <div className="image">
+            <div className="image" data-aos="flip-down">
               <img src={TeamImage} alt="Our Team" />
             </div>
           </div>

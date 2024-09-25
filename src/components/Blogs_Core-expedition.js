@@ -1,18 +1,19 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import './Blogs-CE.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import img_sayantan from '../components/Images/sayantan.png'
 import img_manish from '../components/Images/manish1.png'
-
+import AOS from 'aos'; 
+import 'aos/dist/aos.css';
 
 const BlogData = [
     {
         id1: 1,
         name1: " Aniketh S Gund  ",
         role1: "Intern @ Tata Steel",
-        imageUrl1:"https://media.licdn.com/dms/image/D4D03AQHtCqufRIJ0YA/profile-displayphoto-shrink_400_400/0/1699040399807?e=1720656000&v=beta&t=TVSrDV-9MOw7u3qMk0uqdFY6NDeN4l9EJPBpn5uCWTM",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D4D03AQHtCqufRIJ0YA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1699040399807?e=1732752000&v=beta&t=4NZFGupc6ip1mCGYXikob00USqcSeSbnhqE_csWW6E8",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/aniketh-sridhar-gund-b4b682226/?trk=people_directory&originalSubdomain=in", icon: faLinkedin },
@@ -27,7 +28,7 @@ const BlogData = [
         id1: 2,
         name1: " Sambhav Jena  ",
         role1: "intern(core) @ Dr.Reddy's",
-        imageUrl1:"https://media.licdn.com/dms/image/D5603AQFYjLFCtEg_uQ/profile-displayphoto-shrink_400_400/0/1688897873591?e=1720656000&v=beta&t=F6f7OatuIQIVGEbjwL-kPg-pfNa2Uf0Krk7NaecIA00",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D5603AQFYjLFCtEg_uQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688897873591?e=1732752000&v=beta&t=k36A6R4mbMVQXFjaKwlVLdHbazIZArcu3nybwLifzPk",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/sambhav-jena-7a7ab5200/?originalSubdomain=in", icon: faLinkedin },
@@ -42,7 +43,7 @@ const BlogData = [
         id1: 3,
         name1: " Tanushree Prasad",
         role1: "Intern @ Tata Steel",
-        imageUrl1:"https://media.licdn.com/dms/image/D4D03AQGymmq6Dyn2IA/profile-displayphoto-shrink_400_400/0/1696237061231?e=1720656000&v=beta&t=-aWX9rUX4h3m29dgx6-K7on2ND2LwukFBT5uFGKUrvM",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D4D03AQGymmq6Dyn2IA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696237061231?e=1732752000&v=beta&t=T3RWcRnPI71iCT9NR558WtP3Yuhs4gyMHj6OYz84NZk",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/tanushree-prasad-134293232/?originalSubdomain=in", icon: faLinkedin },
@@ -73,7 +74,7 @@ const BlogData = [
         id1: 5,
         name1: " Chethan Girish",
         role1: " KITES Intern @ ITC Limited",
-        imageUrl1:"https://media.licdn.com/dms/image/D4E03AQFbwn-a6vzhZQ/profile-displayphoto-shrink_400_400/0/1688113084979?e=1720656000&v=beta&t=yj8KcGU365g40Y9d1PXNnvDICVIfY89GLqOxRZuorUM",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D4E03AQFbwn-a6vzhZQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688113084979?e=1732752000&v=beta&t=hQBqRRtXjXyRaJajSDC74skw6rClsX_jbXTTLKbEVlg",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/chethan-girish/?originalSubdomain=in", icon: faLinkedin },
@@ -88,7 +89,7 @@ const BlogData = [
         id1: 6,
         name1: " Aditya Uppal",
         role1: " PPO @ ITC & ex-KITES Intern",
-        imageUrl1:"https://media.licdn.com/dms/image/D4D03AQH9Sy5UQGdQvA/profile-displayphoto-shrink_400_400/0/1715787750771?e=1722470400&v=beta&t=EgzCXL58s_9_raPFKrPAj8b9mtRdM6qa1dfoJdB9PSU",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D4D03AQH9Sy5UQGdQvA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715787750771?e=1732752000&v=beta&t=7iWy0gMs3Gc95oBCt75xAxB7371Jd1qj-f_hypwJzuc",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/aditya-uppal/?originalSubdomain=in", icon: faLinkedin },
@@ -103,7 +104,7 @@ const BlogData = [
         id1: 7,
         name1: " Debojyoti Roy",
         role1: "  GTE Intern @ Bajaj Auto Ltd",
-        imageUrl1:"https://media.licdn.com/dms/image/D5603AQHD7H51yM7mfQ/profile-displayphoto-shrink_400_400/0/1677567130138?e=1720656000&v=beta&t=V0ACM4iMtzWii0bNLwMo7tY4zKIM3XdANoagC4bFOm8",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D5603AQHD7H51yM7mfQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1677567130138?e=1732752000&v=beta&t=sUCHkKqPD8JU-akaKZ0-DCzE7vj5yIwPmN3EZFwG9Y4",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/debojyoti-roy-bb5329233/?originalSubdomain=in", icon: faLinkedin },
@@ -118,7 +119,7 @@ const BlogData = [
         id1: 8,
         name1: "  Ashutosh Dash",
         role1: "   Intern @ Bajaj Auto Ltd",
-        imageUrl1:"https://media.licdn.com/dms/image/D5603AQH54F9JU3Z8qw/profile-displayphoto-shrink_400_400/0/1703677512493?e=1720656000&v=beta&t=iqkq_HWDo1grLMa-fyP3jQy3KD7WqFSt_mUUjhI1LLg",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D5603AQH54F9JU3Z8qw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703677512493?e=1732752000&v=beta&t=m9roEwiypn179YuTq_vO8FeZ-8pHVXgqV6a-3Q4btcY",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/ashutosh-dash-7b801b234/?trk=public_profile_browsemap&originalSubdomain=in", icon: faLinkedin },
@@ -148,7 +149,7 @@ const BlogData = [
         id1: 10,
         name1: "   Praveen Yadav ",
         role1: " Intern @ JLR",
-        imageUrl1:"https://media.licdn.com/dms/image/D4D03AQFIdRGd6wmdMA/profile-displayphoto-shrink_400_400/0/1693891981802?e=1720656000&v=beta&t=giGip-JirnLQrr65kN3RF74JgBalB2r8MtPn5D1Ozlg",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D4D03AQFIdRGd6wmdMA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693891981802?e=1732752000&v=beta&t=y0m_I6SBrHszSl00RcqJpd4JzsfJQQYR-qkKUxpBYxA",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/praveen-yadav-933437190/?originalSubdomain=in", icon: faLinkedin },
@@ -163,7 +164,7 @@ const BlogData = [
         id1: 11,
         name1: " Snehal Swadhin ",
         role1: " Product @Ather Energy ",
-        imageUrl1:"https://media.licdn.com/dms/image/D4D03AQEtJcYqWGT0nw/profile-displayphoto-shrink_400_400/0/1680937466698?e=1720656000&v=beta&t=xCYcImQdNiCvzNdNJE2bxh-rnj9xM12xTHFXi7Z2PvI",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D4D03AQEtJcYqWGT0nw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680937466698?e=1732752000&v=beta&t=K2oXuBCTFlvqzp-KTyojuhGl2vcfXeBWNlICQ_Apu4I",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/snehalswadhin/?originalSubdomain=in", icon: faLinkedin },
@@ -178,7 +179,7 @@ const BlogData = [
         id1: 12,
         name1: "Rohit Rai ",
         role1: "Intern @ John Deere ",
-        imageUrl1:"https://media.licdn.com/dms/image/D5603AQEa9xmSl1MuTQ/profile-displayphoto-shrink_400_400/0/1680640880510?e=1720656000&v=beta&t=nEQIWzuH9a3ee4kEZ1-cJ0FpX9OpJb_ICUZegMDwu_Q",
+        imageUrl1:"https://media.licdn.com/dms/image/v2/D5603AQEa9xmSl1MuTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680640880510?e=1732752000&v=beta&t=hSswk3eGPoQWHsClu0i_6BuuOovTkWu5Mp5dIqvs8As",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/rohit-rai-047a35193/", icon: faLinkedin },
@@ -208,10 +209,18 @@ window.addEventListener('scroll', () => {
     });
 });
 const Blogs = () => {
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          easing: 'ease-in-out',
+        });
+      }, []);
+
     return (
-        <div className="blogs-container1">
+        <div className="blogs-container1"data-aos="fade-up">
             {BlogData.map(blog => (
-                <div className="blog-item1" key={blog.id1}>
+                <div className="blog-item1" key={blog.id1} data-aos="fade-up">
                     <div className="blog-author">
                         <div className="author-image">
                             <img src={blog.imageUrl1} alt="Blog Author" />
@@ -221,13 +230,12 @@ const Blogs = () => {
                             <p className="role">{blog.role1}</p>
                             <div className="social-links">
                                 {blog.socialLinks.map((link, index) => (
-                                    <a href={link.link} className="social-link" key={index}>
+                                    <a href={link.link} className="social-link" key={index} target="_blank" rel="noopener noreferrer">
                                         <FontAwesomeIcon icon={link.icon} />
                                     </a>
                                 ))}
-                                
                             </div>
-                            <Link to={blog.Link} className="button1">Read Blog</Link>
+                            <a href={blog.Link} className="button1" target="_blank" rel="noopener noreferrer">Read Blog</a>
                         </div>
                     </div>
                     <div className="blog-content1">
@@ -239,6 +247,7 @@ const Blogs = () => {
             ))}
         </div>
     );
+    
 }
 
 export default Blogs;

@@ -1,9 +1,12 @@
-import React from 'react';
+import {React,useEffect} from 'react';
 import './Blogs-IC.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import AnuskaKulkarni from '../components/Images/AnuskaKulkarni.png'
+import AOS from 'aos'; 
+import 'aos/dist/aos.css';
+
 
 const BlogData = [
     {
@@ -25,7 +28,7 @@ const BlogData = [
         id: 2,
         name: "Vivek Mirani",
         role: "Analyst @ Golman Sachs",
-        imageUrl: "https://media.licdn.com/dms/image/D4D03AQGsBJHGjqmegg/profile-displayphoto-shrink_400_400/0/1709322233663?e=1720656000&v=beta&t=k2imAbNf06zHDmLr2d2guIq-kOTDT7aXirHQAc85ZXs",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQGsBJHGjqmegg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709322233663?e=1732752000&v=beta&t=MqdBPXmuHVs7gaHanOXWO4-Dxp1utT5dHHpgymJE_DQ",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/vivek-mirani/?originalSubdomain=in", icon: faLinkedin },
@@ -40,7 +43,7 @@ const BlogData = [
         id: 3,
         name: " Vanshul Shikkewal",
         role: "DS Intern @ PUMA",
-        imageUrl: "https://media.licdn.com/dms/image/D4D03AQGUaUYWYgKx_Q/profile-displayphoto-shrink_400_400/0/1718258297542?e=1724889600&v=beta&t=L-J2Nb819Of7ie7ohQKeGfJ_E9j9HUiBclR7HyTgono",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQEYZA4VNVfkrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721043333308?e=1732752000&v=beta&t=ZOPt9HvAuMheM2AEdn96CqvXb0XUTL6g7g87x8aB9Yk",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/vanshul2723/?originalSubdomain=in", icon: faLinkedin },
@@ -55,7 +58,7 @@ const BlogData = [
         id: 4,
         name: "Manas Sharma",
         role: "BAI at McKinsey & Co.",
-        imageUrl: "https://media.licdn.com/dms/image/C5603AQFlPtGoU9WOQQ/profile-displayphoto-shrink_400_400/0/1647427501728?e=1720656000&v=beta&t=OBYGSk7VqWqaLitYTRDgF8tmwtHlB1INBQCzy8skk70",
+        imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQFlPtGoU9WOQQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1647427501728?e=1732752000&v=beta&t=kY9hLun3HqUV9opKRS0z0HX_FjiXzfwln8D-w1kbHAk",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/manas-sharma-49376b213/?originalSubdomain=in", icon: faLinkedin },
@@ -70,7 +73,7 @@ const BlogData = [
         id: 5,
         name: "Vanshika Prakash ",
         role: " Intern @MasterCard",
-        imageUrl: "https://media.licdn.com/dms/image/D5603AQEdvtJEc4JmLw/profile-displayphoto-shrink_400_400/0/1713135256918?e=1720656000&v=beta&t=Jy6ArpZ9m1xJ0-BehUCgcRCt_A9XdpguFlXeD4ui3Sc",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQEdvtJEc4JmLw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713135256918?e=1732752000&v=beta&t=CDwv2YW0u_1pOIq4VINonie5ZvcyknrE9AlQ41_xYR8",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/vanshikaprakash19/", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/vanshika-prakash-1211241b9/?originalSubdomain=in", icon: faLinkedin },
@@ -100,7 +103,7 @@ const BlogData = [
         id: 7,
         name: "Ahana Ganguly",
         role: "SWE Intern @ JLR",
-        imageUrl: "https://media.licdn.com/dms/image/D4D03AQEIJ7pZ02_vTQ/profile-displayphoto-shrink_400_400/0/1703320168026?e=1720656000&v=beta&t=fBcuSSUVmHNSqsNibpfSBqFuYuM5CCPg7tvF1BYmm7Y",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQEIJ7pZ02_vTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703320168026?e=1732752000&v=beta&t=cZQgU1IzN4tFUmynxWzPmHMINMTyDpG8NLp5w8xNiPI",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/ahana-ganguly-b65313219/?originalSubdomain=in", icon: faLinkedin },
@@ -129,32 +132,41 @@ window.addEventListener('scroll', () => {
     });
 });
 const Blogs = () => {
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          easing: 'ease-in-out',
+        });
+      }, []);
+
+
     return (
-        <div className="blogs-container">
+        <div className="blogs-container"data-aos="fade-up">
             {BlogData.map(blog => (
-                <div className="blog-item" key={blog.id}>
-                    <div className="blog-author">
-                        <div className="author-image">
+                <div className="blog-item" key={blog.id}  data-aos="fade-up">
+                    <div className="blog-author"  >
+                        <div className="author-image" >
                             <img src={blog.imageUrl} alt="Blog Author" />
                         </div>
                         <div className="author-details">
                             <p className="name1">{blog.name}</p>
                             <p className="role">{blog.role}</p>
-                            <div className="social-links">
+                            <div className="social-links ">
                                 {blog.socialLinks.map((link, index) => (
-                                    <a href={link.link} className="social-link" key={index}>
+                                    <a href={link.link} className="social-link "  target="_blank" rel="noopener noreferrer" key={index}>
                                         <FontAwesomeIcon icon={link.icon} />
                                     </a>
                                 ))}
                                 
                             </div>
-                            <Link to={blog.Link} className="button">Read Blog</Link>
+                            <Link to={blog.Link} className="button"  target="_blank" rel="noopener noreferrer">Read Blog</Link>
                         </div>
                     </div>
-                    <div className="blog-content">
+                    <div className="blog-content" >
                         <p className="name">{blog.name}</p>
-                        <p className="blog-title">{blog.blogTitle}</p>
-                        <p className="blog-description">{blog.blogDescription}</p>
+                        <p className="blog-title" >{blog.blogTitle}</p>
+                        <p className="blog-description" >{blog.blogDescription}</p>
                     </div>
                 </div>
             ))}

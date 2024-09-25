@@ -5,12 +5,14 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  position: relative;
-  margin-top: 85px;
+  /* position: relative; */
+  
 }
 
 .course-material-section .container {
   max-width: 100%;
+  margin-top: 85px;
+  opacity: 0.9;
 }
 
 
@@ -81,6 +83,11 @@
   background-position: center;
   overflow: hidden;
   position: relative;
+  background-image: url('./Images/MekBg.png');
+  background-size: cover;
+  background-attachment: fixed; 
+  background-position: center; 
+  opacity: 0.9;
 }
 
 .course-material-section .container {
@@ -95,6 +102,7 @@
 
 .semester-accordion {
   margin-bottom: 15px;
+  opacity: 1;
 }
 
 .semester-accordion .accordion-content {
@@ -179,21 +187,22 @@ text-transform: uppercase;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: linear-gradient(135deg, #3d3e3e 0%, #101111 100%);
+  background: linear-gradient(135deg, #353532 0%, #080808 100%);
   border-radius: 8px;
   text-decoration: none;
   color: gold;
   font-weight: 400;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 1s, box-shadow 0.2s, background-color 1s, color 1s;
+  /* transition: transform 1s, box-shadow 0.2s, background-color 1s, color 1s; */
   width: calc(100% - 40px); 
   align-items: center;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+  text-align: center 
 }
 
 .course-material-card:hover {
   transform: translateY(-3px);
-  background: linear-gradient(135deg, rgb(222, 189, 2) 0%, rgb(61, 52, 4) 100%);
+  background: rgb(222, 189, 2) ;
   color: #333;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }

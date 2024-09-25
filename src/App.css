@@ -26,3 +26,7 @@
 body {
   overflow-x: hidden;
 }
+::selection {
+  background-color: var(--primaryColor);
+ background-color:  #95811f;
+}

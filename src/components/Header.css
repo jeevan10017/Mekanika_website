@@ -1,7 +1,8 @@
 
 .header {
   background-color: rgb(2, 2, 2);
-  color: #c6c2c2;
+  /* color: #c6c2c2; */
+  color: #f5d906; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,18 +46,18 @@
 
 .nav a {
   text-decoration: none;
-  color: #dedbdb;
+  /* color: #dedbdb; */
   font-size: 1.2rem;
   transition: color 0.5s ease-in-out;
 }
 
 .nav a:hover {
-  color: #ef6c00; /* Change to gold */
+  color: #ef6c00; 
 }
 
 @media screen and (max-width: 768px) {
   .logo {
-    display: none; /* Hide logo on small screens */
+    display: none; 
   }
   .nav a {
     font-size: 1rem;

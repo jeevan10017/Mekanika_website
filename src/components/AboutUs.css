@@ -8,6 +8,11 @@
   background-image: url(Mekanika_logo.png);
   z-index: -1;
   opacity: 0.9;
+ 
+}
+.container {
+  z-index: 1;
+  opacity: 1;
 }
 
 .section-heading h2 {

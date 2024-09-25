@@ -5,14 +5,19 @@
   border: 1px solid #4f571c;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgb(249, 241, 23);
+  box-shadow: 0 2px 4px rgb(212, 185, 8);
 }
 .projects-section {
   padding: 40px 0;
   background-color: #1b1b19;
   color: #ffffff;
   padding-top: 105px;
+  background-image: url('./Images/MekBg.png');
+  background-size: cover;
+  background-attachment: fixed; 
+  background-position: center; 
 }
+
 
 .section-title {
   text-align: center;
@@ -45,7 +50,7 @@
 .project-card:hover {
   color: black;
   font-weight: 800;
-  background: linear-gradient(135deg, #dbda74 0%, #1d1d1d 100%);
+  background: linear-gradient(135deg, #eebc06 0%, #1d1d1d 100%);
   transform: scale(1.05);
 }
 
