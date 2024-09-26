@@ -1,15 +1,25 @@
 /* For Chrome, Safari, and Opera */
-*::-webkit-scrollbar {
+html{
+  --primary-color:"#64FFDA";
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
   width: 8px;  /* Width of the entire scrollbar */
+  
   height: 8px; /* Height of the scrollbar if needed for horizontal scrolling */
 }
-
-*::-webkit-scrollbar-track {
-  background: transparent;  /* Color of the scrollbar track */
-  border-radius: 10px;  /* Roundness of the scrollbar track */
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  background-color: #f1e906;
 }
 
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-track {
+  background: transparent;  /* Color of the scrollbar track */
+  border-radius: 100px;  /* Roundness of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, gold, orange);  /* Gradient color for the scrollbar thumb */
   border-radius: 10px;  /* Roundness of the scrollbar thumb */
   border: 2px solid #0f0e0e;  /* Creates padding around thumb */
@@ -22,11 +32,13 @@
   scrollbar-color: rgba(255, 217, 2, 0.3) rgba(0, 0, 0, 0.9);
 }
 
-/* Optional: Prevent horizontal scrolling */
+
 body {
   overflow-x: hidden;
 }
 ::selection {
-  background-color: var(--primaryColor);
  background-color:  #95811f;
 }
+
+
+

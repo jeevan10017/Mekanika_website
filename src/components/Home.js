@@ -130,8 +130,8 @@ const Home = () => {
             </p>
            
             </div>
-            <div className="image" data-aos="flip-down">
-              <img src={TeamImage} alt="Our Team" />
+            <div className="image" >
+              <img src={TeamImage} alt="Our Team"data-aos="flip-down" />
             </div>
           </div>
         </div>

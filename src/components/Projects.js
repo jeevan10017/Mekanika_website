@@ -597,7 +597,7 @@ const Projects = () => {
       <CssBaseline />
       <section id="projects" className="projects-section">
         <Container>
-          <Typography variant="h5" component="h2" align="center" gutterBottom>
+          <Typography variant="h5" component="h2"  color="black" align="center" gutterBottom>
             Ongoing Projects in Department
           </Typography>
 
