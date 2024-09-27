@@ -1,11 +1,77 @@
-# Mekanika Website Design
+# Mekanika Website 
 
 Welcome to the Mekanika website design README! This document provides an overview of the features, hierarchy, pages, and more for the Mekanika website.
 
 
+<p align="center" style="background-color:black; padding: 10px; ">
+  <img src="./public/favicon.ico" alt="Logo" width="20%">
+</p>
 
-![image](https://github.com/jeevan10017/Mekanika_website/assets/132948936/112ab126-fe5d-48d3-9c98-73c00a5de0c4)
 
+
+# How to Clone the Mekanika Website Repository, Make Changes, and Create a Pull Request
+
+## 1. Fork the Repository
+- Go to the [Mekanika Website Repository](https://github.com/jeevan10017/Mekanika_website).
+- Click the **Fork** button in the top-right corner to create a copy under your account.
+
+## 2. Clone the Forked Repository
+- Click the green **Code** button, copy the URL, and run this command in your terminal:
+
+    ```bash
+    git clone https://github.com/your-username/Mekanika_website.git
+    ```
+
+- Replace `your-username` with your GitHub username.
+
+## 3. Navigate to the Project Directory
+   ```bash
+   cd Mekanika_website
+   ```
+## 4. Install Dependencies
+After cloning, you need to install the project dependencies by running:
+```bash
+npm install
+```
+
+ ## 5.Sync with the Latest Changes to Avoid Conflicts
+Before making any changes, always pull the latest changes from the original repository to avoid conflicts:
+
+```bash
+git remote add upstream https://github.com/jeevan10017/Mekanika_website.git
+git pull upstream main
+```
+
+
+## 6. Create a New Branch, Make Changes, Commit, and Push
+Create a new branch:
+```bash
+git checkout -b your-branch-name
+```
+Make your changes in the code, then add and commit them:
+
+```bash
+git add .
+```
+```bash
+git commit -m "Description of the changes made"
+```
+Push your changes to your forked repository:
+
+```bash
+git push origin your-branch-name
+```
+## 7. Create a Pull Request
+Visit your forked repository on GitHub.
+Click the Compare & pull request button.
+Add a description, Photos and Videos and submit the pull request.
+
+ ## 8.Sync Regularly to Avoid Conflicts
+Keep your branch up to date by pulling the latest changes from the original repository as you work:
+
+```bash
+git pull upstream main
+```
 
 
 
@@ -13,7 +79,8 @@ Welcome to the Mekanika website design README! This document provides an overvie
 
 1. **Home Page**:
 
-![Screenshot 2024-06-29 033009](https://github.com/jeevan10017/Mekanika_website/assets/132948936/ba13f8ec-7620-4350-a85a-bd1f9f87f520)
+![Screenshot_27-9-2024_1239_mekanika vercel app](https://github.com/user-attachments/assets/6c369512-6a81-46e0-9840-d5a1f216f85a)
+
 
 
 
@@ -27,21 +94,22 @@ Welcome to the Mekanika website design README! This document provides an overvie
 
 5. **Events Page**: Displays past events organized by Mekanika, allowing users to learn more and register.
    
-![Screenshot 2024-06-29 033148](https://github.com/jeevan10017/Mekanika_website/assets/132948936/41c71b63-abd4-4941-844c-a0d9465faf34)
+![Screenshot 2024-09-27 121350](https://github.com/user-attachments/assets/b6e25b53-a62d-4458-baea-6ed5f91e941c)
 
 
 
 
 7. **Course Materials Page**: Access to course materials for mechanical engineering students from semesters 1 to 8.
    
-![Screenshot 2024-06-29 033238](https://github.com/jeevan10017/Mekanika_website/assets/132948936/299b212c-9fdd-4238-aed6-e3520123d844)
+![Screenshot 2024-09-27 121446](https://github.com/user-attachments/assets/7e8fb7e7-abb2-4355-91d6-80f388107262)
+
 
 
 
 
 9. **Projects Page**: Showcases various projects undertaken by the Mechanical Engineering Dept Professors at IIT KGP, providing details and updates.
 
-  ![Screenshot 2024-06-29 033335](https://github.com/jeevan10017/Mekanika_website/assets/132948936/16e62aeb-e67c-4403-be7c-2e4905d458c9)
+![Screenshot 2024-09-27 121539](https://github.com/user-attachments/assets/6f60d254-58f9-485d-86b7-0d56be22ab05)
 
 
   
@@ -57,35 +125,6 @@ Welcome to the Mekanika website design README! This document provides an overvie
 
 
 
-
-
-10. **Quick Links**: Offers convenient navigation to key website sections from any page.
-
-11. **Contact Us**: Provides contact information for users to reach out to Mekanika for inquiries or collaborations.
-
-12. **Social Media Integration**: Connects users with Mekanika's social media profiles for further engagement.
-
-13. **Advanced Search**: Integrated advanced search with autocomplete, Fuse.js for fuzzy search, and Speech Recognition for voice input.
-
-14. **Optimized Interface**: Enhanced user experience with dynamic styling using CSS and Material UI.
-
-15. **Efficient Deployment**: Deployed on Vercel, optimizing loading times with lazy loading.
-
-
-## Responsiveness
-
-
-   | ![Screenshot 2024-06-29 035212](https://github.com/jeevan10017/Mekanika_website/assets/132948936/029e2d30-05de-4f5e-9b3e-fa3ef5a96317)
- | ![Screenshot 2024-06-29 035231](https://github.com/jeevan10017/Mekanika_website/assets/132948936/6a55c500-c986-4993-9574-608be3372bba)
-   |:-------------------------------------------:|:-----------------------------------------------:|
-
-
-
-
-   |![Screenshot 2024-06-29 035315](https://github.com/jeevan10017/Mekanika_website/assets/132948936/c1ba8727-2a48-4613-88cf-f803990892bd)
- |![Screenshot 2024-06-29 035343](https://github.com/jeevan10017/Mekanika_website/assets/132948936/59f075d3-871f-4b47-9644-7deed9182d8a)
-
-   |:-------------------------------------------:|:-----------------------------------------------:|
 ## Hierarchy
 
 - **Home**
@@ -94,7 +133,7 @@ Welcome to the Mekanika website design README! This document provides an overvie
   - Quick Links
 - **About Us**
   - Detailed information about Mekanika
-  - Team member profiles
+  - Team member profile
   - Quick Links
 - **Blogs**
   - Two series of blogs: Intern-Chronicles and Core-Expedition.
@@ -109,11 +148,7 @@ Welcome to the Mekanika website design README! This document provides an overvie
 - **Projects**
   - Showcase of ongoing and past projects of Professors
   - Quick Links
-- **Contact Us**
-  - Contact information and form
-  - Quick Links
-- **Footer**
-  - Mekanika logo and social media links
+
 
 ## Pages
 
@@ -123,17 +158,8 @@ Welcome to the Mekanika website design README! This document provides an overvie
 4. **Events Page**
 5. **Course Materials Page**
 6. **Projects Page**
-7. **Contact Us Page**
 
-## Setup Instructions
 
-To run the Mekanika website locally:
-
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Install dependencies using `npm install`.
-4. Start the development server using `npm start`.
-5. Open your web browser and visit `http://localhost:3000` to view the website.
 
 ## Technologies Used
 
