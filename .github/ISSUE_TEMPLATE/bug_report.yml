@@ -28,7 +28,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: time required
+    id: time-required
     attributes:
       label: Time required to complete it
       description: mention the date by which you will complete it.
