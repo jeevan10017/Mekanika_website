@@ -1,20 +1,52 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
----
-
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Add any other context or screenshots about the feature request here.
+name: ✨ Feature Request
+description: Suggest a feature
+title: "[Feature Request]: "
+labels: enhancement
+body:
+  - type: checkboxes
+    id: existing-issue
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for this feature.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: Please provide a detailed description of the feature you are requesting.
+      placeholder: Describe the new feature or enhancement you'd like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: How would this feature enhance your use of the project?
+      placeholder: Describe a specific use case or scenario where this feature would be beneficial.
+    validations:
+      required: true
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: What benefits would this feature bring to the project or community?
+      placeholder: Explain the advantages of implementing this feature.
+  - type: textarea
+    id: screenShots
+    attributes:
+      label: Add ScreenShots
+      description: If any...
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - High
+        - Medium
+        - Low
+      default: 0
+    validations:
+      required: true
