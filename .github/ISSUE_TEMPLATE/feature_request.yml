@@ -50,3 +50,10 @@ body:
       default: 0
     validations:
       required: true
+ - type: textarea
+    id: time-required
+    attributes:
+      label: Time required to complete it
+      description: mention the date by which you will complete it.
+    validations:
+      required: true
