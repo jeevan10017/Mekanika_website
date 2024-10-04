@@ -28,10 +28,9 @@ body:
     validations:
       required: true
   - type: textarea
-    id: screenshots
+    id: time required
     attributes:
-      label: Add ScreenShots
-      description: Add sufficient ScreenShots to explain your issue.
-  
-  
+      label: Time required to complete it
+      description: mention the date by which you will complete it.
+      
    
