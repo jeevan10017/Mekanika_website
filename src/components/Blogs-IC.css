@@ -4,7 +4,7 @@
     padding: 32px;
     font-family: 'Times New Roman', Times, serif;
     flex-wrap: wrap; 
-    /* background-image: url(../components/Images/Designer1.png); */
+    background-image: url('./Images/MekBg.png');
     background-attachment: fixed;
     background-size: cover;
     margin-top: 25px;

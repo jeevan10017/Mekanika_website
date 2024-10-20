@@ -3,7 +3,7 @@ import './Blogs-IC.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
-import AnuskaKulkarni from '../components/Images/AnuskaKulkarni.png'
+import AnuskaKulkarni from '../components/blog images/AnuskaKulkarni.png'
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 
@@ -13,7 +13,8 @@ const BlogData = [
         id: 1,
         name: " Anushka Kulkarni ",
         role: "DS Intern @ Microsoft",
-        imageUrl: AnuskaKulkarni,
+        imageUrl:AnuskaKulkarni,
+        // imageUrl: "https://media.licdn.com/dms/image/v2/D4D35AQHPaMeo1cCQ1A/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1709304512320?e=1728982800&v=beta&t=4LCa5cmL3eMNbV4oULOSiNRVcwU4oponH4q-SsFbkyI",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/anushka-kulkarni-5b69a91ba/?originalSubdomain=in", icon: faLinkedin },
@@ -28,7 +29,8 @@ const BlogData = [
         id: 2,
         name: "Vivek Mirani",
         role: "Analyst @ Golman Sachs",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQGsBJHGjqmegg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709322233663?e=1732752000&v=beta&t=MqdBPXmuHVs7gaHanOXWO4-Dxp1utT5dHHpgymJE_DQ",
+        imageUrl: require('./blog images/Vivek Mirani.jpeg'),
+        // imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQGsBJHGjqmegg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709322233663?e=1732752000&v=beta&t=MqdBPXmuHVs7gaHanOXWO4-Dxp1utT5dHHpgymJE_DQ",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/vivek-mirani/?originalSubdomain=in", icon: faLinkedin },
@@ -43,7 +45,8 @@ const BlogData = [
         id: 3,
         name: " Vanshul Shikkewal",
         role: "DS Intern @ PUMA",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQEYZA4VNVfkrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721043333308?e=1732752000&v=beta&t=ZOPt9HvAuMheM2AEdn96CqvXb0XUTL6g7g87x8aB9Yk",
+        imageUrl: require('./blog images/Vanshul Shikkewal.jpeg'),
+        // imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQEYZA4VNVfkrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721043333308?e=1732752000&v=beta&t=ZOPt9HvAuMheM2AEdn96CqvXb0XUTL6g7g87x8aB9Yk",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/vanshul2723/?originalSubdomain=in", icon: faLinkedin },
@@ -58,7 +61,8 @@ const BlogData = [
         id: 4,
         name: "Manas Sharma",
         role: "BAI at McKinsey & Co.",
-        imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQFlPtGoU9WOQQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1647427501728?e=1732752000&v=beta&t=kY9hLun3HqUV9opKRS0z0HX_FjiXzfwln8D-w1kbHAk",
+        imageUrl: require('./blog images/Manas Sharma.jpeg'),
+        // imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQFlPtGoU9WOQQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1647427501728?e=1732752000&v=beta&t=kY9hLun3HqUV9opKRS0z0HX_FjiXzfwln8D-w1kbHAk",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/manas-sharma-49376b213/?originalSubdomain=in", icon: faLinkedin },
@@ -73,7 +77,8 @@ const BlogData = [
         id: 5,
         name: "Vanshika Prakash ",
         role: " Intern @MasterCard",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQEdvtJEc4JmLw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713135256918?e=1732752000&v=beta&t=CDwv2YW0u_1pOIq4VINonie5ZvcyknrE9AlQ41_xYR8",
+        imageUrl: require('./blog images/Vanshika Prakash.jpeg'),
+        // imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQEdvtJEc4JmLw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1713135256918?e=1732752000&v=beta&t=CDwv2YW0u_1pOIq4VINonie5ZvcyknrE9AlQ41_xYR8",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/vanshikaprakash19/", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/vanshika-prakash-1211241b9/?originalSubdomain=in", icon: faLinkedin },
@@ -88,7 +93,8 @@ const BlogData = [
         id: 6,
         name: "Apurv Gaurav",
         role: "Analyst @ BlackRock ",
-        imageUrl: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*QSst2ZFasUWHXIom0VTqMg.jpeg",
+        imageUrl: require('./blog images/Apurv Gaurav.jpeg'),
+        // imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQETXWlT7UVwEA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1721124456342?e=1733961600&v=beta&t=UjHRQp97xU6wa277FZ1SOJGoP_R5eAECtZIrR9-5oJw",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/apurv-gaurav-68b175194/?originalSubdomain=in", icon: faLinkedin },
@@ -103,7 +109,8 @@ const BlogData = [
         id: 7,
         name: "Ahana Ganguly",
         role: "SWE Intern @ JLR",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQEIJ7pZ02_vTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703320168026?e=1732752000&v=beta&t=cZQgU1IzN4tFUmynxWzPmHMINMTyDpG8NLp5w8xNiPI",
+        imageUrl: require('./blog images/Ahana Ganguly.jpeg'),
+        // imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQEIJ7pZ02_vTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703320168026?e=1732752000&v=beta&t=cZQgU1IzN4tFUmynxWzPmHMINMTyDpG8NLp5w8xNiPI",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/ahana-ganguly-b65313219/?originalSubdomain=in", icon: faLinkedin },
@@ -114,7 +121,7 @@ const BlogData = [
         Link:"https://medium.com/@mekanika2022/intern-chronicles-ahana-ganguly-jlr-14ad40d36b2e",
         blogDescription: " Specifically speaking about JLR one should at least have more than one project in Machine Learning and Software Development. Relevant prior interns will also help a lot in the selection process. For the software domain POR is not much needed."
     },
-    
+     
 ];
 const blogItems = document.querySelectorAll('.blog-item');
 
