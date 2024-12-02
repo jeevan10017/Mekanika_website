@@ -1,5 +1,3 @@
-
-
 import { createTheme } from '@mui/material/styles';
 import Fuse from 'fuse.js';
 
@@ -445,14 +443,21 @@ const projectData = [
    
   ];
   
+
+
+
+
+
+
+
   const fuseOptions = {
     includeScore: true,
     threshold: 0.3, // Balance between strict and lenient matching
     keys: ['title', 'Startdate', 'faculties.name', 'faculties.link'],
   };
-  
+  // eslint-disable-next-line
   const fuse = new Fuse(projectData, fuseOptions);
-  
+  // eslint-disable-next-line
   const theme = createTheme({
     palette: {
       mode: 'dark',
@@ -489,5 +494,5 @@ const projectData = [
 
 
 
-    export default projectData;
+ export default projectData;
     
