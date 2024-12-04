@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import TeamImage from './Images/MEO3.jpg';
@@ -9,15 +9,15 @@ import image3 from './Images/ME1.jpg';
 import image4 from './Images/ME003.jpg';
 import image5 from './Images/ME5.jpg';
 import image6 from './Images/MATLAB.jpg';
-
+import AboutUs from './AboutUs';
 import './Home.css';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
+import SuccessStories from './SuccessStories';
 
 
 const Home = () => {
- 
-  
+
   const images = [image1, image2, image3, image4, image5, image6];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(0);
@@ -81,7 +81,6 @@ const Home = () => {
   }, [isHovered, setCurrentImageIndex, images.length]);
 
   return (
-    
     <section className="home-section" data-aos="fade-down">
            <div
         className="image-container"
@@ -136,8 +135,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <AboutUs />  
+      <SuccessStories />
     </section>
-    
+
   );
 };
  

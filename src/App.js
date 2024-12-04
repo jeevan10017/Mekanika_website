@@ -12,11 +12,12 @@ import Footer from './components/Footer';
 import Copyright from './components/Copyright';
 import BlogsCE from './components/Blogs_Core-expedition';
 import BlogsIC from './components/Blog_InternChronicles';
+import SuccessStories from './components/SuccessStories';
 
 function App() {
   return (
     <Router>
-        <Header />
+        <Header />  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
