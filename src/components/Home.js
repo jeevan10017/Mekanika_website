@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect , useRef } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import TeamImage from './Images/MEO3.jpg';
@@ -135,7 +135,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <AboutUs />  
       <SuccessStories />
     </section>
 

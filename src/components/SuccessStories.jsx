@@ -1,6 +1,5 @@
-// Import customer images
 import customer5 from "./Images/manishimg.png";
-
+import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import "./SuccessStories.css";
 import AOS from "aos";
@@ -8,13 +7,19 @@ import "aos/dist/aos.css";
 
 const SuccessStories = () => {
   const [active, setActive] = useState(3);
+  const navigate = useNavigate();
+
+  const navigateBlog = () => {
+    navigate("/intern-chronicles");
+  };
   const items = [
     {
       image: customer5,
       name: "Manish S",
       story:
         "For me, the resources that I referred to mostly were the textbooks that are recommended by professors.",
-      rating: "Intern @ JLR",
+      role: "Intern @ JLR",
+      
     },
     {
       image:
@@ -22,7 +27,7 @@ const SuccessStories = () => {
       name: "Aniketh S Gund",
       story:
         "Apart from that Tata is not much concerned about any software or extracurricular activities.",
-      rating: "Intern @ Tata Steel",
+      role: "Intern @ Tata Steel",
     },
     {
       image:
@@ -30,15 +35,15 @@ const SuccessStories = () => {
       name: "Tanushree Prasad",
       story:
         "Majorly to work in this domain one needs to have good knowledge about the core mechanical engineering concepts",
-      rating: "Intern @ Tata Steel",
+      role: "Intern @ Tata Steel",
     },
     {
       image:
         "https://miro.medium.com/v2/resize:fit:750/format:webp/1*UON0m5ktaFuvPQOoVq3WMw.jpeg",
       name: "Sayantan Sarkar",
       story:
-        "To get into an automotive company, you don’t need any extra subjects other than mechanical curriculum.",
-      rating: "Intern @ JLR",
+        "To get into an automotive role, you don’t need any extra subjects other than mechanical curriculum.",
+      role: "Intern @ JLR",
     },
     {
       image:
@@ -46,7 +51,7 @@ const SuccessStories = () => {
       name: "Anushka Kulkarni",
       story:
         " I believe that one project and one intern would be good. It would be great if you could do more.",
-      rating: "DS Intern @ Microsoft",
+      role: "DS Intern @ Microsoft",
     },
     {
       image:
@@ -54,7 +59,7 @@ const SuccessStories = () => {
       name: "Apurv Gaurav",
       story:
         "Try to prepare for multiple profiles rather than putting all your hard work into a single profile.",
-      rating: "Analyst @ BlackRock",
+      role: "Analyst @ BlackRock",
     },
     {
       image:
@@ -62,7 +67,7 @@ const SuccessStories = () => {
       name: "Ashutosh Dash",
       story:
         "Apart from the core domain, the finance domain requires a set of skills depending on the segment that you are focusing on.",
-      rating: "Intern @ Bajaj Auto Ltd",
+      role: "Intern @ Bajaj Auto Ltd",
     },
     {
       image:
@@ -70,7 +75,7 @@ const SuccessStories = () => {
       name: "Praveen Yadav",
       story:
         "They don’t specifically search for any particular skill set but pursuing some projects in the core mechanical domain.",
-      rating: "Intern @ JLR",
+      role: "Intern @ JLR",
     },
     {
       image:
@@ -78,14 +83,14 @@ const SuccessStories = () => {
       name: "Snehal Swadhin",
       story:
         "Product is one of the easiest domains because product doesn’t require much preparation.",
-      rating: "Product @Ather Energy",
+      role: "Product @Ather Energy",
     },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % items.length);
-    }, 2500);
+    },4000);
 
     return () => clearInterval(interval);
   }, [items.length]);
@@ -130,12 +135,13 @@ const SuccessStories = () => {
     });
   }, []);
   return (
-    <>
+    <div className="homeBlog">
       <div className="blogHead">
         <h1>Blogs</h1>
       </div>
+      <div className="blogOverflow">
       <div className="blogDetail">
-        <div className="sliderSuccess">
+        <div className="sliderSuccess" onClick={navigateBlog}>
           <div
             style={{
               position: "relative",
@@ -164,7 +170,7 @@ const SuccessStories = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  overflow: "hidden", // Ensures the image does not overflow
+                  overflow: "hidden", 
                   color: "white",
                 }}
               >
@@ -174,19 +180,19 @@ const SuccessStories = () => {
                   className=" "
                   style={{
                     transition: "transform 0.3s ease, filter 0.3s ease",
-                    border: "3px solid #d0e7b0", // Green border for the image
+                    border: "3px solid #d0e7b0", 
                   }}
                   onMouseOver={(e) => {
                     e.currentTarget.style.transform = "scale(1.1)";
-                    e.currentTarget.style.filter = "brightness(1.1)"; // Brightness effect on hover
+                    e.currentTarget.style.filter = "brightness(1.1)"; 
                   }}
                   onMouseOut={(e) => {
                     e.currentTarget.style.transform = "scale(1)";
-                    e.currentTarget.style.filter = "brightness(1)"; // Reset brightness
+                    e.currentTarget.style.filter = "brightness(1)"; 
                   }}
                 />
-                <div className="stars ">{item.rating}</div>
-                <p className="">{item.story}</p>
+                <h1 className="stars " style={{marginBottom:"0"}}>{item.role}</h1>
+                <p className="" style={{marginTop:"10px"}}>{item.story}</p>
                 <h2 className=" ">{item.name}</h2>
               </div>
             ))}
@@ -224,7 +230,8 @@ const SuccessStories = () => {
           </p>
         </div>
       </div>
-    </>
+      </div>
+    </div>
   );
 };
 
