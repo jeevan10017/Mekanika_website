@@ -92,6 +92,7 @@ const SuccessStories = () => {
 
   useEffect(() => {
     loadShow();
+    // eslint-disable-next-line 
   }, [active]);
 
   const loadShow = () => {
@@ -138,9 +139,9 @@ const SuccessStories = () => {
           <div
             style={{
               position: "relative",
-              marginTop: "120px",
+              marginTop: "90px",
               width: "100%",
-              height: "550px",
+              height: "500px",
               overflow: "hidden",
             }}
             data-aos="fade-up"
