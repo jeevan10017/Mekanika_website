@@ -73,7 +73,6 @@ export function HeroVideo() {
                 className="dark:hidden block"
                 animationStyle="from-center"
                 videoSrc={VideoSrc}
-                thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
                 thumbnailAlt="Hero Video"
                 fullscreen
               />

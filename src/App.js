@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import BlogsCE from './pages/Blogs/Core-Expedition/Blogs_Core-expedition';
 import BlogsIC from './pages/Blogs/Intern-Chronicles/Blog_InternChronicles';
 import Navbar from './components/Navbar';
-import {Events} from './components/3D_Events';
+import {Events} from './pages/Events/3D_Events';
 // import SignUpMechanism from './components/SignUpMechanism.jsx';
 
 

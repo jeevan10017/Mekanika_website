@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Logo from "../components/Images/MekanikaLogo.png";
+import Logo from "../components/Images/mekalogo.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -60,7 +60,7 @@ const Navbar = () => {
     >
       <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-20">
         <Link to="/" className="flex items-center">
-          <img src={Logo} alt="MS Hall Logo" className="h-10 w-auto mr-3" />
+          <img src={Logo} alt="MS Hall Logo" className="h-10 w-auto mr-3  rounded" />
           <h1 className="text-3xl font-bold text-[#fefefe]">MEKANIKA</h1>
         </Link>
 
@@ -154,11 +154,11 @@ const Navbar = () => {
               ) : (
                 <li
                   key={item.id}
-                  className="p-4 border-b text-[#c9c7c2] border-gray-600  hover:bg-[#B17457] duration-300 hover:text-white cursor-pointer bg-gray-950"
+                  className="p-4 border-b text-[#c9c7c2] border-gray-600  hover:bg-yellow-400 duration-300 hover:text-white cursor-pointer bg-gray-950"
                 >
                   <Link to={item.link} onClick={() => setNav(false)}>
                     {item.text}
-                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                   </Link>
                 </li>
               )

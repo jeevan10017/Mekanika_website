@@ -2,9 +2,7 @@
     display: flex;
     justify-content: center;
     padding: 32px;
-    font-family: 'Times New Roman', Times, serif;
     flex-wrap: wrap; 
-    background-image: url('../../../components/Images/MekBg.png');
     background-attachment: fixed;
     background-size: cover;
     

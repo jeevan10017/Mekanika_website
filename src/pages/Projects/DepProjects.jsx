@@ -67,7 +67,7 @@ export function DepProjects() {
             placeholder="Search by Project Title or Professor"
             value={searchQuery}
             onChange={handleSearch}
-            className="w-full p-3 border border-gray-600 rounded-lg  bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full p-3 border border-gray-600 rounded-lg  bg-gradient-to-b from-neutral-900  to-neutral-950 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
 
           {/* Suggestions */}

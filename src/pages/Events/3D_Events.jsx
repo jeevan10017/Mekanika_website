@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CardBody, CardContainer, CardItem } from "./ui/3d_Card";
+import { CardBody, CardContainer, CardItem } from "../../components/ui/3d_Card";
 
 const images = [
-    require("./event_Images/KYM_1.jpg"),
-    require("./event_Images/KYM_2.jpg"),
-    require("./event_Images/KYM_3.jpg"),
-    require("./event_Images/KYM_4.jpg"),
-    require("./event_Images/MDT1.jpg"),
-    require("./event_Images/MDT2.jpg"),
-    require("./event_Images/MDT3.jpg"),
-    require("./event_Images/MDT4.jpg"),
-    require("./event_Images/Quiz1.jpg"),
-    require("./event_Images/Quiz2.jpg"),
-    require("./event_Images/Quiz3.jpg"),
-    require("./event_Images/Quiz4.jpg"),
-    require("./event_Images/Quiz5.jpg"),
-    require("./event_Images/AT1.jpg"),
-    require("./event_Images/AT2.jpg"),
-    require("./event_Images/AT3.jpg"),
-    require("./event_Images/AT4.jpg"),
-    require("./event_Images/AT5.jpg"),
+    require("../../components/event_Images/KYM_1.jpg"),
+    require("../../components/event_Images/KYM_2.jpg"),
+    require("../../components/event_Images/KYM_3.jpg"),
+    require("../../components/event_Images/KYM_4.jpg"),
+    require("../../components/event_Images/MDT1.jpg"),
+    require("../../components/event_Images/MDT2.jpg"),
+    require("../../components/event_Images/MDT3.jpg"),
+    require("../../components/event_Images/MDT4.jpg"),
+    require("../../components/event_Images/Quiz1.jpg"),
+    require("../../components/event_Images/Quiz2.jpg"),
+    require("../../components/event_Images/Quiz3.jpg"),
+    require("../../components/event_Images/Quiz4.jpg"),
+    require("../../components/event_Images/Quiz5.jpg"),
+    require("../../components/event_Images/AT1.jpg"),
+    require("../../components/event_Images/AT2.jpg"),
+    require("../../components/event_Images/AT3.jpg"),
+    require("../../components/event_Images/AT4.jpg"),
+    require("../../components/event_Images/AT5.jpg"),
     
   ];
   
@@ -115,7 +115,7 @@ function CardContent({ card }) {
 
   return (
     <CardBody
-      className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border"
+      className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1]bg-black border-white/[0.2]  w-auto sm:w-[30rem] h-auto rounded-xl p-6 border"
     >
       {/* Title Container */}
       <div className="relative">
@@ -123,7 +123,7 @@ function CardContent({ card }) {
         <CardItem
           translateZ="20"
           as="button"
-          className="absolute -top-2 -right-2 px-4 py-2 rounded-xl bg-black dark:bg-yellow-400/60 dark:text-black text-white text-xs font-bold"
+          className="absolute -top-2 -right-2 px-4 py-2 rounded-xl bg-yellow-400/60 text-black  text-xs font-bold"
         >
           {card.ctaSecondary.label}
         </CardItem>
@@ -131,7 +131,7 @@ function CardContent({ card }) {
         {/* Title */}
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-yellow-300 mr-24"
+          className="text-xl font-bold  text-yellow-300 mr-24"
         >
           {card.title}
         </CardItem>
