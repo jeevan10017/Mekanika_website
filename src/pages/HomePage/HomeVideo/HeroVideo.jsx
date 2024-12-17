@@ -73,6 +73,7 @@ export function HeroVideo() {
                 className="dark:hidden block"
                 animationStyle="from-center"
                 videoSrc={VideoSrc}
+                thumbnailSrc={Img}
                 thumbnailAlt="Hero Video"
                 fullscreen
               />

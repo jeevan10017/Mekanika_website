@@ -101,74 +101,74 @@ const images = [
     );
   }
   
-
-function CardContent({ card }) {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % card.imageUrls.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [card.imageUrls]);
-
-  return (
-    <CardBody
-      className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1]bg-black border-white/[0.2]  w-auto sm:w-[30rem] h-auto rounded-xl p-6 border"
-    >
-      {/* Title Container */}
-      <div className="relative">
-        {/* CTA Secondary Button Positioned Above Title */}
-        <CardItem
-          translateZ="20"
-          as="button"
-          className="absolute -top-2 -right-2 px-4 py-2 rounded-xl bg-yellow-400/60 text-black  text-xs font-bold"
-        >
-          {card.ctaSecondary.label}
-        </CardItem>
-
-        {/* Title */}
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold  text-yellow-300 mr-24"
-        >
-          {card.title}
-        </CardItem>
-      </div>
-
-      {/* Description */}
-      <CardItem
-        as="p"
-        translateZ="60"
-        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 line-clamp-5"
+  function CardContent({ card }) {
+    const [currentImage, setCurrentImage] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % card.imageUrls.length);
+      }, 5000);
+  
+      return () => clearInterval(interval);
+    }, [card.imageUrls]);
+  
+    return (
+      <CardBody
+        className="bg-neutral-900 relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6"
       >
-        {card.description}
-      </CardItem>
-
-      {/* Dynamic Image Transition */}
-      <CardItem translateZ="100" className="w-full mt-4">
-        <div
-          style={{
-            backgroundImage: `url(${card.imageUrls[currentImage]})`,
-            transition: "background-image 1s ease-in-out",
-          }}
-          className="h-60 w-full rounded-xl bg-cover bg-center group-hover/card:shadow-xl"
-        ></div>
-      </CardItem>
-
-      {/* CTA Primary Button */}
-      <div className="flex justify-start items-center mt-8">
+        {/* Title Container */}
+        <div className="relative">
+          {/* CTA Secondary Button Positioned Above Title */}
+          <CardItem
+            translateZ="20"
+            as="button"
+            className="absolute -top-2 -right-2 px-4 py-2 rounded-xl bg-yellow-400/60 text-black text-xs font-bold"
+          >
+            {card.ctaSecondary.label}
+          </CardItem>
+  
+          {/* Title */}
+          <CardItem
+            translateZ="50"
+            className="text-xl font-bold text-yellow-300 mr-24"
+          >
+            {card.title}
+          </CardItem>
+        </div>
+  
+        {/* Description */}
         <CardItem
-          translateZ={20}
-          as={Link}
-          to={card.ctaPrimary.link}
-          target="_blank"
-          className="px-4 py-2 rounded-xl text-xs font-normal dark:text-yellow-300"
+          as="p"
+          translateZ="60"
+          className="text-neutral-300 text-sm max-w-sm mt-2 line-clamp-5"
         >
-          {card.ctaPrimary.label}
+          {card.description}
         </CardItem>
-      </div>
-    </CardBody>
-  );
-}
+  
+        {/* Dynamic Image Transition */}
+        <CardItem translateZ="100" className="w-full mt-4">
+          <div
+            style={{
+              backgroundImage: `url(${card.imageUrls[currentImage]})`,
+              transition: "background-image 1s ease-in-out",
+            }}
+            className="h-60 w-full rounded-xl bg-cover bg-center shadow-xl"
+          ></div>
+        </CardItem>
+  
+        {/* CTA Primary Button */}
+        <div className="flex justify-start items-center mt-8">
+          <CardItem
+            translateZ={20}
+            as={Link}
+            to={card.ctaPrimary.link}
+            target="_blank"
+            className="px-4 py-2 rounded-xl text-xs font-normal text-yellow-300"
+          >
+            {card.ctaPrimary.label}
+          </CardItem>
+        </div>
+      </CardBody>
+    );
+  }
+  

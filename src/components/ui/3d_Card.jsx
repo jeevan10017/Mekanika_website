@@ -1,20 +1,18 @@
-"use client";
 import React, {
-    createContext,
-    useState,
-    useContext,
-    useRef,
-    useEffect,
-  } from "react";
+  createContext,
+  useState,
+  useContext,
+  useRef,
+  useEffect,
+} from "react";
 import { cn } from "../utils/uiUtils.tsx";
-
 
 const MouseEnterContext = createContext(undefined);
 
 export const CardContainer = ({
   children,
   className,
-  containerClassName
+  containerClassName,
 }) => {
   const containerRef = useRef(null);
   const [isMouseEntered, setIsMouseEntered] = useState(false);
@@ -28,23 +26,27 @@ export const CardContainer = ({
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = () => {
     setIsMouseEntered(true);
-    if (!containerRef.current) return;
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = () => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
   };
+
   return (
-    (<MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
+    <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
-        className={cn("py-20 flex items-center justify-center mx-4 lg:mx-0", containerClassName)}
+        className={cn(
+          "py-20 flex items-center justify-center mx-4 lg:mx-0",
+          containerClassName
+        )}
         style={{
           perspective: "1000px",
-        }}>
+        }}
+      >
         <div
           ref={containerRef}
           onMouseEnter={handleMouseEnter}
@@ -56,26 +58,25 @@ export const CardContainer = ({
           )}
           style={{
             transformStyle: "preserve-3d",
-          }}>
+          }}
+        >
           {children}
         </div>
       </div>
-    </MouseEnterContext.Provider>)
+    </MouseEnterContext.Provider>
   );
 };
 
-export const CardBody = ({
-  children,
-  className
-}) => {
+export const CardBody = ({ children, className }) => {
   return (
-    (<div
+    <div
       className={cn(
-        "h-96 w-72 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        "h-96 w-72 bg-neutral-900 text-zinc-100 shadow-lg rounded-3xl [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]",
         className
-      )}>
+      )}
+    >
       {children}
-    </div>)
+    </div>
   );
 };
 
@@ -108,16 +109,20 @@ export const CardItem = ({
   };
 
   return (
-    (<Tag
+    <Tag
       ref={ref}
-      className={cn("w-fit transition duration-200 ease-linear", className)}
-      {...rest}>
+      className={cn(
+        "w-fit text-zinc-100 transition duration-200 ease-linear",
+        className
+      )}
+      {...rest}
+    >
       {children}
-    </Tag>)
+    </Tag>
   );
 };
 
-// Create a hook to use the context
+// Hook for using MouseEnterContext
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
   if (context === undefined) {
