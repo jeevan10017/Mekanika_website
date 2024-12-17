@@ -2,22 +2,24 @@ import React from 'react';
 import './App.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './components/Home';
-import AboutUs from './components/AboutUs';
-import Events from './components/Events';
+import Home from './pages/HomePage/Home';
+import AboutUs from './pages/AboutUs/AboutUs';
 import CourseMaterial from './components/CourseMaterial';
-import Projects from './components/Projects';
+// import Projects from './components/Projects';
+import {DepProjects} from './pages/Projects/DepProjects';
 import Footer from './components/Footer';
-import Copyright from './components/Copyright';
-import BlogsCE from './components/Blogs_Core-expedition';
-import BlogsIC from './components/Blog_InternChronicles';
-import SuccessStories from './components/SuccessStories';
+import BlogsCE from './pages/Blogs/Core-Expedition/Blogs_Core-expedition';
+import BlogsIC from './pages/Blogs/Intern-Chronicles/Blog_InternChronicles';
+import Navbar from './components/Navbar';
+import {Events} from './components/3D_Events';
+// import SignUpMechanism from './components/SignUpMechanism.jsx';
+
 
 function App() {
   return (
     <Router>
-        <Header />  
+        {/* <Header />   */}
+        <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
@@ -25,11 +27,12 @@ function App() {
         <Route path="/intern-chronicles" element={<BlogsIC />} />
         <Route path="/events" element={<Events />} />
         <Route path="/course-material" element={<CourseMaterial />} />
-        <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/projects" element={<Projects />} /> */}
+        <Route path="/projects" element={<DepProjects />} />
+        {/* <Route path="/registration" element={<SignUpMechanism />} /> */}
         {/* <Route path="*" element={<NotFound />} />  */}
       </Routes>
       <Footer />
-      <Copyright/>
     </Router>
   );
 }

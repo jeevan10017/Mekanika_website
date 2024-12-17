@@ -1,0 +1,11 @@
+{
+  "name": "custom-static-package",
+  "version": "1.0.2",
+  "main": "index.js",
+  "description": "Custom HTML, CSS, and JS as an NPM package",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

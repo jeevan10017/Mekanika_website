@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 import Fuse from 'fuse.js';
 
 
-const projectData = [
+const projectsData = [
     {
       id: 1,
       title: 'Development of autonomous multipurpose agricultural robotic platform (AUR)',
@@ -447,52 +447,5 @@ const projectData = [
 
 
 
-
-
-
-  const fuseOptions = {
-    includeScore: true,
-    threshold: 0.3, // Balance between strict and lenient matching
-    keys: ['title', 'Startdate', 'faculties.name', 'faculties.link'],
-  };
-  // eslint-disable-next-line
-  const fuse = new Fuse(projectData, fuseOptions);
-  // eslint-disable-next-line
-  const theme = createTheme({
-    palette: {
-      mode: 'dark',
-      background: {
-        default: '#121212',
-        paper: '#1d1d1d',
-      },
-      text: {
-        primary: '#ffffff',
-        secondary: '#F0E68C',
-      },
-    },
-    components: {
-      MuiTextField: {
-        styleOverrides: {
-          root: {
-            '& .MuiInputBase-input': {
-              color: '#F0E68C',
-            },
-            '& .MuiInputLabel-root': {
-              color: '#b0b0b0',
-            },
-            '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#b0b0b0',
-            },
-            '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#eadc5f',
-            },
-          },
-        },
-      },
-    },
-  });
-
-
-
- export default projectData;
+ export default projectsData;
     
