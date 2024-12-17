@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
-import './Footer.css';
 import Logos from './Images/MekanikaLogo.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,7 +15,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-slate-900 py-8" >
+    <footer className="bg-slate-950 py-8" >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-10 gap-4 text-center md:text-left text-gray-300 " >
         {/* Quick Links */}
         <div className="col-span-4 flex flex-col items-center justify-center md:items-start md:mx-24 mt-4" >
