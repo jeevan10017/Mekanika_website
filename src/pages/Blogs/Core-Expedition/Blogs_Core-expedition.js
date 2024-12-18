@@ -44,7 +44,7 @@ const BlogsCE = () => {
                     <p className=" text-sm text-gray-400 sm:ml-4 text-center sm:text-left mt-2 mb-20 sm:mt-0 ">(Core)</p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-4">
                     {CE_blogsData.map((blog) => (
                         <GlareCard
                             key={blog.id}

@@ -60,7 +60,7 @@ const Navbar = () => {
     >
       <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-14 md:h-16 lg:h-20"> 
         <Link to="/" className="flex items-center">
-          <img src={Logo} alt="MS Hall Logo" className=" h-8 md:h-10 w-auto mr-3  rounded" />
+          <img src={Logo} alt="Mekanika" className=" h-8 md:h-10 w-auto mr-3  rounded" />
           <h1 className="md:text-3xl text-2xl font-bold text-[#fefefe]">MEKANIKA</h1>
         </Link>
 

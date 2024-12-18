@@ -71,7 +71,7 @@ export function MediumRegister() {
           placeholder="Enter your email"
           value={email}
           onChange={handleEmailChange}
-          className="w-full md:w-72 h-12 rounded-xl border border-black dark:border-neutral-700 text-black dark:text-white bg-white dark:bg-neutral-900 text-sm px-3"
+          className="w-full md:w-72 h-12 rounded-xl border  border-gray-700  text-white bg-gray-900 text-sm px-3"
           required
         />
         <button

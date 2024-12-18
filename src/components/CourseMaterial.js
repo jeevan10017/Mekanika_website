@@ -105,7 +105,7 @@ const CourseMaterial = () => {
         {semesters.map((semester, index) => (
           <div key={index} className="semester-accordion" >
             <input type="checkbox" id={`accordion-${index}`} className="accordion-input" />
-            <label htmlFor={`accordion-${index}`} className="accordion-label bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 !important lg:flex lg:items-center ">{semester.semester}
+            <label htmlFor={`accordion-${index}`} className="accordion-label bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 !important  ">{semester.semester}
             </label>
             <div className="accordion-content">
               {semester.subjects.map((subject, idx) => (
