@@ -44,10 +44,10 @@ const Navbar = () => {
       id: 6,
       text: "more",
       subItems: [
-        { id: 61, text: "Team", link: "/" },
-        { id: 62, text: "Video", link: "/" },
-        { id: 63, text: "gallery", link: "/" },
-        { id: 64, text: "registration", link: "/registration" },
+        { id: 61, text: "Team", link: "/under-construction" },
+        { id: 62, text: "Video", link: "/under-construction" },
+        { id: 63, text: "gallery", link: "/under-construction" },
+        { id: 64, text: "registration", link: "/under-construction" },
       ],
     },
   ];
@@ -58,10 +58,10 @@ const Navbar = () => {
         scrolled ? "backdrop-blur-md bg-black/70 shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-20">
+      <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-14 md:h-16 lg:h-20"> 
         <Link to="/" className="flex items-center">
-          <img src={Logo} alt="MS Hall Logo" className="h-10 w-auto mr-3  rounded" />
-          <h1 className="text-3xl font-bold text-[#fefefe]">MEKANIKA</h1>
+          <img src={Logo} alt="MS Hall Logo" className=" h-8 md:h-10 w-auto mr-3  rounded" />
+          <h1 className="md:text-3xl text-2xl font-bold text-[#fefefe]">MEKANIKA</h1>
         </Link>
 
         {/* Desktop Navigation */}
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <span>{item.text}</span>
                 <span className="absolute left-0 bottom-3 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                 <div
-                  className={`absolute left-0 top-full bg-gray-900 opacity-70 text-gray-300 shadow-lg rounded-md ${
+                  className={`absolute left-0 top-full bg-gray-900 opacity-90 text-gray-300 shadow-lg rounded-md ${
                     activeDropdown === item.id ? "block" : "hidden"
                   }`}
                   style={{ width: "200px" }}
@@ -114,7 +114,7 @@ const Navbar = () => {
           onClick={handleNav}
           className="block md:hidden text-gray-300 font-extrabold"
         >
-          {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+          {nav ? <AiOutlineClose size={22} /> : <AiOutlineMenu size={22} />}
         </div>
 
         {/* Mobile Menu */}

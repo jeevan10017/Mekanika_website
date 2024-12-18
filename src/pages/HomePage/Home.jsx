@@ -6,7 +6,8 @@ import Hero from './HomeCarousal/Hero.jsx';
 import AboutMekanika from './AboutMekanika/AboutMekanika.jsx';
 import {AnimatedTestimonialsDemo} from './HomeEvents/HomeEvents.tsx';
 import { HeroVideo } from './HomeVideo/HeroVideo.jsx';
-import {CardHoverEffectDemo} from '../Projects/DepProjects.jsx';
+import { MediumRegister } from '../../components/MediumRegister.jsx';
+
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <SuccessStories />
       <AnimatedTestimonialsDemo/>
       <HeroVideo/>
+      <MediumRegister/>
     </section>
   );
 };

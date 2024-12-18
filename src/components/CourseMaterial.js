@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import './CourseMaterial.css';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
 
 const CourseMaterial = () => {
+  const [openSemester, setOpenSemester] = useState(null);
 
   useEffect(() => {
     AOS.init({
@@ -94,22 +95,26 @@ const CourseMaterial = () => {
     
   ];
 
+  const toggleSemester = (index) => {
+    setOpenSemester(openSemester === index ? null : index); // Open the clicked semester, close others
+  };
+
   return (
     <section id="course-material" className="course-material-section">
-      <div className="container" data-aos="fade-up">
+      <div className="container" >
         {semesters.map((semester, index) => (
-          <div key={index} className="semester-accordion" data-aos="fade-up">
+          <div key={index} className="semester-accordion" >
             <input type="checkbox" id={`accordion-${index}`} className="accordion-input" />
-            <label htmlFor={`accordion-${index}`} className="accordion-label">{semester.semester}</label>
-            <div className="accordion-content" data-aos="fade-up">
+            <label htmlFor={`accordion-${index}`} className="accordion-label bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 !important lg:flex lg:items-center ">{semester.semester}
+            </label>
+            <div className="accordion-content">
               {semester.subjects.map((subject, idx) => (
                 <a
                   key={idx}
                   href={subject.link}
-                  className="course-material-card"
+                  className="course-material-card bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 !important"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-aos="fade-up"
                 >
                   {subject.title}
                 </a>
@@ -118,7 +123,11 @@ const CourseMaterial = () => {
           </div>
         ))}
       </div>
+      <div className="text-gray-400 display-4 text-center p-8">
+      These resources were extracted from KGPellence
+      </div>
     </section>
+    
   );
 }
 
