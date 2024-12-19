@@ -3,10 +3,10 @@ import React from 'react';
 import './CourseMaterial.css';
 import AOS from 'aos'; 
 import 'aos/dist/aos.css';
+import { GradualSpacing } from "../../components/magicui/GradualSpacing.tsx";
 
 const CourseMaterial = () => {
-  const [openSemester, setOpenSemester] = useState(null);
-
+  const [openAccordions, setOpenAccordions] = useState(0);
   useEffect(() => {
     AOS.init({
       duration: 1000, 
@@ -14,7 +14,9 @@ const CourseMaterial = () => {
     });
   }, []);
 
-
+  const handleAccordionToggle = (isOpen) => {
+    setOpenAccordions((prev) => (isOpen ? prev + 1 : prev - 1));
+  };
   const semesters = [
     {
       semester: 'Semester 1',
@@ -95,24 +97,40 @@ const CourseMaterial = () => {
     
   ];
 
-  const toggleSemester = (index) => {
-    setOpenSemester(openSemester === index ? null : index); // Open the clicked semester, close others
-  };
 
   return (
-    <section id="course-material" className="course-material-section bg-zinc-950">
-      <div className="container" >
+    <section id="course-material" className="course-material-section bg-zinc-950 relative">
+      {/* Conditionally render the "Materials" text */}
+      {openAccordions === 0 && (
+        <div className="absolute hidden lg:flex items-center justify-center top-0 left-40 w-full h-full">
+          <p className="text-yellow-400 text-4xl font-bold"> <GradualSpacing
+              text="Course Materials"
+              className="text-4xl sm:text-2xl md:text-3xl font-extrabold transition-opacity duration-500 opacity-100"
+            /></p>
+        </div>
+      )}
+
+      <div className="container">
         {semesters.map((semester, index) => (
-          <div key={index} className="semester-accordion" >
-            <input type="checkbox" id={`accordion-${index}`} className="accordion-input" />
-            <label htmlFor={`accordion-${index}`} className="accordion-label bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 !important  ">{semester.semester}
+          <div key={index} className="semester-accordion">
+            <input
+              type="checkbox"
+              id={`accordion-${index}`}
+              className="accordion-input"
+              onChange={(e) => handleAccordionToggle(e.target.checked)}
+            />
+            <label
+              htmlFor={`accordion-${index}`}
+              className="accordion-label bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 shadow-sm shadow-yellow-400"
+            >
+              {semester.semester}
             </label>
             <div className="accordion-content">
               {semester.subjects.map((subject, idx) => (
                 <a
                   key={idx}
                   href={subject.link}
-                  className="course-material-card bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 !important"
+                  className="course-material-card bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 shadow-sm shadow-yellow-400"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -123,12 +141,12 @@ const CourseMaterial = () => {
           </div>
         ))}
       </div>
+
       <div className="text-gray-400 display-4 text-center p-8">
-      These resources were extracted from KGPellence
+        These resources were extracted from KGPellence
       </div>
     </section>
-    
   );
-}
+};
 
 export default CourseMaterial;

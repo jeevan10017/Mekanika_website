@@ -11,6 +11,16 @@ const images = [Image1, Image2, Image3, Image4, Image5];
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleText, setVisibleText] = useState({ line1: false, line2: false, line3: false });
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768); 
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     // Carousel transition interval
@@ -62,7 +72,6 @@ const Hero = () => {
           ))}
         </div>
 
-        {/* Light pink filter overlay */}
         <div className="absolute inset-0 bg-gray-900 bg-opacity-30"></div>
 
         {/* Hero Text Section */}
@@ -74,11 +83,28 @@ const Hero = () => {
             />
           )}
           {visibleText.line2 && (
-            <GradualSpacing
-              text="Official society of Department of Mechanical Engineering"
-              className="text-lg font-semibold mt-2 sm:text-lg md:text-2xl flex flex-col items-center justify-center transition-opacity duration-500 opacity-100"
-            />
+            <>
+              {isSmallScreen ? (
+                <div className="flex flex-col items-center justify-center mx-2">
+                  <GradualSpacing
+                    text="Official society of Department"
+                    className="text-lg font-semibold transition-opacity duration-500 opacity-100 sm:text-lg md:text-2xl"
+                  />
+                  <GradualSpacing
+                    text=" of Mechanical Engineering"
+                    className="text-lg font-semibold mt-1 transition-opacity duration-500 opacity-100 sm:text-lg md:text-2xl"
+                  />
+                </div>
+              ) : (
+                <GradualSpacing
+                  text="Official society of Department of Mechanical Engineering"
+                  className="text-lg font-semibold mt-2 sm:text-lg md:text-2xl flex flex-col items-center justify-center transition-opacity duration-500 opacity-100"
+                />
+              )}
+            </>
           )}
+
+
           {visibleText.line3 && (
             <GradualSpacing
               text="IIT Kharagpur"

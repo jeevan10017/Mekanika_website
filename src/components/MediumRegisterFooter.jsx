@@ -1,24 +1,13 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com"; 
-import { TypewriterEffectSmooth } from "./ui/typeWriterEffect";
 import { CheckIcon, ChevronRightIcon } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css"; 
 
-export function MediumRegister() {
+
+export function MediumRegisterFooter() {
   const [email, setEmail] = useState(""); 
   const [isSubscribed, setIsSubscribed] = useState(false); 
-
-  const words = [
-    { text: "Stay" },
-    { text: "updated" },
-    { text: "with" },
-    { text: "the" },
-    { text: "latest" },
-    { text: "blogs" },
-    { text: "from" },
-    { text: "Mekanika", className: "text-yellow-300 dark:text-yellow-300" },
-  ];
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -38,7 +27,6 @@ export function MediumRegister() {
     const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
     const userId = process.env.REACT_APP_EMAILJS_USER_ID;
 
-    
     emailjs
       .send(serviceId, templateId, templateParams, userId)
       .then(
@@ -56,27 +44,30 @@ export function MediumRegister() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[20rem] px-4 sm:px-8 lg:px-16">
-      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base">
-        To get notified about new blogs every week, Register here.
+    <div className="flex flex-col items-center justify-center h-[8rem] lg:mb-8 mb-16 mt-8 lg:mt-0 px-4 sm:px-6 lg:px-12">
+      <p className="text-gray-500 text-sm sm:text-base text-center">
+        Get notified about new blogs every week by registering here.
       </p>
-      <TypewriterEffectSmooth words={words} />
+
+      <p className="text-yellow-300 dark:text-yellow-300 font-semibold text-lg sm:text-xl mt-2 text-center">
+        Stay updated with the latest blogs from Mekanika
+      </p>
 
       <form
         onSubmit={handleSubscribe}
-        className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 items-center justify-center w-full"
+        className="flex flex-col md:flex-row space-y-3 md:space-y-0 space-x-0 md:space-x-3 items-center justify-center w-full mt-4"
       >
         <input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={handleEmailChange}
-          className="w-full md:w-72 h-12 rounded-xl border  border-gray-700  text-white bg-gray-900 text-sm px-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          className="w-full md:w-72 h-10 rounded-lg border border-gray-700 text-white bg-gray-900 text-sm px-3 focus:outline-none focus:ring-2 focus:ring-yellow-400"
           required
         />
         <button
           type="submit"
-          className={`w-36 h-12 rounded-xl flex items-center justify-center ${
+          className={`w-32 h-10 rounded-lg flex items-center justify-center text-sm ${
             isSubscribed ? "text-gray-950" : "text-yellow-400"
           } bg-gradient-to-r ${
             isSubscribed
@@ -87,7 +78,7 @@ export function MediumRegister() {
         >
           {isSubscribed ? (
             <span className="flex items-center">
-              <CheckIcon className="mr-2 size-4 text-black" />
+              <CheckIcon className="mr-1 size-4 text-black font-bold" />
               Subscribed
             </span>
           ) : (

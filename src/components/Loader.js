@@ -19,7 +19,7 @@ const Loader = () => {
       <div className="loader-text">
          <GradualSpacing
                     text="MEKANIKA"
-                    className="text-4xl sm:text-2xl md:text-3xl font-extrabold transition-opacity duration-500 opacity-100"
+                    className=" lg:text-4xl text-2xl md:text-3xl font-extrabold transition-opacity duration-500 opacity-100"
           /></div>
     </div>
   );

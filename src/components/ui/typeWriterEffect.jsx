@@ -11,13 +11,12 @@ export const TypewriterEffectSmooth = ({
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768); // Adjust breakpoint as needed
+      setIsSmallScreen(window.innerWidth < 768); 
     };
 
-    // Initialize screen size on mount
+  
     handleResize();
 
-    // Listen for window resize events
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -36,7 +35,7 @@ export const TypewriterEffectSmooth = ({
           {word.text.map((char, index) => (
             <span
               key={`char-${index}`}
-              className={cn(`dark:text-white text-black`, word.className)}
+              className={cn(`text-white`, word.className)}
             >
               {char}
             </span>

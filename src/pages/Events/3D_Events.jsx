@@ -83,14 +83,14 @@ const images = [
 
   export function Events() {
     return (
-      <div className="flex flex-col items-center justify-center w-full">
+      <div className="flex flex-col items-center justify-center w-full ">
         {/* Heading */}
         <h1 className="text-3xl font-bold text-center mt-24  text-yellow-400">
           Events Conducted by us
         </h1>
   
         {/* Card Container */}
-        <div className="flex flex-wrap gap-6 justify-center">
+        <div className="flex flex-wrap gap-6 justify-center ">
           {cardData.map((card, cardIndex) => (
             <CardContainer key={cardIndex} className="inter-var">
               <CardContent card={card} />

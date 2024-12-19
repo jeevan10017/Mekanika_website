@@ -71,7 +71,7 @@ export const CardBody = ({ children, className }) => {
   return (
     <div
       className={cn(
-        "h-96 w-72 bg-neutral-900 text-zinc-100 shadow-lg rounded-3xl [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]",
+        "h-96 w-72 bg-neutral-900 text-zinc-100  rounded-3xl [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] shadow-md shadow-yellow-400",
         className
       )}
     >

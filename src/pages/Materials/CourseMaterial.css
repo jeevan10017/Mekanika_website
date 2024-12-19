@@ -1,9 +1,9 @@
 .course-material-section { 
-  padding: 20px;
+  /* padding: 20px;
  
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  overflow: hidden; */
   /* position: relative; */
   
 }
@@ -77,15 +77,15 @@
 .course-material-section {
   padding: 20px;
  
-  background-size: cover;
+  /* background-size: cover;
   background-position: center;
-  overflow: hidden;
-  position: relative;
+  overflow: hidden; */
+  /* position: relative;
 
   background-size: cover;
   background-attachment: fixed; 
   background-position: center; 
-  opacity: 0.9;
+  opacity: 0.9; */
 }
 
 .course-material-section .container {
@@ -183,6 +183,7 @@ text-transform: uppercase;
   overflow-y: auto;
   margin : 0px; 
   padding: 0px;
+ 
 }
 
 .course-material-card {
@@ -195,7 +196,9 @@ text-transform: uppercase;
   width: calc(100% - 40px); 
   align-items: center;
   margin-bottom: 10px;
+  box-shadow: 0px 1px 2px rgba(214, 186, 8, 0.993);
   text-align: center 
+  
 }
 
 .course-material-card:hover {
