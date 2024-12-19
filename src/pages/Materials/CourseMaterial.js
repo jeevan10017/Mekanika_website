@@ -99,14 +99,26 @@ const CourseMaterial = () => {
 
 
   return (
-    <section id="course-material" className="course-material-section bg-zinc-950 relative">
-      {/* Conditionally render the "Materials" text */}
+    <section id="course-material" className="course-material-section bg-zinc-950">
+      {/* "Course Materials" text for small screens */}
+      <div className="block lg:hidden text-center pt-24">
+        <p className="text-yellow-400 text-xl sm:text-2xl font-bold">
+          <GradualSpacing
+            text="Course Materials"
+            className="text-2xl sm:text-2xl font-extrabold transition-opacity duration-500 opacity-100"
+          />
+        </p>
+      </div>
+
+      {/* "Course Materials" text for large screens */}
       {openAccordions === 0 && (
         <div className="absolute hidden lg:flex items-center justify-center top-0 left-40 w-full h-full">
-          <p className="text-yellow-400 text-4xl font-bold"> <GradualSpacing
+          <p className="text-yellow-400 text-4xl font-bold">
+            <GradualSpacing
               text="Course Materials"
               className="text-4xl sm:text-2xl md:text-3xl font-extrabold transition-opacity duration-500 opacity-100"
-            /></p>
+            />
+          </p>
         </div>
       )}
 

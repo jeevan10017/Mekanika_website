@@ -49,7 +49,7 @@ export function MediumRegisterFooter() {
         Get notified about new blogs every week by registering here.
       </p>
 
-      <p className="text-yellow-300 dark:text-yellow-300 font-semibold text-lg sm:text-xl mt-2 text-center">
+      <p className="text-yellow-400/90 font-semibold text-lg sm:text-xl mt-2 text-center">
         Stay updated with the latest blogs from Mekanika
       </p>
 

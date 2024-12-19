@@ -36,8 +36,8 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="col-span-3 flex flex-col items-center justify-center md:items-start" >
-          <h2 className="text-2xl font-bold text-yellow-400 mb-4">Contact Us</h2>
+        <div className="col-span-3 flex flex-col items-center justify-center md:items-start lg:mt-0 mt-6" >
+          <h2 className="text-2xl font-bold text-yellow-400 lg:mb-4 mb-2">Contact Us</h2>
           <p className="mb-1">Email: mekanika2022@gmail.com</p>
           <p className="mb-1">Phone: +91 080041 25928</p>
           <p className="mb-1">IIT Kharagpur</p>
@@ -45,9 +45,9 @@ const Footer = () => {
         </div>
 
         {/* Logo and Social Links */}
-        <div className="col-span-3 flex flex-col items-center justify-center" >
-          <div className="flex items-center mb-4">
-            <img src={Logos} alt="Mekanika Logo" className="w-12 h-12 rounded mr-3" />
+        <div className="col-span-3 flex flex-col items-center justify-center lg:mt-0 mt-6" >
+          <div className="flex items-center lg:mb-4 mb-2">
+            <img src={Logos} alt="Mekanika Logo" className="w-10 h-10 rounded mr-3 " />
             <h1 className="text-3xl font-bold text-yellow-400">MEKANIKA</h1>
            
           </div>
