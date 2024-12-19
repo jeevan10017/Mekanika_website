@@ -40,7 +40,7 @@ const Hero = () => {
   return (
     <div>
       {/* --------------------   Hero section ---------------------------*/}
-      <div className="relative w-full h-screen overflow-hidden pt-16 z-0">
+      <div className="relative w-full h-screen overflow-hidden pt-16 z-0 " data-aos="fade-in">
         {/* Background Images */}
         <div className="absolute inset-0 transition-opacity duration-500">
           {images.map((image, index) => (

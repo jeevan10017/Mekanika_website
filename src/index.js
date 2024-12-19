@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Loader from './components/Loader'; 
+import Loader from './components/Loader';
 import './index.css';
+
+const App = lazy(() => import('./App'));
 
 const Root = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-   
     const timeout = setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -17,9 +17,9 @@ const Root = () => {
   }, []);
 
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       {loading ? <Loader /> : <App />}
-    </>
+    </Suspense>
   );
 };
 

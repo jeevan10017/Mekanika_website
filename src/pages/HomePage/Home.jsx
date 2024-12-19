@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="relative text-center bg-cover bg-fixed bg-slate-950" data-aos="fade-down">
+    <section className="relative text-center bg-cover bg-fixed bg-slate-950" data-aos="fade-in">
       <Hero />
       <AboutMekanika/>
       <SuccessStories />

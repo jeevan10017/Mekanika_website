@@ -100,7 +100,7 @@ const CourseMaterial = () => {
   };
 
   return (
-    <section id="course-material" className="course-material-section">
+    <section id="course-material" className="course-material-section bg-zinc-950">
       <div className="container" >
         {semesters.map((semester, index) => (
           <div key={index} className="semester-accordion" >

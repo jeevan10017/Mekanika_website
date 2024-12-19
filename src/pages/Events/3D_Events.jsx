@@ -172,3 +172,4 @@ const images = [
     );
   }
   
+  export default Events;
