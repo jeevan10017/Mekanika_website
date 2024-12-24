@@ -16,6 +16,7 @@ const AboutUs = lazy(() => import('./pages/AboutUs/AboutUs'));
 const BlogsCE = lazy(() => import('./pages/Blogs/Core-Expedition/Blogs_Core-expedition'));
 const BlogsIC = lazy(() => import('./pages/Blogs/Intern-Chronicles/Blog_InternChronicles'));
 const Events = lazy(() => import('./pages/Events/3D_Events'));
+const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/projects" element={<DepProjects />} />
           <Route path="/speed-insights" element={<SpeedInsights />} />
           <Route path="/under-construction" element={<TextRevealDemo />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Suspense>
       <Footer />

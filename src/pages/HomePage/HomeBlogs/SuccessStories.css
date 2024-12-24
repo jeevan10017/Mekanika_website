@@ -38,8 +38,8 @@
 .blogDescrp {
     width: 50%;
     text-align: center;
-    padding-right: 25px;
-    margin-inline: 2rem;
+    /* padding-right: 25px; */
+    margin-inline: 1rem;
 }
 
 .blogDescrp p {
@@ -169,8 +169,7 @@
 
     .blogDescrp {
         width: auto;
-        /* padding: 20px;
-        margin-inline: 3rem; */
+
     }
 
     .sliderSuccess .item {
@@ -206,9 +205,9 @@
 
     .blogDescrp p {
         font-size: 1.2rem;
-    }
-    .blogDescrp {
-        /* margin-inline: 1rem; */
+        width: 98%;
+        margin: 0;
+        padding: 0;
     }
 
     .sliderSuccess .item {

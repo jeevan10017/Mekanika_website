@@ -68,7 +68,7 @@ const AboutMekanika = () => {
                   textAlign: "center",
                   wordSpacing: "4px",
                   lineHeight: "32px",
-                  marginInline: "64px",
+                  // marginInline: "64px",
                 }}
               />
             )}

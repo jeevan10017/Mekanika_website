@@ -37,3 +37,13 @@ body {
 ::selection {
   background-color: #fdd5096b; /* Highlight color */
 }
+
+html {
+  touch-action: manipulation; /* Disables double-tap to zoom */
+  overscroll-behavior: none;
+}
+
+body {
+  user-select: none; /* Disables text selection */
+  touch-action: pan-x pan-y; /* Disables pinch zoom */
+}
