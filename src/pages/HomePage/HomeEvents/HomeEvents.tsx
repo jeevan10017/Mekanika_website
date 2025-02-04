@@ -10,35 +10,35 @@ export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+        "'Know Your Mates' provide a platform for first-year undergraduates students to interact, build connections, and familiarize themselves with fellow students, fostering a sense of community and camaraderie within the department.",
       name: "Know Your Mates",
       designation: "Product Manager at TechFlow",
       src: Image1
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+        "Mekanika organized an industrial visit, offering students valuable exposure to real-world manufacturing processes and cutting-edge technologies in mechanical engineering.",
       name: "Industrisl Visit",
       designation: "CTO at InnovateSphere",
       src: Image2,
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+        "A Comprehensive MATLAB workshop, providing students with practical skills in data analysis, simulation, and optimization, equipping them to solve real-world engineering problems efficiently.",
       name: "Matlab Workshop",
       designation: "Operations Director at CloudScale",
       src: MATLAB,
     },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+        "'Mech-D Talks' is an insightful event that brings together a panel of students to share valuable knowledge and experiences, while addressing inquiries related to CDC and academic opportunities.",
       name: "MechD Talks",
       designation: "Engineering Lead at DataPro",
       src: MechDTalk,
     },
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+        "Mekanika organizes cricket and sports events to foster a spirit of competition, teamwork, and fitness among students, offering them a chance to unwind and showcase their athletic talents",
       name: "Sports - Cricket",
       designation: "VP of Technology at FutureNet",
       src: Cricket,

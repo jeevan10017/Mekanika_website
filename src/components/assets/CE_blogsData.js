@@ -1,6 +1,7 @@
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 // import Sambhav from '../../components/blog images/Sambhav Jena.jpeg'
 import Tanushree from '../../components/blog images/Tanushree Prasad.jpeg'
+// eslint-disable-next-line 
 import { time } from 'framer-motion';
 
 

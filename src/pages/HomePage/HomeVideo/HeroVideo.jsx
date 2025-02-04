@@ -42,15 +42,11 @@ export function HeroVideo() {
                   marginInline: "0",
                 }}
               >
-                Mekanika is a passionate community of students and alumni of the
-                Department of Mechanical Engineering at IIT Kharagpur who are
-                dedicated to advancing the field of Mechanical Engineering. Our
-                mission is to build connections, collaboration, and education in
-                the world of Mechanical Engineering.
+               Mekanika organizes a heartfelt farewell to celebrate the achievements of graduating students, featuring speeches, performances, and moments of reflection. It serves as a final gathering to honor friendships, share experiences, and wish the graduates success in their future endeavors, marking the end of their academic journey and the beginning of new opportunities. 
               </p>
             ) : (
               <TextRevealByWord
-                text={`Mekanika is a passionate community of students and alumni of the Department of Mechanical Engineering at IIT Kharagpur who are dedicated to advancing the field of Mechanical Engineering. Our mission is to build connections, collaboration, and education in the world of Mechanical Engineering.`}
+                text={`Mekanika organizes a heartfelt farewell to celebrate the achievements of graduating students, featuring speeches, performances, and moments of reflection. It serves as a final gathering to honor friendships, share experiences, and wish the graduates success in their future endeavors, marking the end of their academic journey and the beginning of new opportunities. `}
                 className="text-lg sm:text-xl leading-relaxed whitespace-pre-line text-center"
                 style={{
                   fontSize: "1.4rem",

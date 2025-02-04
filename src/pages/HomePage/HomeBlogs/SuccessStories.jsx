@@ -85,7 +85,7 @@ const SuccessStories = () => {
         "https://miro.medium.com/v2/resize:fit:786/format:webp/1*Cp8nhcSc4JDnBMkrowvcsA.png",
       name: "Praveen Yadav",
       story:
-        "They don’t specifically search for any particular skill set but pursuing some projects in the core mechanical domain.",
+        "They don't specifically search for any particular skill set but pursuing some projects in the core mechanical domain.",
       role: "Intern @ JLR",
     },
     {

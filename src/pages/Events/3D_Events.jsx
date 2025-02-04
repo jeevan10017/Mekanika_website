@@ -21,11 +21,36 @@ const images = [
     require("../../components/event_Images/AT3.jpg"),
     require("../../components/event_Images/AT4.jpg"),
     require("../../components/event_Images/AT5.jpg"),
+    //17
+    require("../../components/event_Images/ps1.jpg"),
+    require("../../components/event_Images/ps2.jpg"),
+    require("../../components/event_Images/ps3.jpg"),
+    require("../../components/event_Images/kyd1.jpg"),
+    require("../../components/event_Images/kyd2.jpg"),
+    require("../../components/event_Images/kyd3.jpg"),
+    require("../../components/event_Images/gl1.jpg"),
+    require("../../components/event_Images/gl2.jpg"),
+    require("../../components/event_Images/gl3.jpg"),
+    require("../../components/event_Images/gl4.jpg"),
+
     
   ];
   
 
   export const cardData = [
+    {
+      title: "KNOW YOUR DEPARTMENT",
+      description:
+        "Mekanika organized the 'Know Your Department' event to welcome freshers. Professors provided an overview of the coursework, and key study areas, while students engaged in discussions to gain valuable insights. ",
+      imageUrls: [ images[21], images[22], images[23]],
+      ctaPrimary: {
+        label: "Explore now →",
+        link: "https://example.com",
+      },
+      ctaSecondary: {
+        label: "5 Aug 2024",
+      },
+    },
     {
       title: "KNOW YOUR MATES",
       description:
@@ -36,7 +61,7 @@ const images = [
         link: "https://twitter.com/mannupaaji",
       },
       ctaSecondary: {
-        label: "26 Jan 2026",
+        label: "4 Oct 2024",
       },
     },
     {
@@ -49,20 +74,7 @@ const images = [
         link: "https://example.com",
       },
       ctaSecondary: {
-        label: "12 Feb 2026",
-      },
-    },
-    {
-      title: " INTRA-DEPARTMENTAL QUIZ",
-      description:
-        "organized an Intra-Departmental Quiz, creating a platform for students to showcase their knowledge. Fostered a friendly yet competitive atmosphere and a sense of camaraderie among participants. The atmosphere buzzed with excitement and friendly competition as teams vied for the top spot.The success of the event was a result of meticulous planning and enthusiastic participation, making it a memorable and enriching experience for all involved.",
-      imageUrls: [images[8], images[9], images[10], images[11],images[12]],
-      ctaPrimary: {
-        label: "Explore now →",
-        link: "https://example.com",
-      },
-      ctaSecondary: {
-        label: "12 Feb 2026",
+        label: "12 Nov 2024",
       },
     },
     {
@@ -75,9 +87,50 @@ const images = [
         link: "https://example.com",
       },
       ctaSecondary: {
-        label: "20 March 2026",
+        label: "4 Jan 2025",
       },
     },
+    {
+      title: " INTRA-DEPARTMENTAL QUIZ",
+      description:
+        "organized an Intra-Departmental Quiz, creating a platform for students to showcase their knowledge. Fostered a friendly yet competitive atmosphere and a sense of camaraderie among participants. The atmosphere buzzed with excitement and friendly competition as teams vied for the top spot.The success of the event was a result of meticulous planning and enthusiastic participation, making it a memorable and enriching experience for all involved.",
+      imageUrls: [images[8], images[9], images[10], images[11],images[12]],
+      ctaPrimary: {
+        label: "Explore now →",
+        link: "https://example.com",
+      },
+      ctaSecondary: {
+        label: "4 Feb 2024",
+      },
+    },
+    
+    {
+      title: "GUEST LECTURE",
+      description:
+        "An insightful session was organized,featuring esteemed alumnus Mr. Ashok Kumar Nandy.Students of Pre-final and final-year explored industry trends, technological advancements, and career opportunities. The session provided valuable perspectives, bridging academia and industry to guide students in their professional journey.",
+      imageUrls: [ images[24], images[25], images[26],images[27]],
+      ctaPrimary: {
+        label: "Explore now →",
+        link: "https://example.com",
+      },
+      ctaSecondary: {
+        label: "9 Aug 2023",
+      },
+    },
+    {
+      title: "PHOTOSHOOT & FAREWELL",
+      description:
+        "The graduating batch captured lasting memories during their farewell and batchmates photoshoot. Beginning with a group picture alongwith faculty, the celebration continued at the Tagore Open Air Theatre (TOAT) followed by the culltural preformance of the departmental Professor. Wishing them all success in their future endeavors!",
+      imageUrls: [ images[18], images[19], images[20]],
+      ctaPrimary: {
+        label: "Explore now →",
+        link: "https://example.com",
+      },
+      ctaSecondary: {
+        label: "15 March 2024",
+      },
+    },
+    
   ];
   
 

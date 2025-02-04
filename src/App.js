@@ -20,6 +20,7 @@ const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
 
 function App() {
   return (
+    
     <Router>
       <ScrollToTop />
       <Navbar />
@@ -39,6 +40,7 @@ function App() {
       </Suspense>
       <Footer />
     </Router>
+    
   );
 }
 

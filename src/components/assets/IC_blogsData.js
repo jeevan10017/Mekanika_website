@@ -1,5 +1,6 @@
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 import AnuskaKulkarni from '../../components/blog images/AnuskaKulkarni.png'
+// eslint-disable-next-line 
 import { time } from 'framer-motion';
 
 
