@@ -1,44 +1,49 @@
-/* For Chrome, Safari, and Opera */
-html{
-  --primary-color:"#64FFDA";
+/* Global Variables */
+html {
+  --primary-color: "#64FFDA";
   scroll-behavior: smooth;
 }
-::-webkit-scrollbar {
-  width: 8px;  /* Width of the entire scrollbar */
-  
-  height: 8px; /* Height of the scrollbar if needed for horizontal scrolling */
-}
-::-webkit-scrollbar-thumb
-{
-  border-radius: 10px;
-  background-color: #f1e906;
-}
 
-::-webkit-scrollbar-track {
-  background: transparent;  /* Color of the scrollbar track */
-  border-radius: 100px;  /* Roundness of the scrollbar track */
+/* Custom Scrollbar for Webkit Browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height for horizontal scrolling */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, gold, orange);  /* Gradient color for the scrollbar thumb */
-  border-radius: 10px;  /* Roundness of the scrollbar thumb */
-  border: 2px solid #0f0e0e;  /* Creates padding around thumb */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adding shadow to the thumb for better visibility */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  background: linear-gradient(45deg, gold, orange); /* Gradient color for the thumb */
+  border: 2px solid #0f0e0e; /* Adds padding effect */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
 }
 
-/* For Firefox */
+::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Custom Scrollbar for Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 217, 2, 0.3) rgba(0, 0, 0, 0.9);
+  scrollbar-width: thin; /* Makes scrollbar thinner */
+  scrollbar-color: rgba(255, 217, 2, 0.482) rgba(0, 0, 0, 0.9); /* Thumb and track color */
 }
 
+/* Body */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Selection Highlight */
+::selection {
+  background-color: #fdd5096b; /* Highlight color */
+}
+
+html {
+  touch-action: manipulation; /* Disables double-tap to zoom */
+  overscroll-behavior: none;
+}
 
 body {
-  overflow-x: hidden;
+  user-select: none; /* Disables text selection */
+  touch-action: pan-x pan-y; /* Disables pinch zoom */
 }
-::selection {
- background-color:  #95811f;
-}
-
-
-

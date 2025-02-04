@@ -1,11 +1,9 @@
-
 .loader-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
-    background-image: url(../components/Images/lp.png) no-repeat center center fixed;
     position: relative;
     top: 0;
     left: 0;
@@ -31,10 +29,21 @@
   .loader-icon3 {
     font-size: 5rem;
     color: rgba(208, 158, 30, 0.7) ; 
-    animation: rotate 1.5s linear infinite;
+    animation: rotate 1.3s linear infinite;
   }
  
- 
+  .loader-text {
+    position: absolute;
+    bottom: 10%; 
+    font-size: 2rem; 
+    color: rgba(208, 158, 30, 1); 
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hides the element */
+    animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
+    animation-delay: 1s; /* Delay the appearance by 1 second */
+  }
   
   @keyframes rotate {
     from {
@@ -51,5 +60,12 @@
     }
     to {
       transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      visibility: visible;
     }
   }

@@ -1,0 +1,224 @@
+.blogs-container1 {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  font-family: 'Times New Roman', Times, serif;
+  flex-wrap: wrap; 
+  /* background-color: #f7f4f2; */
+
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+.blog-item1 {
+  flex: 1 0 calc(23% - 24px);
+  max-width: calc(23% - 24px); 
+  justify-content: space-around;
+  margin: 25px; 
+  border-radius: 50px;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  background: linear-gradient(135deg, rgb(47, 3, 55) 0%, rgb(124, 17, 142) 100%);
+  background-color: rgb(75, 2, 88);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 0 0.75rem rgb(6, 6, 5));
+  box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  height: max-content;
+  animation: fadeInFromBottom 0.5s ease forwards;
+}
+
+.author-image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.author-image img {
+  width: 100%;
+  height: auto;
+}
+
+.author-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 150px;
+  border-top-left-radius: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top, transparent, black);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-bottom-right-radius: 50px;
+  background-color: rgba(32, 31, 31, 0.53);
+}
+
+.author-details:hover {
+  opacity: 1;
+}
+
+.name1 {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 8px; 
+  display: flex;
+ 
+}
+.role {
+  color: #ea7311;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 8px; 
+  display: flex;
+ 
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ea7311;
+}
+
+.blog-content1 {
+  background: linear-gradient(135deg, #ea7311 0%, #954504 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 0;
+padding-bottom: 10px;
+z-index: 1;
+/* border-left: #ea7311 6px solid; */
+margin-left: 10px;
+
+}
+
+.name {
+  margin-top: 0;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.blog-title1 {
+  font-weight: bold;
+  font-size:x-large;
+  color:  rgb(75, 2, 88);
+}
+
+.blog-description {
+  color: #333;
+  color: rgb(75, 2, 88);
+  font-size: 1.5rem;
+  line-height: 1.3rem;
+  max-height: 4.2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  font-family: 'Times New Roman', Times, serif;
+  /* font-family: "Comfortaa", sans-serif; */
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.button1{
+  color: rgb(16, 16, 16);
+  font-weight: 700;
+  background: linear-gradient(135deg, #ea7311 0%, #954504 100%);
+  /* background-color: #ea7311; */
+  margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor:pointer;
+  border-radius: 10px;
+  transition: background-color 1s , padding-left 1s , padding-right 1s , color-1s;
+  text-decoration: none;
+}
+.button1:hover{
+  color: #f7f4f2;
+  font-weight: 700;
+  background-color: rgb(127, 0, 255);
+  padding-left: 30px;
+  padding-right: 30px;
+  
+}
+
+@media screen and (max-width: 1024px) {
+  .blog-item1 {
+      flex: 1 0 calc(33.33% - 24px); 
+      max-width: calc(33.33% - 24px); 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-item1 {
+      flex: 1 0 calc(50% - 24px); 
+      max-width: calc(50% - 24px);
+      justify-content: space-between;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .blog-item1 {
+      flex: 1 0 calc(90% - 12px); 
+      max-width: calc(95% - 12px); 
+  }
+}
+@media screen and (max-width: 446px) {
+  .blog-item1 {
+    flex: 1 0 calc(90% - 0px); 
+    max-width: calc(95% - 0px);
+  }
+}
+
+
+@keyframes fadeInFromBottom {
+  from {
+      opacity: 0;
+      transform: translateY(50px); 
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOnScroll {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.blog-item1 {
+  animation: fadeInOnScroll 1s ease forwards;
+  animation-delay: 1s; 
+}
+.name{
+  color: rgb(250, 247, 245);
+}
+.blog-description{
+  color: rgb(147, 144, 142);
+  font-size: medium;
+}

@@ -1,5 +1,7 @@
 import { faInstagram, faLinkedin, faFacebook, faMedium } from '@fortawesome/free-brands-svg-icons';
 import AnuskaKulkarni from '../../components/blog images/AnuskaKulkarni.png'
+// eslint-disable-next-line 
+import { time } from 'framer-motion';
 
 
 const IC_blogsData = [
@@ -14,9 +16,10 @@ const IC_blogsData = [
             { name: "Facebook", link: "https://www.facebook.com/mekanikaiitkgp/", icon: faFacebook },
             { name: "Medium", link: "https://medium.com/@mekanika2022", icon: faMedium }
         ],
-        blogTitle: "Data Scientist Intern @ Microsoft",
+        blogTitle: "DS Intern @ Microsoft",
         Link: "https://medium.com/@mekanika2022/intern-chronicles-anushka-kulkarni-microsoft-03a3d2666a08",
-        blogDescription: " I believe that one project and one intern would be good. It would be great if you could do more..."
+        blogDescription: " I believe that one project and one intern would be good. It would be great if you could do more...",
+        time: 5
     },
 {
         id: 2,
@@ -33,12 +36,13 @@ const IC_blogsData = [
         ],
         blogTitle: "Analyst @ Golman Sachs",
         Link:"https://medium.com/@mekanika2022/intern-chronicles-vivek-mirani-goldman-sachs-28bef367675d",
-        blogDescription: "Mostly the Quant profile companies ask questions based on Probability and Statistics and if you mention it then you will receive questions based on that but as Mechanical engineering students don’t have this course in the coursework I mentioned it beforehand so I did not receive questions based on distributions and most questions I was asked were logic based. Very good communication skills are also required as you should able to convey your points to the interviewer which one could gain through extracurricular activities."
+        blogDescription: "Mostly the Quant profile companies ask questions based on Probability and Statistics and if you mention it then you will receive questions based on that but as Mechanical engineering students don’t have this course in the coursework I mentioned it beforehand so I did not receive questions based on distributions and most questions I was asked were logic based. Very good communication skills are also required as you should able to convey your points to the interviewer which one could gain through extracurricular activities.",
+        time: 5
     },
     {
         id: 3,
         name: " Vanshul Shikkewal",
-        role: "DS Intern @ PUMA",
+        role: "Data Scientist Intern @ PUMA",
         imageUrl: require('../../components/blog images/Vanshul Shikkewal.jpeg'),
         // imageUrl: "https://media.licdn.com/dms/image/v2/D4D03AQEYZA4VNVfkrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721043333308?e=1732752000&v=beta&t=ZOPt9HvAuMheM2AEdn96CqvXb0XUTL6g7g87x8aB9Yk",
         socialLinks: [
@@ -47,9 +51,10 @@ const IC_blogsData = [
             { name: "Facebook", link: "https://www.facebook.com/vanshul.2723/", icon: faFacebook },
             { name: "Medium", link: "https://medium.com/@mekanika2022", icon: faMedium }
         ],
-        blogTitle: " Data Scientist Intern @ PUMA ",
+        blogTitle: " DS Intern @ PUMA ",
         Link:"https://medium.com/@mekanika2022/intern-chronicles-vanshul-shikkewal-puma-1bfcf4825234",
-        blogDescription: " he cross-questioned me about those Algorithms and asked about their use cases while asking me to compare them to others. After he was satisfied with my responses, he asked me about my hobbies and questioned my subpar involvement in physical activities! The whole interview lasted around 25–35 minutes."
+        blogDescription: " he cross-questioned me about those Algorithms and asked about their use cases while asking me to compare them to others. After he was satisfied with my responses, he asked me about my hobbies and questioned my subpar involvement in physical activities! The whole interview lasted around 25–35 minutes.",
+        time: 5
     },
     {
         id: 4,
@@ -65,7 +70,8 @@ const IC_blogsData = [
         ],
         blogTitle: "BAI at McKinsey & Co.",
         Link:"https://medium.com/@mekanika2022/intern-chronicles-manas-sharma-mckinsey-company-70559e474178",
-        blogDescription: "In consulting, you are interacting with a lot of people meeting clients trying to solve different business situations so the position of responsibility shows that you have taken command, you have taken responsibility for yourself, and you have run an organization in your tenure. I would say POR and academics are two major pillars of your CV. Having a good academic record will be helpful. Having a CGPA of more than 8.5 would be very safe."
+        blogDescription: "In consulting, you are interacting with a lot of people meeting clients trying to solve different business situations so the position of responsibility shows that you have taken command, you have taken responsibility for yourself, and you have run an organization in your tenure. I would say POR and academics are two major pillars of your CV. Having a good academic record will be helpful. Having a CGPA of more than 8.5 would be very safe.",
+        time: 5
     },
     {
         id: 5,
@@ -81,7 +87,8 @@ const IC_blogsData = [
         ],
         blogTitle: " Intern @MasterCard",
         Link:"https://medium.com/@mekanika2022/intern-chronicles-vanshika-prakash-mastercard-9a789b0ff01b",
-        blogDescription: "There were 2 interview rounds. Each of 1hr. In the 1st round, the interviewer asked me to start explaining about my projects. He asked questions on SQL like the difference between SQL and Excel, framed a detailed example, and wrote a query. He went on to ask me 2–3 puzzles and basic ML theory questions like variance, bias, plots, and a few HR questions."
+        blogDescription: "There were 2 interview rounds. Each of 1hr. In the 1st round, the interviewer asked me to start explaining about my projects. He asked questions on SQL like the difference between SQL and Excel, framed a detailed example, and wrote a query. He went on to ask me 2–3 puzzles and basic ML theory questions like variance, bias, plots, and a few HR questions.",
+        time: 8
     },
     {
         id: 6,
@@ -97,7 +104,8 @@ const IC_blogsData = [
         ],
         blogTitle: "Analyst @ BlackRock ",
         Link:"https://medium.com/@mekanika2022/intern-chronicles-apurv-gaurav-blackrock-5bdeee5eb209",
-        blogDescription: " they look for candidates with quantitative aptitude and good temperament. Apart from theoretical finance one has to be smart with quantitative finance, risk modeling, and probability and statistics. Having knowledge of stochastic processes and calculus is also important. It is also important that the candidate has a good knowledge of time series modeling and machine learning as it comes in handy in this job profile."
+        blogDescription: " they look for candidates with quantitative aptitude and good temperament. Apart from theoretical finance one has to be smart with quantitative finance, risk modeling, and probability and statistics. Having knowledge of stochastic processes and calculus is also important. It is also important that the candidate has a good knowledge of time series modeling and machine learning as it comes in handy in this job profile.",
+        time: 6
     },
     {
         id: 7,
@@ -113,7 +121,8 @@ const IC_blogsData = [
         ],
         blogTitle: "SWE Intern @ JLR",
         Link:"https://medium.com/@mekanika2022/intern-chronicles-ahana-ganguly-jlr-14ad40d36b2e",
-        blogDescription: " Specifically speaking about JLR one should at least have more than one project in Machine Learning and Software Development. Relevant prior interns will also help a lot in the selection process. For the software domain POR is not much needed."
+        blogDescription: " Specifically speaking about JLR one should at least have more than one project in Machine Learning and Software Development. Relevant prior interns will also help a lot in the selection process. For the software domain POR is not much needed.",
+        time: 5
     },
     // Add other blog entries here
 ];
