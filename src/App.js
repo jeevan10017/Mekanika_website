@@ -9,6 +9,7 @@ import Loader from './components/Loader';
 import CourseMaterial from './pages/Materials/CourseMaterial';
 import {DepProjects} from './pages/Projects/DepProjects';
 import {TextRevealDemo} from './components/TextRevealDemo';
+import { Analytics } from "@vercel/analytics/react"
 
 // Lazy-load pages and components
 const Home = lazy(() => import('./pages/HomePage/Home'));
@@ -23,6 +24,7 @@ function App() {
     
     <Router>
       <ScrollToTop />
+      <Analytics/> {/* vercel analytics */}
       <Navbar />
       <Suspense fallback={<Loader />}>
         <Routes>

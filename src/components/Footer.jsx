@@ -71,7 +71,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright Section */}
-      <div className="text-center mt-8  border-gray-700 pt-4">
+      <div className="text-center mt-8  border-gray-700 pt-4 text-sm">
         <MediumRegisterFooter/>
         <p className="text-gray-500">&copy; {new Date().getFullYear()} Mekanika IIT Kharagpur. All Rights Reserved.</p>
       </div>
