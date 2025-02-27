@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-950 py-8 shadow-top-only  shadow-yellow-400 " >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-10 gap-4 text-center md:text-left text-gray-300 " >
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-10  text-center md:text-left text-gray-300 " >
         {/* Quick Links */}
         <div className="col-span-4 flex flex-col items-center justify-center md:items-start md:mx-24 mt-4" >
           <h2 className="text-2xl font-bold text-yellow-400 mb-4">Quick Links</h2>
