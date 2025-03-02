@@ -7,8 +7,7 @@ import 'aos/dist/aos.css';
 import CE_blogsData from '../../../components/assets/CE_blogsData';
 import { GlareCard } from '../../../components/ui/glare-Crad.jsx';
 import { MediumRegister } from '../../../components/MediumRegister.jsx';
-
-
+import { BackgroundBeamsWithCollision } from '../../../components/ui/background-beams-with-collision.jsx';
 
 const blogItems = document.querySelectorAll('.blog-item');
 
@@ -25,8 +24,8 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-const BlogsCE = () => {
 
+const BlogsCE = () => {
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -35,20 +34,22 @@ const BlogsCE = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gray-950 text-white py-12">
-            <div className="container mx-auto px-4">
+        <div className=" relative min-h-screen bg-gradient-to-b from-gray-950 to-zinc-950 text-white py-12 overflow-hidden shadow-bottom-only shadow-yellow-400 pb-8">
+            <BackgroundBeamsWithCollision from="CE" className="absolute inset-0 w-full h-full" />
+
+            <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center mt-20">
                     <h2 className="lg:text-4xl font-extrabold text-gradient bg-clip-text text-2xl text-transparent bg-purple-400 text-center mb-0 sm:mb-20 sm:text-left">
                         Explore Our Core Expedition Blog Series
                     </h2>
-                    <p className=" text-sm text-gray-400 sm:ml-4 text-center sm:text-left mt-2 mb-20 sm:mt-0 ">(Core)</p>
+                    <p className="text-sm text-gray-400 sm:ml-4 text-center sm:text-left mt-2 mb-20 sm:mt-0">(Core)</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-2">
                     {CE_blogsData.map((blog) => (
                         <GlareCard
                             key={blog.id}
-                            className="relative bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl  shadow-purple-950 overflow-hidden shadow-md hover:scale-105 transform transition-transform duration-500 "
+                            className="relative bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl shadow-purple-950 overflow-hidden shadow-md "
                             data-aos="fade-up"
                         >
                             {/* Author Image */}
@@ -56,7 +57,7 @@ const BlogsCE = () => {
                                 <img
                                     src={blog.imageUrl}
                                     alt="Author"
-                                    className="opacity-70 w-full h-60 object-cover rounded-2xl p-1  "
+                                    className="opacity-70 w-full h-72 object-cover rounded-2xl p-1"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                                     <div className="text-center">
@@ -108,7 +109,9 @@ const BlogsCE = () => {
                     ))}
                 </div>
             </div>
-            <MediumRegister/>
+            <div className="relative z-10">
+                <MediumRegister />
+            </div>
         </div>
     );
 };

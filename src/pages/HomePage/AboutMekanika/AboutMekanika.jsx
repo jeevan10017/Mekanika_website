@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TeamImage from "../../../components/Images/MEO3.jpg";
 import { TextRevealByWord } from "../../../components/magicui/TextReveal.tsx";
+import { Spotlight } from "../../../components/ui/spotlight-new.jsx";
 
 
 const AboutMekanika = () => {
@@ -17,6 +18,7 @@ const AboutMekanika = () => {
 
   return (
     <section className="relative bg-cover bg-fixed text-gray-300">
+            <Spotlight/>
       <div className="relative container mx-auto px-4 my-16 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Section */}

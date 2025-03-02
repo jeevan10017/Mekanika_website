@@ -1,5 +1,5 @@
 import { HeroVideoDialog } from "../../../components/magicui/HeroVideo.tsx";
-import Img from "../../../components/Images/Event01.jpg";
+import Img from "../../../components/Images/Farewell.png";
 import React, { useState, useEffect } from "react";
 import { TextRevealByWord } from "../../../components/magicui/TextReveal.tsx";
 import VideoSrc from "../../../components/videos/Event1.mp4";

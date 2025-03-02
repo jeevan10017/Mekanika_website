@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 import './CourseMaterial.css';
-import AOS from 'aos'; 
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { GradualSpacing } from "../../components/magicui/GradualSpacing.tsx";
+import { Spotlight } from "../../components/ui/spotlight-new.jsx";
 
 const CourseMaterial = () => {
   const [openAccordions, setOpenAccordions] = useState(0);
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
+      duration: 1000,
       easing: 'ease-in-out',
     });
   }, []);
@@ -94,12 +95,21 @@ const CourseMaterial = () => {
         { title: '', link: '#' },
       ]
     },
-    
+
   ];
+  const newResources = [
+    {
+      link: "https://justjus.notion.site/Notes-IIT-Kharagpur-33ecf32bf7f44f7b9f47d049baa94220",
+    },
+    {
+      link: "https://iitkgpacin-my.sharepoint.com/personal/jus_jaisinghani_iitkgp_ac_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fjus%5Fjaisinghani%5Fiitkgp%5Fac%5Fin%2FDocuments%2FSemesters&ga=1"
+    }
+  ]
 
 
   return (
     <section id="course-material" className="course-material-section bg-zinc-950">
+      <Spotlight/>
       {/* "Course Materials" text for small screens */}
       <div className="block lg:hidden text-center pt-24">
         <p className="text-yellow-400 text-xl sm:text-2xl font-bold">
@@ -156,6 +166,27 @@ const CourseMaterial = () => {
 
       <div className="text-gray-400 display-4 text-center p-8">
         These resources were extracted from KGPellence
+      </div>
+      <div className="text-gray-400 display-4 text-center p-8">
+        <div>
+          <a
+            href={newResources[0].link}
+            className="course-material-card bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 shadow-sm shadow-yellow-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Notion notes
+          </a>
+          <a
+            href={newResources[1].link}
+            className="course-material-card bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 hover:bg-gradient-to-b hover:from-yellow-500 hover:via-yellow-400 hover:to-yellow-300 shadow-sm shadow-yellow-400"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+           These Resources with Recorded Online Classes
+          </a>
+        </div>
+        <p className='pt-2'>These Online Classes Resources by Jus Jaisinghani</p>
       </div>
     </section>
   );
