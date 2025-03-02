@@ -3,6 +3,7 @@ import { Instagram, Linkedin, Facebook, Phone } from 'lucide-react';
 import { RetroGrid } from '../../../components/magicui/RetroGrid.tsx';
 import { Spotlight } from "../../../components/ui/spotlight-new";
 
+
 const HorizontalScroll = () => {
   const containerRef = useRef(null);
   const pinWrapRef = useRef(null);
@@ -19,7 +20,7 @@ const HorizontalScroll = () => {
     accent: '#f8f9fa',
     dark: '#121212', 
   };
-  
+  const isSmallScreen = window.innerWidth <= 768;
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current || !pinWrapRef.current) return;
@@ -56,6 +57,7 @@ const HorizontalScroll = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  
   
   const styles = {
     container: {
@@ -286,7 +288,7 @@ const HorizontalScroll = () => {
     },
     stickyHeading: {
       color: themeColors.primary,
-      fontSize: '2rem',
+      fontSize: isSmallScreen ? '1.5rem' : '2rem',
       fontWeight: 'bold',
       textShadow: `0 4px 12px rgba(0, 0, 0, 0.5), 0 0 20px ${themeColors.primary}60`,
       letterSpacing: '1px',
@@ -296,6 +298,9 @@ const HorizontalScroll = () => {
       backdropFilter: 'blur(8px)',
       borderRadius: '12px',
     //   border: `2px solid ${themeColors.primary}30`
+    '@media (max-width: 768px)': {
+    fontSize: '1rem', 
+  },
     }
   };
   
