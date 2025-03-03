@@ -75,7 +75,7 @@ const Footer = () => {
       <div className="text-center mt-8 border-gray-700 pt-4 text-sm">
         <MediumRegisterFooter/>
         <p className="text-gray-500 mb-1">&copy; {new Date().getFullYear()} Mekanika IIT Kharagpur. All Rights Reserved.</p>
-        <p className="text-gray-500 text-xs">For best experience, use a 15.6 inch width PC or any size mobile device.</p>
+        {/* <p className="text-gray-500 text-xs">For best experience, use a 15.6 inch width PC or any size mobile device.</p> */}
       </div>
     </footer>
   );

@@ -12,6 +12,7 @@ import { TextRevealDemo } from './components/TextRevealDemo';
 import { Analytics } from "@vercel/analytics/react";
 import Team from './pages/Team/Team';
 import NotFound from './pages/Error404/Error404';
+import ScreenSizeAlert from './components/ScreenSizeAlert'; 
 
 // Lazy-load pages and components
 const Home = lazy(() => import('./pages/HomePage/Home'));
@@ -43,6 +44,7 @@ function AppContent() {
 
   return (
     <>
+      <ScreenSizeAlert /> 
       <ScrollToTop />
       <Analytics />
       {showNavAndFooter && <Navbar />}
