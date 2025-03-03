@@ -137,9 +137,9 @@ export function HeroVideoDialog({
                   src={videoSource}
                   className="size-full rounded-2xl object-cover"
                   autoPlay
-                  muted
+                  // muted
                   loop
-                  controls={false}
+                  controls={true}
                 ></video>
               </div>
             </motion.div>

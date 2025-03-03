@@ -45,13 +45,13 @@ export function MediumRegisterFooter() {
 
   return (
     <div className="flex flex-col items-center justify-center h-[8rem] lg:mb-8 mb-16 mt-8 lg:mt-0 px-4 sm:px-6 lg:px-12">
-      <p className="text-gray-500 text-sm sm:text-base text-center">
+      <p className="text-gray-500 text-yellow-400/60 text-sm sm:text-base text-center">
         Get notified about new blogs every week by registering here.
       </p>
 
-      <p className="text-yellow-400/90 font-semibold text-lg sm:text-xl mt-2 text-center">
+      {/* <p className="text-yellow-400/90 font-semibold text-lg sm:text-xl mt-2 text-center">
         Stay updated with the latest blogs from Mekanika
-      </p>
+      </p> */}
 
       <form
         onSubmit={handleSubscribe}

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React,{useEffect, useState} from "react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 
 import { cn } from "../utils/utils.tsx";
@@ -12,6 +12,8 @@ interface GradualSpacingProps {
   className?: string;
 }
 
+
+
 export function GradualSpacing({
   text,
   duration = 0.5,
@@ -22,8 +24,18 @@ export function GradualSpacing({
   },
   className,
 }: GradualSpacingProps) {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768); 
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
-    <div className="flex justify-center space-x-1">
+    <div className={`flex justify-center ${isSmallScreen ? "space-x-0.5" : "space-x-1"}`}>
       <AnimatePresence>
         {text.split("").map((char, i) => (
           <motion.h1

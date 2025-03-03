@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-950 py-8 shadow-top-only  shadow-yellow-400 " >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-10 gap-4 text-center md:text-left text-gray-300 " >
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-10  text-center md:text-left text-gray-300 " >
         {/* Quick Links */}
         <div className="col-span-4 flex flex-col items-center justify-center md:items-start md:mx-24 mt-4" >
           <h2 className="text-2xl font-bold text-yellow-400 mb-4">Quick Links</h2>
@@ -29,8 +29,8 @@ const Footer = () => {
             <li><Link to="/events" className="hover:text-yellow-400">Events</Link></li>
             <li><Link to="/course-material" className="hover:text-yellow-400"> Materials</Link></li>
             <li><Link to="/projects" className="hover:text-yellow-400">Projects</Link></li>
-            <li><Link to="/under-construction" className="hover:text-yellow-400">Team</Link></li>
-            <li><Link to="/under-construction" className="hover:text-yellow-400">Gallery</Link></li>
+            <li><Link to="/team" className="hover:text-yellow-400">Team</Link></li>
+            <li><Link to="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
             <li><Link to="/under-construction" className="hover:text-yellow-400">Registrations</Link></li>
           </ul>
         </div>
@@ -44,34 +44,36 @@ const Footer = () => {
           <p>West Bengal 721302</p>
         </div>
 
-        {/* Logo and Social Links */}
-        <div className="col-span-3 flex flex-col items-center justify-center lg:mt-0 mt-6" >
-          <div className="flex items-center lg:mb-4 mb-2">
-            <img src={Logos} alt="Mekanika Logo" className="w-10 h-10 rounded mr-3 " />
-            <h1 className="text-3xl font-bold text-yellow-400">MEKANIKA</h1>
-           
-          </div>
-          <span className="lg:mx-24 md:mx-2 text-md flex flex-col items-center justify-center">Official society of Department of Mechanical Engineering</span>
-          <h2 className="text-xl mb-4">IIT Kharagpur</h2>
-          <div className="flex space-x-4">
-            <a href="https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4" className="hover:text-yellow-400">
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
-            </a>
-            <a href="https://www.linkedin.com/company/mekanika-iit-kharagpur/about/" className="hover:text-yellow-400">
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
-            </a>
-            <a href="https://www.facebook.com/mekanikaiitkgp/" className="hover:text-yellow-400">
-              <FontAwesomeIcon icon={faFacebook} size="2x" />
-            </a>
-            <a href="https://medium.com/@mekanika2022" className="hover:text-yellow-400">
-              <FontAwesomeIcon icon={faMedium} size="2x" />
-            </a>
-          </div>
-        </div>
+{/* Logo and Social Links */}
+<div className="col-span-3 flex flex-col items-center justify-center lg:mt-0 mt-6">
+  <div className="lg:mb-4 mb-2 relative w-full flex justify-center">
+    <h1 className="text-[1.7rem] font-bold text-yellow-400">MEKANIKA</h1>
+    <img src={Logos} alt="Mekanika Logo" className="w-9 h-9 rounded absolute transform -translate-y-1/2 top-1/2" style={{ right: 'calc(48% + 16px + 8ch)' }} />
+  </div>
+  <span className="lg:mx-24 md:mx-2 text-md flex flex-col items-center justify-center">
+    Official society of Department of Mechanical Engineering
+  </span>
+  <h2 className="text-xl mb-4">IIT Kharagpur</h2>
+  <div className="flex space-x-4">
+    <a href="https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4" className="hover:text-yellow-400">
+      <FontAwesomeIcon icon={faInstagram} size="2x" />
+    </a>
+    <a href="https://www.linkedin.com/company/mekanika-iit-kharagpur/about/" className="hover:text-yellow-400">
+      <FontAwesomeIcon icon={faLinkedin} size="2x" />
+    </a>
+    <a href="https://www.facebook.com/mekanikaiitkgp/" className="hover:text-yellow-400">
+      <FontAwesomeIcon icon={faFacebook} size="2x" />
+    </a>
+    <a href="https://medium.com/@mekanika2022" className="hover:text-yellow-400">
+      <FontAwesomeIcon icon={faMedium} size="2x" />
+    </a>
+  </div>
+</div>
+
       </div>
 
       {/* Copyright Section */}
-      <div className="text-center mt-8  border-gray-700 pt-4">
+      <div className="text-center mt-8  border-gray-700 pt-4 text-sm">
         <MediumRegisterFooter/>
         <p className="text-gray-500">&copy; {new Date().getFullYear()} Mekanika IIT Kharagpur. All Rights Reserved.</p>
       </div>

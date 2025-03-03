@@ -57,7 +57,7 @@ export const AnimatedTestimonials = ({
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <h3 className="text-2xl font-boldtext-white text-yellow-400" style={{ fontSize: window.innerWidth < 640 ? " 1.4rem" :"1.5rem"}}>
+            <h3 className="text-3xl font-boldtext-white text-yellow-400" style={{ fontSize: window.innerWidth < 640 ? " 1.4rem" :"1.8rem"}}>
               {testimonials[active].name}
             </h3>
             <p className="text-sm text-neutral-500">

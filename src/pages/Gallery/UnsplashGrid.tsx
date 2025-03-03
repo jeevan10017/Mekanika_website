@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { Image } from "react-bootstrap";
 import { X } from "lucide-react";
+import { BackgroundBeamsWithCollision } from "../../components/ui/background-beams-with-collision.jsx";
+
 
 // Helper function to dynamically import images
 //@ts-ignore
@@ -65,7 +67,7 @@ function ImageItem({
         layoutId={`card-${item.id}`}
         whileHover={{ scale: 1.025 }}
         src={item.url}
-        className="w-full bg-base-100 shadow-xl image-full cursor-pointer rounded-md "
+        className="w-full bg-base-100 shadow-xl image-full cursor-pointer rounded-md  "
         alt={`Event Image ${index + 1}`}
       />
     </motion.figure>
@@ -109,10 +111,11 @@ function Modal({
         onClick={() => setSelected(null)}
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 cursor-pointer overflow-y-scroll"
       >
+        <BackgroundBeamsWithCollision from="Team" className="absolute inset-0 w-full h-full -z-10" />  
         <motion.div
           onClick={(e) => e.stopPropagation()}
           layoutId={`card-${selected.id}`}
-          className="w-full max-w-[1000px] mx-auto my-8 bg-yellow-400/70 rounded-md"
+          className="w-full max-w-[1000px] mx-auto my-8 bg-yellow-400/70 rounded-md "
         >
           <button
             className="absolute top-2 right-2 p-2 mix-blend-multiply"
@@ -120,11 +123,11 @@ function Modal({
           >
             <X />
           </button>
-          <motion.div className="p-2 h-[70vh] rounded-md">
+          <motion.div className="p-1 h-[70vh] rounded-md">
             <Image
               alt="Selected"
               src={selected.url}
-              className="w-full h-full object-contain rounded-md bg-black"
+              className="w-full h-full object-contain rounded-md bg-black "
             />
           </motion.div>
         </motion.div>

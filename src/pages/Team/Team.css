@@ -1,0 +1,12 @@
+/* Add these styles to your Team.css file */
+.team-page {
+  position: relative;
+  width: 100%;
+}
+
+.timeline-section {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  overflow: hidden;
+}

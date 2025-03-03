@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import IC_blogsData from '../../../components/assets/IC_blogsData';
 import { GlareCard } from '../../../components/ui/glare-Crad.jsx';
 import { MediumRegister } from '../../../components/MediumRegister.jsx';
+import { BackgroundBeamsWithCollision } from '../../../components/ui/background-beams-with-collision.jsx';
 
 const BlogsIC = () => {
     useEffect(() => {
@@ -13,8 +14,9 @@ const BlogsIC = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gray-950 text-white py-12">
-            <div className="container mx-auto px-4">
+        <div className=" relative min-h-screenbg-gradient-to-b from-gray-950 to-zinc-900 text-white py-12 overflow-hidden shadow-bottom-only shadow-yellow-400 pb-8">
+            <BackgroundBeamsWithCollision from="IC" className="absolute inset-0 w-full h-full" />
+            <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center mt-20">
                     <h2 className="text-2xl lg:text-4xl font-extrabold text-gradient bg-clip-text text-transparent bg-pink-700 text-center mb-0 sm:mb-20  sm:text-left">
                         Explore Our Intern Chronicles Blog Series
@@ -26,7 +28,7 @@ const BlogsIC = () => {
                     {IC_blogsData.map((blog) => (
                         <GlareCard
                             key={blog.id}
-                            className="relative bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl  shadow-pink-700 overflow-hidden shadow-md hover:scale-105 transform transition-transform duration-500 "
+                            className="relative bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl  shadow-pink-700 overflow-hidden shadow-md  "
                             data-aos="fade-up"
                         >
                             {/* Author Image */}
@@ -34,7 +36,7 @@ const BlogsIC = () => {
                                 <img
                                     src={blog.imageUrl}
                                     alt="Author"
-                                    className="opacity-70 w-full h-60 object-cover rounded-2xl p-1 "
+                                    className="opacity-70 w-full h-72 object-cover rounded-2xl p-1 "
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                                     <div className="text-center">
@@ -85,7 +87,9 @@ const BlogsIC = () => {
                     ))}
                 </div>
             </div>
-            <MediumRegister/>
+            <div className="relative z-10">
+                <MediumRegister />
+            </div>
         </div>
     );
 };

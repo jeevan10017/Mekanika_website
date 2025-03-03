@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CardBody, CardContainer, CardItem } from "../../components/ui/3d_Card";
+import { Spotlight } from "../../components/ui/spotlight-new.jsx";
 
 const images = [
     require("../../components/event_Images/KYM_1.jpg"),
@@ -137,6 +138,7 @@ const images = [
   export function Events() {
     return (
       <div className="flex flex-col items-center justify-center w-full ">
+        <Spotlight/>
         {/* Heading */}
         <h1 className="text-3xl font-bold text-center mt-24  text-yellow-400">
           Events Conducted by us

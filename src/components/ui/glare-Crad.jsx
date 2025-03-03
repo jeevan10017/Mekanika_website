@@ -54,28 +54,28 @@ export const GlareCard = ({
       className="relative isolate [contain:layout_style] [perspective:900px] transition-transform duration-[var(--duration)] "
       ref={refElement}
       onPointerMove={(event) => {
-        const rotateFactor = 0.4;
-        const rect = event.currentTarget.getBoundingClientRect();
-        const position = {
-          x: event.clientX - rect.left,
-          y: event.clientY - rect.top,
-        };
-        const percentage = {
-          x: (100 / rect.width) * position.x,
-          y: (100 / rect.height) * position.y,
-        };
-        const delta = {
-          x: percentage.x - 50,
-          y: percentage.y - 50,
-        };
+        // const rotateFactor = 0.4;
+        // const rect = event.currentTarget.getBoundingClientRect();
+        // const position = {
+        //   x: event.clientX - rect.left,
+        //   y: event.clientY - rect.top,
+        // };
+        // const percentage = {
+        //   x: (100 / rect.width) * position.x,
+        //   y: (100 / rect.height) * position.y,
+        // };
+        // const delta = {
+        //   x: percentage.x - 50,
+        //   y: percentage.y - 50,
+        // };
 
-        const { background, rotate, glare } = state.current;
-        rotate.x = -(delta.x /3.5);
-        rotate.y = delta.y / 3;
-        rotate.x *= rotateFactor;
-        rotate.y *= rotateFactor;
-        glare.x = percentage.x;
-        glare.y = percentage.y;
+        // const { background, rotate, glare } = state.current;
+        // rotate.x = -(delta.x /3.5);
+        // rotate.y = delta.y / 3;
+        // rotate.x *= rotateFactor;
+        // rotate.y *= rotateFactor;
+        // glare.x = percentage.x;
+        // glare.y = percentage.y;
 
         updateStyles();
       }}
@@ -93,16 +93,20 @@ export const GlareCard = ({
         isPointerInside.current = false;
         if (refElement.current) {
           refElement.current.style.removeProperty("--duration");
-          refElement.current?.style.setProperty("--r-x", `0deg`);
-          refElement.current?.style.setProperty("--r-y", `0deg`);
+          // refElement.current?.style.setProperty("--r-x", `0deg`);
+          // refElement.current?.style.setProperty("--r-y", `0deg`);
         }
       }}>
+       
       <div
-        className=" ansition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-[var(--radius)] border border-slate-800 hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none ">
+        // className=" ansition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] rounded-[var(--radius)] border border-slate-800 hover:[--opacity:0.6] hover:[--duration:200ms] hover:[--easing:linear] hover:filter-none ">
+        className="  ">
+          
         <div
-          className="">
+          className=" bg-gradient-to-br from-slate-900 to-slate-950">
           <div className={cn("", className)}>
             {children}
+            
           </div>
         </div>
         <div

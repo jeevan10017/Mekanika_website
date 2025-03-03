@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import UnsplashGrid from './UnsplashGrid.tsx'; 
 import { Helmet } from 'react-helmet';
+import { Spotlight } from "../../components/ui/spotlight-new.jsx";
 
 const Gallery = () => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const Gallery = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
       </Helmet>
       <div className="max-w-full mx-auto bg-gray-950 text-white min-h-screen py-24">
+       <Spotlight/>
         <h1 className="text-3xl font-bold text-center mt-8 mb-4 text-yellow-400">
           Gallery
         </h1>
