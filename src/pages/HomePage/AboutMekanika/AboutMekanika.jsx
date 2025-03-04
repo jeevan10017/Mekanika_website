@@ -18,7 +18,7 @@ const AboutMekanika = () => {
 
   return (
     <section className="relative bg-cover bg-fixed text-gray-300">
-            <Spotlight/>
+            {/* <Spotlight/> */}
       <div className="relative container mx-auto px-4 my-16 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Section */}
