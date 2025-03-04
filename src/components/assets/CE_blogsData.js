@@ -9,6 +9,22 @@ import { time } from 'framer-motion';
 const CE_blogsData = [
     {
         id: 1,
+        name: " Rakshit Raj ",
+        role: "Intern @ Tata Steel",
+        imageUrl: require('../../components/blog images/Rakshit Raj.jpg'),
+        socialLinks: [
+            { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
+            { name: "LinkedIn", link: "https://www.linkedin.com/in/rakshit-raj-329ba2204/", icon: faLinkedin },
+            { name: "Facebook", link: "https://www.facebook.com/mekanikaiitkgp/", icon: faFacebook },
+            { name: "Medium", link: "https://medium.com/@mekanika2022", icon: faMedium }
+        ],
+        blogTitle: "Intern @ Tata Steel",
+         Link: "https://medium.com/@mekanika2022/core-expedition-rakshit-raj-tata-steel-914483dbf864",
+        blogDescription: "I was always interested in the core mechanical engineering domain, and I enjoyed learning core subjects............",
+        time:5
+    },
+    {
+        id: 2,
         name: " Aniketh S Gund  ",
         role: "Intern @ Tata Steel",
         imageUrl: require('../../components/blog images/Aniketh S Gund.jpeg'),
@@ -25,7 +41,7 @@ const CE_blogsData = [
         time:5
     },
     {
-        id: 2,
+        id: 3,
         name: " Sambhav Jena  ",
         role: "intern(core) @ Dr.Reddy's",
         imageUrl:require('../../components/blog images/Sambhav Jena.jpeg'),
@@ -43,13 +59,11 @@ const CE_blogsData = [
         time:6
     },
     {
-        id: 3,
+        id: 4,
         name: " Tanushree Prasad",
         role: "Intern @ Tata Steel",
         imageUrl:Tanushree,
-        // imageUrl: require('../../components/blog images/Tanushree Prasad.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D4D03AQGymmq6Dyn2IA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696237061231?e=1732752000&v=beta&t=T3RWcRnPI71iCT9NR558WtP3Yuhs4gyMHj6OYz84NZk",
-        socialLinks: [
+       socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/tanushree-prasad-134293232/?originalSubdomain=in", icon: faLinkedin },
             { name: "Facebook", link: "https://www.facebook.com/mekanikaiitkgp/", icon: faFacebook },
@@ -62,7 +76,7 @@ const CE_blogsData = [
     },
    
     {
-        id: 4,
+        id: 5,
         name: " Sayantan Sarkar",
         role: "Intern @ JLR",
         imageUrl: require('../../components/blog images/Sayantan Sarkar.jpeg'),
@@ -78,12 +92,11 @@ const CE_blogsData = [
         time:4
     },
     {
-        id: 5,
+        id: 6,
         name: " Chethan Girish",
         role: " KITES Intern @ ITC Limited",
         imageUrl: require('../../components/blog images/Chethan Girish.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D5603AQH38QTlXWCwSQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727376406008?e=1733961600&v=beta&t=cW96uCkjmWahJ88OBW1QYSRoUcwuN3lbnVVm5C60zhc",
-        socialLinks: [
+       socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/chethan-girish/?originalSubdomain=in", icon: faLinkedin },
             { name: "Facebook", link: "https://www.facebook.com/mekanikaiitkgp/", icon: faFacebook },
@@ -95,11 +108,10 @@ const CE_blogsData = [
         time:4
     },
     {
-        id: 6,
+        id: 7,
         name: " Aditya Uppal",
         role: " PPO @ ITC & ex-KITES Intern",
         imageUrl: require('../../components/blog images/Aditya Uppal.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D4D03AQH9Sy5UQGdQvA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715787750771?e=1732752000&v=beta&t=7iWy0gMs3Gc95oBCt75xAxB7371Jd1qj-f_hypwJzuc",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/aditya-uppal/?originalSubdomain=in", icon: faLinkedin },
@@ -112,11 +124,10 @@ const CE_blogsData = [
         time:5
     },
     {
-        id: 7,
+        id: 8,
         name: " Debojyoti Roy",
         role: "  GTE Intern @ Bajaj Auto Ltd",
         imageUrl: require('../../components/blog images/Debojyoti Roy.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D5603AQHD7H51yM7mfQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1677567130138?e=1732752000&v=beta&t=sUCHkKqPD8JU-akaKZ0-DCzE7vj5yIwPmN3EZFwG9Y4",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/debojyoti-roy-bb5329233/?originalSubdomain=in", icon: faLinkedin },
@@ -129,12 +140,11 @@ const CE_blogsData = [
         time:4
     },
     {
-        id: 8,
+        id: 9,
         name: "  Ashutosh Dash",
         role: "   Intern @ Bajaj Auto Ltd",
         imageUrl: require('../../components/blog images/Ashutosh Dash.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D5603AQH54F9JU3Z8qw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703677512493?e=1732752000&v=beta&t=m9roEwiypn179YuTq_vO8FeZ-8pHVXgqV6a-3Q4btcY",
-        socialLinks: [
+       socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/ashutosh-dash-7b801b234/?trk=public_profile_browsemap&originalSubdomain=in", icon: faLinkedin },
             { name: "Facebook", link: "https://www.facebook.com/mekanikaiitkgp/", icon: faFacebook },
@@ -146,7 +156,7 @@ const CE_blogsData = [
         time:5
     },
     {
-        id: 9,
+        id: 10,
         name: "  Manish S",
         role: " Intern @ JLR",
         imageUrl: require('../../components/blog images/Manish S.jpeg'),
@@ -162,11 +172,10 @@ const CE_blogsData = [
         time:6
     },
     {
-        id: 10,
+        id: 11,
         name: "   Praveen Yadav ",
         role: " Intern @ JLR",
         imageUrl: require('../../components/blog images/Praveen Yadav.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D4D03AQFIdRGd6wmdMA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693891981802?e=1732752000&v=beta&t=y0m_I6SBrHszSl00RcqJpd4JzsfJQQYR-qkKUxpBYxA",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/praveen-yadav-933437190/?originalSubdomain=in", icon: faLinkedin },
@@ -179,11 +188,10 @@ const CE_blogsData = [
         time:5
     },
     {
-        id: 11,
+        id: 12,
         name: " Snehal Swadhin ",
         role: " Product @Ather Energy ",
         imageUrl: require('../../components/blog images/Snehal Swadhin.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D4D03AQEtJcYqWGT0nw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680937466698?e=1732752000&v=beta&t=K2oXuBCTFlvqzp-KTyojuhGl2vcfXeBWNlICQ_Apu4I",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/snehalswadhin/?originalSubdomain=in", icon: faLinkedin },
@@ -196,11 +204,10 @@ const CE_blogsData = [
         time:5
     },
     {
-        id: 12,
+        id: 13,
         name: "Rohit Rai ",
         role: "Intern @ John Deere ",
         imageUrl: require('../../components/blog images/Rohit Rai.jpeg'),
-        // imageUrl:"https://media.licdn.com/dms/image/v2/D5603AQEa9xmSl1MuTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680640880510?e=1732752000&v=beta&t=hSswk3eGPoQWHsClu0i_6BuuOovTkWu5Mp5dIqvs8As",
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp?fbclid=IwAR0Zjcbj4FTv6DhzYw3wU97I-Jw9Wkn0-ZS5aYh-nn9OGgy3j4BkiMLfGM4", icon: faInstagram },
             { name: "LinkedIn", link: "https://www.linkedin.com/in/rohit-rai-047a35193/", icon: faLinkedin },

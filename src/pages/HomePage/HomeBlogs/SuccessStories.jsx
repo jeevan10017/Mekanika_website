@@ -5,6 +5,7 @@ import "./SuccessStories.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { TextRevealByWord } from "../../../components/magicui/TextReveal.tsx";
+// import CE_blogsData from "../../../components/assets/CE_blogsData";
 
 const SuccessStories = () => {
   const [active, setActive] = useState(3);
@@ -24,7 +25,8 @@ const SuccessStories = () => {
   const navigateBlog = () => {
     navigate("/intern-chronicles");
   };
-  const items = [
+  const items = 
+  [
     {
       image: customer5,
       name: "Manish S",
@@ -96,7 +98,7 @@ const SuccessStories = () => {
         "Product is one of the easiest domains because product doesn’t require much preparation.",
       role: "Product @Ather Energy",
     },
-  ];
+ ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -209,6 +211,7 @@ const SuccessStories = () => {
                     textAlign: "center",
                     wordBreak: "break-word",
                     overflowWrap: "break-word",
+                    color:"red",
                   }}
                 >
                   {item.role}
@@ -219,6 +222,7 @@ const SuccessStories = () => {
                     textAlign: "justify",
                     wordBreak: "break-word",
                     overflowWrap: "break-word",
+                    color:"green",
                   }}
                 >
                   {item.story}
