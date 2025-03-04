@@ -202,13 +202,13 @@ export const Timeline = ({ data }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-black flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-gray-800 border border-gray-700 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-yellow-500 opacity-60">
+              {/* <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-yellow-500 opacity-60">
                 {item.title}
-              </h3>
+              </h3> */}
             </div>
 
             <div className="relative pl-20 md:pl-0 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-yellow-500 opacity-60">
+              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-yellow-500 opacity-80">
                 {item.title}
               </h3>
               {item.content}
@@ -290,7 +290,7 @@ export function PastTimeline() {
     {
       name: "Sambhav Jena",
       image: "",
-      title: "Technical Director",
+      title: "",
       linkedin: "https://www.linkedin.com/in",
     },
   ];
