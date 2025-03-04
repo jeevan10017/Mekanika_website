@@ -7,6 +7,38 @@ import { time } from 'framer-motion';
 const IC_blogsData = [
     {
         id: 1,
+        name: "Parijat Sutradhar ",
+        role: "SDE @ Salesforce",
+        imageUrl:require('../../components/blog images/Parijat Sutradhar.jpg') ,
+        socialLinks: [
+            { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp", icon: faInstagram },
+            { name: "LinkedIn", link: "https://www.linkedin.com/in/parijat-sutradhar-9650b7202/", icon: faLinkedin },
+            { name: "Facebook", link: "https://www.facebook.com/profile.php?id=100086213054547", icon: faFacebook },
+            { name: "Medium", link: "https://medium.com/@mekanika2022", icon: faMedium }
+        ],
+        blogTitle: "SDE intern @ Salesforce",
+        Link: "https://medium.com/@mekanika2022/intern-chronicles-parijat-sutradhar-salesforce-cbedabf6b1c1",
+        blogDescription: "The Salesforce interview was much more planned and organized, from the end of the company...",
+        time: 5
+    },
+    {
+        id: 2,
+        name: " Vumika Ghosh ",
+        role: "Quantitative Strategist @ Goldman Sachs",
+        imageUrl: require('../../components/blog images/vumika ghosh.jpg'), 
+        socialLinks: [
+            { name: "Instagram", link: "https://www.instagram.com/mekanika_iitkgp", icon: faInstagram },
+            { name: "LinkedIn", link: "https://www.linkedin.com/in/vumika-ghosh-b89463258/", icon: faLinkedin },
+            { name: "Facebook", link: "https://www.facebook.com/profile.php?id=100088553164652", icon: faFacebook },
+            { name: "Medium", link: "https://medium.com/@mekanika2022", icon: faMedium }
+        ],
+        blogTitle: "Strategist @ Goldman Sachs",
+        Link: "https://medium.com/@mekanika2022/intern-chronicles-vumika-ghosh-goldman-sachs-3343b08f9dee",
+        blogDescription: " I always preferred to do something related to coding, maths, and a bit of finance, and GS offers....",
+        time: 5
+    },
+    {
+        id: 3,
         name: " Anushka Kulkarni ",
         role: "DS Intern @ Microsoft",
         imageUrl:  AnuskaKulkarni ,
@@ -22,7 +54,7 @@ const IC_blogsData = [
         time: 5
     },
 {
-        id: 2,
+        id: 4,
         name: "Vivek Mirani",
         role: "Analyst @ Golman Sachs",
         
@@ -40,7 +72,7 @@ const IC_blogsData = [
         time: 5
     },
     {
-        id: 3,
+        id: 5,
         name: " Vanshul Shikkewal",
         role: "Data Scientist Intern @ PUMA",
         imageUrl: require('../../components/blog images/Vanshul Shikkewal.jpeg'),
@@ -57,7 +89,7 @@ const IC_blogsData = [
         time: 5
     },
     {
-        id: 4,
+        id: 6,
         name: "Manas Sharma",
         role: "BAI at McKinsey & Co.",
         imageUrl: require('../../components/blog images/Manas Sharma.jpeg'),
@@ -74,7 +106,7 @@ const IC_blogsData = [
         time: 5
     },
     {
-        id: 5,
+        id: 7,
         name: "Vanshika Prakash ",
         role: " Intern @MasterCard",
         imageUrl: require('../../components/blog images/Vanshika Prakash.jpeg'),
@@ -91,7 +123,7 @@ const IC_blogsData = [
         time: 8
     },
     {
-        id: 6,
+        id: 8,
         name: "Apurv Gaurav",
         role: "Analyst @ BlackRock ",
         imageUrl: require('../../components/blog images/Apurv Gaurav.jpeg'),
@@ -108,7 +140,7 @@ const IC_blogsData = [
         time: 6
     },
     {
-        id: 7,
+        id: 9,
         name: "Ahana Ganguly",
         role: "SWE Intern @ JLR",
         imageUrl: require('../../components/blog images/Ahana Ganguly.jpeg'),
