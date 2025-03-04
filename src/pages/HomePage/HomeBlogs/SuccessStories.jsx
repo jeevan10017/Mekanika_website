@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { TextRevealByWord } from "../../../components/magicui/TextReveal.tsx";
 import CE_blogsData from "../../../components/assets/CE_blogsData";
+import IC_blogsData from "../../../components/assets/IC_blogsData";
 
 const SuccessStories = () => {
   const [active, setActive] = useState(3);
@@ -25,80 +26,17 @@ const SuccessStories = () => {
   const navigateBlog = () => {
     navigate("/intern-chronicles");
   };
-  const items = CE_blogsData;
-//   [
-//     {
-//       image: customer5,
-//       name: "Manish S",
-//       story:
-//         "For me, the resources that I referred to mostly were the textbooks that are recommended by professors.",
-//       role: "Intern @ JLR",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:640/format:webp/1*Ye12uqiRKyT6laYAJBUVTA.jpeg",
-//       name: "Aniketh S Gund",
-//       story:
-//         "Apart from that Tata is not much concerned about any software or extracurricular activities.",
-//       role: "Intern @ Tata Steel",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:828/format:webp/1*aPvLzceqCXqIwVWsBdi6_g.jpeg",
-//       name: "Tanushree Prasad",
-//       story:
-//         "Majorly to work in this domain one needs to have good knowledge about the core mechanical engineering concepts",
-//       role: "Intern @ Tata Steel",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:750/format:webp/1*UON0m5ktaFuvPQOoVq3WMw.jpeg",
-//       name: "Sayantan Sarkar",
-//       story:
-//         "To get into an automotive role, you don’t need any extra subjects other than mechanical curriculum.",
-//       role: "Intern @ JLR",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:828/format:webp/1*1wKTDqxpXFnXe3mr15VZjQ.jpeg",
-//       name: "Anushka Kulkarni",
-//       story:
-//         " I believe that one project and one intern would be good. It would be great if you could do more.",
-//       role: "DS Intern @ Microsoft",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:640/format:webp/1*QSst2ZFasUWHXIom0VTqMg.jpeg",
-//       name: "Apurv Gaurav",
-//       story:
-//         "Try to prepare for multiple profiles rather than putting all your hard work into a single profile.",
-//       role: "Analyst @ BlackRock",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:828/format:webp/1*4QFZWal4FI8mJRZ1QJol6A.jpeg",
-//       name: "Ashutosh Dash",
-//       story:
-//         "Apart from the core domain, the finance domain requires a set of skills depending on the segment that you are focusing on.",
-//       role: "Intern @ Bajaj Auto Ltd",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:786/format:webp/1*Cp8nhcSc4JDnBMkrowvcsA.png",
-//       name: "Praveen Yadav",
-//       story:
-//         "They don't specifically search for any particular skill set but pursuing some projects in the core mechanical domain.",
-//       role: "Intern @ JLR",
-//     },
-//     {
-//       image:
-//         "https://miro.medium.com/v2/resize:fit:828/format:webp/1*E2ZeZ8OqO4tpd8TRqooneQ.png",
-//       name: "Snehal Swadhin",
-//       story:
-//         "Product is one of the easiest domains because product doesn’t require much preparation.",
-//       role: "Product @Ather Energy",
-//     },
-//  ];
+
+const ceItems = CE_blogsData.slice(-4).reverse();
+const icItems = IC_blogsData.slice(-4).reverse();
+
+  const mixedItems = [];
+  for (let i = 0; i < 4; i++) {
+    if (icItems[i]) mixedItems.push(icItems[i]);
+    if (ceItems[i]) mixedItems.push(ceItems[i]);
+  }
+  
+  const items = mixedItems; 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -225,7 +163,7 @@ const SuccessStories = () => {
                 >
         {item.blogDescription}
                 </p>
-                <h2 style={{ color: "black" }}>{item.name}</h2>
+                <h2 style={{ color: "#2e004d" }}>{item.name}</h2>
               </div>
             ))}
           </div>

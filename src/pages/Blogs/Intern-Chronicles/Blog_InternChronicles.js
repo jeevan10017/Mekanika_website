@@ -25,7 +25,7 @@ const BlogsIC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-2">
-                    {IC_blogsData.map((blog) => (
+                    {IC_blogsData.reverse().map((blog) => (
                         <GlareCard
                             key={blog.id}
                             className="relative bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl  shadow-pink-700 overflow-hidden shadow-md  "
@@ -61,7 +61,7 @@ const BlogsIC = () => {
 
                             {/* Blog Content */}
                             <div className="p-6 relative">
-                                <h3 className="text-xl font-semibold text-pink-600 mb-2">
+                                <h3 className="text-[1.20rem] font-semibold text-pink-600 mb-2">
                                     {blog.blogTitle}
                                 </h3>
                                 <p className="text-gray-400 text-sm line-clamp-3 mb-8">

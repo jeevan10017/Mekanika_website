@@ -20,7 +20,7 @@ const AboutMekanika = () => {
         <div className="absolute inset-0 pointer-events-none z-10 overflow-x-hidden">
           <Spotlight />
         </div>
-      <div className="relative container mx-auto px-4 my-16 py-12">
+      <div className="relative container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Section */}
           <div className="lg:col-span-1 text-center space-y-4">

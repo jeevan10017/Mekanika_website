@@ -46,7 +46,7 @@ const BlogsCE = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-2">
-                    {CE_blogsData.map((blog) => (
+                    {CE_blogsData.reverse().map((blog) => (
                         <GlareCard
                             key={blog.id}
                             className="relative bg-gradient-to-b from-slate-900 to-slate-950 rounded-2xl shadow-purple-950 overflow-hidden shadow-md "
@@ -61,7 +61,7 @@ const BlogsCE = () => {
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                                     <div className="text-center">
-                                        <p className="text-lg text-purple-300 font-extrabold">{blog.name}</p>
+                                        <p className="text-[1.20rem] text-purple-300 font-extrabold">{blog.name}</p>
                                         <p className="text-sm italic text-gray-300">{blog.role}</p>
                                         <div className="flex justify-center space-x-3 mt-3">
                                             {blog.socialLinks.map((link, index) => (
