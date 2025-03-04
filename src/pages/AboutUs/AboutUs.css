@@ -98,3 +98,18 @@ margin: calc(8% - 20px);
     /* font-weight: bold; */
   }
 }
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px; 
+  padding: 3rem;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px; 
+}
