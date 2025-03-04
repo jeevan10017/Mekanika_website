@@ -12,11 +12,6 @@ export const Spotlight = ({
   duration = 7,
   xOffset = 100
 } = {}) => {
-    const isSmallScreen = window.innerWidth <= 768; 
-
-  if (isSmallScreen) {
-    return null; 
-  }
   return (
     (<motion.div
       initial={{
