@@ -138,7 +138,9 @@ const images = [
   export function Events() {
     return (
       <div className="flex flex-col items-center justify-center w-full ">
-        <Spotlight/>
+        <div className="absolute inset-0 pointer-events-none z-10 overflow-x-hidden">
+          <Spotlight />
+       </div>
         {/* Heading */}
         <h1 className="text-3xl font-bold text-center mt-24  text-yellow-400">
           Events Conducted by us

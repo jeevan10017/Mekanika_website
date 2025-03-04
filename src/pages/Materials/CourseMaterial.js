@@ -109,7 +109,9 @@ const CourseMaterial = () => {
 
   return (
     <section id="course-material" className="course-material-section bg-zinc-950">
-      <Spotlight/>
+      <div className="absolute inset-0 pointer-events-none z-10 overflow-x-hidden">
+         <Spotlight />
+       </div>
       {/* "Course Materials" text for small screens */}
       <div className="block lg:hidden text-center pt-24">
         <p className="text-yellow-400 text-xl sm:text-2xl font-bold">
