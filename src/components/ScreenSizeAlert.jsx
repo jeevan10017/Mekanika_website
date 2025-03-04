@@ -6,7 +6,7 @@ const ScreenSizeAlert = () => {
   useEffect(() => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
-      setShowAlert(width >= 1015 && width <= 1515);
+      setShowAlert(width >= 1015 && width <= 1515 && width <= 350 && width >= 2160 );
     };
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
