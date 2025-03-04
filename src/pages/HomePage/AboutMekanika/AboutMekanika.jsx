@@ -3,7 +3,6 @@ import TeamImage from "../../../components/Images/MEO3.jpg";
 import { TextRevealByWord } from "../../../components/magicui/TextReveal.tsx";
 import { Spotlight } from "../../../components/ui/spotlight-new.jsx";
 
-
 const AboutMekanika = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 640);
 
@@ -18,7 +17,9 @@ const AboutMekanika = () => {
 
   return (
     <section className="relative bg-cover bg-fixed text-gray-300">
-            {/* <Spotlight/> */}
+      <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
+        <Spotlight />
+      </div>
       <div className="relative container mx-auto px-4 my-16 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Text Section */}
@@ -55,8 +56,8 @@ const AboutMekanika = () => {
                     marginInline: "0",
                   }}
                 >
-                  We believe in pushing boundaries, exploring new frontiers,
-                  and finding solutions for Mechanical Engineering students by
+                  We believe in pushing boundaries, exploring new frontiers, and
+                  finding solutions for Mechanical Engineering students by
                   conducting events. Our team is committed to excellence and
                   continuous learning.
                 </p>
@@ -93,4 +94,4 @@ const AboutMekanika = () => {
   );
 };
 
-export default AboutMekanika
+export default AboutMekanika;
