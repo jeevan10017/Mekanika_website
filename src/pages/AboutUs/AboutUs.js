@@ -3,6 +3,7 @@ import "./AboutUs.css";
 import TeamImage from "../../components/Images/mekanika_Team.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Spotlight } from "../../components/ui/spotlight-new.jsx";
 
 const AboutUs = () => {
   // useEffect(() => {
@@ -27,6 +28,9 @@ const AboutUs = () => {
 
   return (
     <section className="about-us-section" id="about">
+      <div className="absolute inset-0 pointer-events-none z-10 overflow-x-hidden">
+        <Spotlight />
+     </div>
       <div className="container">
         <div className="section-heading">
           <div className="abouthead">About Us</div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Instagram, Linkedin, Facebook, Phone } from 'lucide-react';
+import { Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { RetroGrid } from '../../../components/magicui/RetroGrid.tsx';
 import { Spotlight } from "../../../components/ui/spotlight-new";
 
@@ -85,7 +85,8 @@ const HorizontalScroll = () => {
       height: '380px',
       overflow: 'hidden',
       border: `2px solid ${themeColors.primary}`,
-      boxShadow: `0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px ${themeColors.primary}40`
+      boxShadow: `0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px ${themeColors.primary}40`,
+      cursor: 'pointer',
     },
     facultyImageContainer: {
       position: 'absolute',
@@ -99,7 +100,7 @@ const HorizontalScroll = () => {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
-      filter: 'brightness(0.9) contrast(1.1)'
+      filter: 'brightness(0.6) contrast(1.1)'
     },
     facultyInfoContainer: {
       position: 'absolute',
@@ -158,7 +159,8 @@ const HorizontalScroll = () => {
       position: sectionPinned ? 'fixed' : 'relative',
       top: sectionPinned ? 0 : 'auto',
       transform: `translateX(${scrollPosition}px)`,
-      transition: 'transform 0.1s ease-out'
+      transition: 'transform 0.1s ease-out',
+      willChange: 'transform' 
     },
     pinnedSectionGradient: {
       content: '',
@@ -179,15 +181,18 @@ const HorizontalScroll = () => {
       height: '380px',
       margin: '0 1.2rem',
       overflow: 'hidden',
-      transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-      border: '1px solid rgba(255, 255, 255, 0.1)',
+      transition: 'all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+      border: '1px solid yellow',
       boxShadow: '0 15px 35px rgba(0, 0, 0, 0.2)',
       cursor: 'pointer',
+      willChange: 'transform, box-shadow', 
+      backfaceVisibility: 'hidden', 
+      WebkitBackfaceVisibility: 'hidden'
     },
     profileImageContainer: {
-      position: 'relative',
+      position: 'absolute', 
       width: '100%',
-      height: '280px', 
+      height: '100%',
       overflow: 'hidden'
     },
     profileImage: {
@@ -195,12 +200,26 @@ const HorizontalScroll = () => {
       height: '100%',
       objectFit: 'cover',
       transition: 'transform 0.5s ease',
+      willChange: 'transform', 
+      backfaceVisibility: 'hidden' 
     },
     profileInfo: {
       padding: '1.2rem',
       textAlign: 'center',
-      position: 'relative',
+      position: 'absolute', 
+      bottom: 0, 
+      left: 0,
+      width: '100%',
       zIndex: 2
+    },
+    profileInfoGradient: { 
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      height: '150px',
+      background: `linear-gradient(to top, rgba(10, 15, 26, 0.95) 0%, rgba(10, 15, 26, 0.7) 70%, rgba(10, 15, 26, 0) 100%)`,
+      zIndex: 1
     },
     profileName: {
       fontSize: '1.3rem',
@@ -272,9 +291,8 @@ const HorizontalScroll = () => {
       transition: 'opacity 0.3s, bottom 0.3s',
       pointerEvents: 'none',
       whiteSpace: 'nowrap',
-      zIndex: 100
+      zIndex: 1000
     },
-
     stickyHeadingContainer: {
       position: 'absolute',
       top: '6vh',
@@ -294,13 +312,9 @@ const HorizontalScroll = () => {
       letterSpacing: '1px',
       textTransform: 'uppercase',
       padding: '1rem 2rem',
-    //   background: 'rgba(10, 15, 26, 0.8)',
-      backdropFilter: 'blur(8px)',
-      borderRadius: '12px',
-    //   border: `2px solid ${themeColors.primary}30`
-    '@media (max-width: 768px)': {
-    fontSize: '1rem', 
-  },
+      '@media (max-width: 768px)': {
+        fontSize: '1rem', 
+      }
     }
   };
   
@@ -308,7 +322,7 @@ const HorizontalScroll = () => {
   const facultyData = {
     name: "Prof. Jeevan Jyoti Chakraborty",
     role: "Faculty Incharge",
-    image: "/api/placeholder/800/1000"
+    image: "/TeamImages/JC.png"
   };
 
   const teamMembers = [
@@ -318,10 +332,9 @@ const HorizontalScroll = () => {
       image: "",
       socials: {
         linkedin: "https://linkedin.com/in/",
-        facebook: "https://facebook.com/",
-          phone: "",
+        mail: "sarthak@example.com",
+        phone: "+91 9876543210",
         instagram: "https://instagram.com/",
-      
       }
     },
     {
@@ -330,9 +343,9 @@ const HorizontalScroll = () => {
       image: "/api/placeholder/400/500",
       socials: {
         linkedin: "https://linkedin.com/in",
-        facebook: "https://facebook.com",
+        mail: "aman@example.com",
         instagram: "https://instagram.com",
-        phone: ""
+        phone: "+91 8765432109"
       }
     },
     {
@@ -341,9 +354,9 @@ const HorizontalScroll = () => {
       image: "/api/placeholder/400/500",
       socials: {
         linkedin: "https://linkedin.com/in/",
-        facebook: "https://facebook.com/",
+        mail: "yasaswini@example.com",
         instagram: "https://instagram.com/",
-        phone: ""
+        phone: "+91 7654321098"
       }
     },
     {
@@ -352,9 +365,9 @@ const HorizontalScroll = () => {
       image: "/api/placeholder/400/500",
       socials: {
         linkedin: "https://linkedin.com/in/",
-        facebook: "https://facebook.com/",
+        mail: "surjya@example.com",
         instagram: "https://instagram.com/",
-        phone: ""
+        phone: "+91 6543210987"
       }
     },
     {
@@ -363,18 +376,18 @@ const HorizontalScroll = () => {
       image: "/api/placeholder/400/500",
       socials: {
         linkedin: "https://linkedin.com/in/",
-        facebook: "https://facebook.com/",
+        mail: "monisha@example.com",
         instagram: "https://instagram.com/",
-        phone: ""
+        phone: "+91 5432109876"
       }
     },
     {
       name: "Jeevan Kumar Korra", 
       role: "Web Head",
-      image: "/api/placeholder/400/500",
+      image: "/TeamImages/jeevan.jpg",
       socials: {
         linkedin: "https://www.linkedin.com/in/jeevan-kumar-korra-068726252/",
-        facebook: "https://www.facebook.com/korra.jeevan.98/",
+        mail: "jeevankumarkorra2005@gmail.com",
         instagram: "https://www.instagram.com/jeevankumarkorra/",
         phone: "+91 8500003192"
       }
@@ -406,14 +419,30 @@ const HorizontalScroll = () => {
     }
   };
 
+  const handleMailClick = (email) => {
+    // Open default mail client with the email address
+    window.location.href = `mailto:${email}`;
+    
+    // Also try to copy to clipboard as a fallback
+    navigator.clipboard.writeText(email)
+      .then(() => {
+        console.log('Email copied to clipboard');
+      })
+      .catch(err => {
+        console.error('Failed to copy email: ', err);
+      });
+  };
+
   const SocialIcon = ({ type, link, showTooltip, setShowTooltip }) => {
-    const isPhone = type === 'phone';
+    const isContact = type === 'phone' || type === 'mail';
     const tooltipRef = useRef(null);
     
     const handleClick = (e) => {
-      if (isPhone) {
-        e.preventDefault();
+      e.preventDefault();
+      if (type === 'phone') {
         handlePhoneClick(link);
+      } else if (type === 'mail') {
+        handleMailClick(link);
       } else {
         window.open(link, '_blank', 'noopener,noreferrer');
       }
@@ -424,17 +453,17 @@ const HorizontalScroll = () => {
         style={{
           ...styles.socialIcon,
           position: 'relative',
-          transform: showTooltip && isPhone ? 'scale(1.1)' : 'scale(1)'
+          transform: showTooltip && isContact ? 'scale(1.1)' : 'scale(1)'
         }}
         onClick={handleClick}
-        onMouseEnter={() => isPhone && setShowTooltip(true)}
-        onMouseLeave={() => isPhone && setShowTooltip(false)}
+        onMouseEnter={() => isContact && setShowTooltip(true)}
+        onMouseLeave={() => isContact && setShowTooltip(false)}
       >
         {type === 'linkedin' && <Linkedin size={20} />}
         {type === 'instagram' && <Instagram size={20} />}
         {type === 'phone' && <Phone size={20} />}
-        {type === 'facebook' && <Facebook size={20} />}
-        {isPhone && (
+        {type === 'mail' && <Mail size={20} />}
+        {isContact && (
           <div 
             ref={tooltipRef}
             style={{
@@ -461,6 +490,7 @@ const HorizontalScroll = () => {
             alt={name} 
             style={styles.facultyImage} 
             onError={handleImageError}
+            loading="eager" // Force eager loading
           />
         </div>
         <div style={styles.facultyInfoGradient}></div>
@@ -477,7 +507,7 @@ const HorizontalScroll = () => {
   // Custom team profile card with hover effect and social links
   const TeamProfileCard = ({ name, role, image, socials }) => {
     const [isHovered, setIsHovered] = useState(false);
-    const [showPhoneTooltip, setShowPhoneTooltip] = useState(false);
+    const [showContactTooltip, setShowContactTooltip] = useState({ phone: false, mail: false });
     
     return (
       <div 
@@ -487,24 +517,33 @@ const HorizontalScroll = () => {
           boxShadow: isHovered ? `0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px ${themeColors.primary}30` : styles.teamProfile.boxShadow
         }}
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseLeave={() => {
+          setIsHovered(false);
+          setShowContactTooltip({ phone: false, mail: false });
+        }}
       >
         <div style={styles.cardHighlight}></div>
         <div style={styles.profileImageContainer}>
           <img 
-            src={image} 
+            src={image || fallbackImage} 
             alt={name} 
             style={{
               ...styles.profileImage,
               transform: isHovered ? 'scale(1.1)' : 'scale(1)'
             }}
             onError={handleImageError}
+            loading="eager" 
           />
         </div>
+        
+        {/* Added gradient overlay for text */}
+        <div style={styles.profileInfoGradient}></div>
+        
         <div style={styles.profileInfo}>
           <h3 style={styles.profileName}>{name}</h3>
           <p style={styles.profileRole}>{role}</p>
         </div>
+        
         <div style={{
           ...styles.socialOverlay,
           opacity: isHovered ? 1 : 0,
@@ -519,6 +558,12 @@ const HorizontalScroll = () => {
               showTooltip={false} 
               setShowTooltip={() => {}}
             />
+             <SocialIcon 
+              type="mail" 
+              link={socials.mail}
+              showTooltip={showContactTooltip.mail} 
+              setShowTooltip={(show) => setShowContactTooltip(prev => ({...prev, mail: show}))}
+            />
             <SocialIcon 
               type="instagram" 
               link={socials.instagram}
@@ -528,15 +573,10 @@ const HorizontalScroll = () => {
             <SocialIcon 
               type="phone" 
               link={socials.phone}
-              showTooltip={showPhoneTooltip} 
-              setShowTooltip={setShowPhoneTooltip}
+              showTooltip={showContactTooltip.phone} 
+              setShowTooltip={(show) => setShowContactTooltip(prev => ({...prev, phone: show}))}
             />
-             <SocialIcon 
-              type="facebook" 
-              link={socials.facebook}
-              showTooltip={false} 
-              setShowTooltip={() => {}}
-            />
+           
           </div>
         </div>
       </div>
@@ -564,7 +604,6 @@ const HorizontalScroll = () => {
         className="horizontal-scroll-section"
         style={styles.pinnedSection}
       >
-        {/* Sticky Heading */}
         <div style={styles.stickyHeadingContainer}>
           <h1 style={styles.stickyHeading}>Executive Team</h1>
         </div>

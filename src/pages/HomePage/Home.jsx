@@ -7,7 +7,6 @@ import AboutMekanika from './AboutMekanika/AboutMekanika.jsx';
 import {AnimatedTestimonialsDemo} from './HomeEvents/HomeEvents.tsx';
 import { HeroVideo } from './HomeVideo/HeroVideo.jsx';
 import { MediumRegister } from '../../components/MediumRegister.jsx';
-import { Spotlight } from '../../components/ui/spotlight-new.jsx';
 
 
 

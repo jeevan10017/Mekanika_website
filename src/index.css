@@ -5,6 +5,7 @@ body {
   background-color: black;
   background-attachment: fixed;
   font-family:"Comfortaa", sans-serif;
+  overflow-x: hidden; 
 }
 code {
   font-family: "Comfortaa", sans-serif;
