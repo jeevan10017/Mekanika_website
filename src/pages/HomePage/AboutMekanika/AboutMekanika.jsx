@@ -35,14 +35,10 @@ const AboutMekanika = () => {
                     wordSpacing: "4px",
                     lineHeight: "24px",
                     marginInline: "0",
+              
                   }}
                 >
-                  Mekanika is a passionate community of students and alumni of
-                  the Department of Mechanical Engineering at IIT Kharagpur who
-                  are dedicated to advancing the field of Mechanical
-                  Engineering. Our mission is to build connections,
-                  collaboration, and education in the world of Mechanical
-                  Engineering.
+                  Mekanika is a dynamic student-led community, providing a platform for students to connect, exchange ideas, and enhance their skills. It fosters a sense of unity through conducting intra-department competitions and various engaging activities that bring students together, creating a lively and collaborative environment.
                 </p>
 
                 <p
@@ -56,15 +52,12 @@ const AboutMekanika = () => {
                     marginInline: "0",
                   }}
                 >
-                  We believe in pushing boundaries, exploring new frontiers, and
-                  finding solutions for Mechanical Engineering students by
-                  conducting events. Our team is committed to excellence and
-                  continuous learning.
+                 Mekanika also organizes interactive sessions for CDC preparation and the farewell ceremony for final-year students, celebrating their journey and contributions to the department. Through these initiatives, it strengthens bonds among students and ensures a memorable experience throughout their academic journey.
                 </p>
               </>
             ) : (
               <TextRevealByWord
-                text={`Mekanika is a passionate community of students and alumni of the Department of Mechanical Engineering at IIT Kharagpur who are dedicated to advancing the field of Mechanical Engineering. Our mission is to build connections, collaboration, and education in the world of Mechanical Engineering.\n\n We believe in pushing boundaries, exploring new frontiers, and finding solutions for Mechanical Engineering students by conducting events. Our team is committed to excellence and continuous learning.`}
+                text={`Mekanika is a dynamic student-led community, providing a platform for students to connect, exchange ideas, and enhance their skills. It fosters a sense of unity through conducting intra-department competitions and various engaging activities that bring students together, creating a lively and collaborative environment. \n\n Mekanika also organizes interactive sessions for CDC preparation and the farewell ceremony for final-year students, celebrating their journey and contributions to the department. Through these initiatives, it strengthens bonds among students and ensures a memorable experience throughout their academic journey.`}
                 className="text-lg sm:text-xl leading-normal whitespace-pre-line text-center"
                 style={{
                   fontSize: "1.4rem",
