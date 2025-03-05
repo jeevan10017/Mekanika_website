@@ -38,7 +38,7 @@ const AboutMekanika = () => {
               
                   }}
                 >
-                  Mekanika is a dynamic student-led community, providing a platform for students to connect, exchange ideas, and enhance their skills. It fosters a sense of unity through conducting intra-department competitions and various engaging activities that bring students together, creating a lively and collaborative environment.
+                  Mekanika is a dynamic student-led community, providing a platform for students to connect, exchange experiences, and enhance their skills. It fosters unity through intra-department competitions and various engaging activities that bring students together, creating a lively and collaborative environment.
                 </p>
 
                 <p
@@ -52,12 +52,12 @@ const AboutMekanika = () => {
                     marginInline: "0",
                   }}
                 >
-                 Mekanika also organizes interactive sessions for CDC preparation and the farewell ceremony for final-year students, celebrating their journey and contributions to the department. Through these initiatives, it strengthens bonds among students and ensures a memorable experience throughout their academic journey.
+                 We also organizes interactive sessions for CDC preparation and the farewell ceremony for final-year students, celebrating their journey and contributions to the department. Through these initiatives, it strengthens bonds among students and ensures a memorable experience throughout their academic journey.
                 </p>
               </>
             ) : (
               <TextRevealByWord
-                text={`Mekanika is a dynamic student-led community, providing a platform for students to connect, exchange ideas, and enhance their skills. It fosters a sense of unity through conducting intra-department competitions and various engaging activities that bring students together, creating a lively and collaborative environment. \n\n Mekanika also organizes interactive sessions for CDC preparation and the farewell ceremony for final-year students, celebrating their journey and contributions to the department. Through these initiatives, it strengthens bonds among students and ensures a memorable experience throughout their academic journey.`}
+                text={`Mekanika is a vibrant student-led community that connects students, fosters skill development, and promotes unity through competitions and activities. We organize interactive sessions for CDC preparation and a farewell ceremony to celebrate final-year students, ensuring a supportive and memorable academic journey.`}
                 className="text-lg sm:text-xl leading-normal whitespace-pre-line text-center"
                 style={{
                   fontSize: "1.4rem",
