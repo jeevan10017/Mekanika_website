@@ -91,7 +91,7 @@ const ExecutiveTeam = ({ executives, firstRowCount = 2 }) => {
                 <a 
                   href={executive.linkedin || "#"} 
                   className="text-white hover:text-blue-400 transition-colors"
-                  style={{ paddingTop: "5rem" }}
+                  // style={{ paddingTop: "5rem" }}
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
