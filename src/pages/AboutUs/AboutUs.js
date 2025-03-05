@@ -38,7 +38,7 @@ const AboutUs = () => {
         <div className="content">
           <div className="text">
             <p data-aos="fade-right">
-            Mekanika is a dynamic student-led community, providing a platform for students to connect, exchange ideas, and enhance their skills. It fosters a sense of unity through conducting intra-department competitions and various engaging activities that bring students together, creating a lively and collaborative environment.
+            Mekanika is a dynamic student-led community, providing a platform for students to connect, exchange experiences, and enhance their skills. It fosters unity through intra-department competitions and various engaging activities that bring students together, creating a lively and collaborative environment.
             </p>
             <p data-aos="fade-right">
             Mekanika also organizes interactive sessions for CDC preparation and the farewell ceremony for final-year students, celebrating their journey and contributions to the department. Through these initiatives, it strengthens bonds among students and ensures a memorable experience throughout their academic journey.
