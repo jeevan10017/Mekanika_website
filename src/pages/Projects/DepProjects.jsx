@@ -227,7 +227,7 @@ export function DepProjects() {
             </div>
 
             {/* Sort Button */}
-            <button
+            {/* <button
               onClick={handleSort}
               className={`flex items-center justify-center gap-2 ${
                 sortActive
@@ -242,7 +242,7 @@ export function DepProjects() {
               <span className="md:hidden">
                 Sort {sortOrder === "asc" ? "↑" : "↓"}
               </span>
-            </button>
+            </button> */}
           </div>
         </div>
 
