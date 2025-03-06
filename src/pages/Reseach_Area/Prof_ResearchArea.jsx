@@ -234,7 +234,7 @@ export function ProfResearchArea() {
             paddingLeft: '100%', 
           }}
         >
-          Data last updated March 2025
+          last updated in March 2025
         </div>
       </div>
       
