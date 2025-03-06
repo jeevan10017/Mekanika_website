@@ -340,7 +340,7 @@ export function ProfResearchArea() {
         </AnimatePresence>
         
 
-        <div className="sticky top-0 z-30 bg-gray-950 pt-4 pb-6 border-b border-neutral-800">
+        <div className="sticky top-0 z-30 bg-gray-950 md:pt-4 pb-6 border-b border-neutral-800">
            <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
                      <Spotlight />
                    </div> 
