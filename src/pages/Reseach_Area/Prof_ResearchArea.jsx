@@ -202,7 +202,7 @@ export function ProfResearchArea() {
         className={`relative w-4 h-4 mr-2 ${className}`}
         onClick={onChange}
       >
-        <div className={`w-4 h-4 border ${checked ? 'border-yellow-500 bg-yellow-500' : 'border-neutral-500 bg-neutral-700'} rounded transition-colors`}>
+        <div className={`w-4 h-4 border ${checked ? 'border-yellow-500 bg-yellow-500' : 'border-gray-500 bg-gray-700'} rounded transition-colors`}>
           {checked && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +223,7 @@ export function ProfResearchArea() {
   };
 
   return (
-    <div className="w-full bg-neutral-900 pt-12 md:pt-24 pb-16">
+    <div className="w-full bg-gray-950 pt-12 md:pt-24 pb-16">
       <div className="container mx-auto px-4 max-w-[80rem]">
       <div className="relative w-full overflow-hidden mb-6">
       <div className="flex">
@@ -252,7 +252,7 @@ export function ProfResearchArea() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/80 h-full w-full z-10" 
+              className="fixed inset-0 bg-black h-full w-full z-10" 
             />
           )}
         </AnimatePresence>
@@ -279,7 +279,7 @@ export function ProfResearchArea() {
               <motion.div
                 layoutId={`card-${active.profName}-${id}`}
                 ref={ref}
-                className="w-full min-w-full md:min-w-[800px] max-w-[90vw] h-full md:h-fit md:max-h-[90%] max-h-[80vh] flex flex-col bg-neutral-800 border border-neutral-700 sm:rounded-xl overflow-hidden"
+                className="w-full min-w-full md:min-w-[800px] max-w-[90vw] h-full md:h-fit md:max-h-[90%] max-h-[80vh] flex flex-col bg-gray-900 border border-neutral-700 sm:rounded-xl overflow-hidden"
                 style={{
                   background: "linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%)"
                 }}
@@ -313,7 +313,7 @@ export function ProfResearchArea() {
                       {active.researchAreas.map((area, idx) => (
                         <div 
                           key={idx} 
-                          className="px-4 py-3 bg-neutral-700/50 rounded-lg hover:bg-neutral-700 transition-colors"
+                          className="px-4 py-3 bg-gray-800/50 rounded-lg hover:bg-gray-900 transition-colors"
                         >
                           {area}
                         </div>
@@ -323,7 +323,7 @@ export function ProfResearchArea() {
                     {active.researchStatement && (
                       <>
                         <h4 className="font-medium text-lg text-white mt-4">Research Statement:</h4>
-                        <div className="max-h-64 overflow-y-auto w-full bg-neutral-700/30 p-4 rounded-lg">
+                        <div className="max-h-64 overflow-y-auto w-full bg-gray-800/50 p-4 rounded-lg">
                           {active.researchStatement.split('/n/n').map((paragraph, idx) => (
                             <p key={idx} className="mb-4 last:mb-0">
                               {paragraph}
@@ -340,19 +340,19 @@ export function ProfResearchArea() {
         </AnimatePresence>
         
 
-        <div className="sticky top-0 z-30 bg-neutral-900 pt-4 pb-6 border-b border-neutral-800">
+        <div className="sticky top-0 z-30 bg-gray-950 pt-4 pb-6 border-b border-neutral-800">
            <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
                      <Spotlight />
                    </div> 
           {/* Search Bar */}
           <div className="relative mb-4" ref={searchRef}>
-            <div className="flex items-center border-2 border-neutral-700 rounded-lg overflow-hidden bg-neutral-800">
+            <div className="flex items-center border-2 border-gray-800 rounded-lg overflow-hidden bg-gray-800">
               <input
                 type="text"
                 placeholder="Search professors or research areas..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full p-4 focus:outline-none bg-neutral-800 text-white placeholder:text-neutral-400"
+                className="w-full p-4 focus:outline-none bg-zinc-800 text-white placeholder:text-neutral-400"
               />
               {searchQuery && (
                 <button 
@@ -370,7 +370,7 @@ export function ProfResearchArea() {
                 {suggestions.map((suggestion, index) => (
                   <div 
                     key={index}
-                    className="p-4 hover:bg-neutral-700 cursor-pointer border-b last:border-b-0 border-neutral-700"
+                    className="p-4 hover:bg-neutral-700 cursor-pointer border-b last:border-b-0 border-zinc-700"
                     onClick={() => {
                       setSearchQuery(suggestion.profName);
                       setSuggestions([]);
@@ -411,7 +411,7 @@ export function ProfResearchArea() {
 
               {/* Professor Filter Dropdown */}
               {showProfessorFilter && (
-                <div className="absolute left-0 mt-2 w-full bg-neutral-800 border border-neutral-700 rounded-lg shadow-lg z-50">
+                <div className="absolute left-0 mt-2 w-full bg-gray-900 border border-neutral-700 rounded-lg shadow-lg z-50">
                   <div className="flex justify-between items-center p-3 border-b border-neutral-700">
                     <h3 className="font-medium text-white">Filter by Professor</h3>
                     {(selectedProfessors.length > 0 || selectedResearchAreas.length > 0) && (
@@ -427,7 +427,7 @@ export function ProfResearchArea() {
                     {professorsList.map((profName) => (
                       <div
                         key={profName}
-                        className={`p-3 cursor-pointer hover:bg-neutral-700 text-sm ${
+                        className={`p-3 cursor-pointer hover:bg-gray-800 text-sm ${
                           selectedProfessors.includes(profName)
                             ? "bg-yellow-500 text-black"
                             : "text-neutral-300"
@@ -468,7 +468,7 @@ export function ProfResearchArea() {
 
               {/* Research Area Filter Dropdown */}
               {showResearchFilter && (
-                <div className="absolute left-0 mt-2 w-full bg-neutral-800 border border-neutral-700 rounded-lg shadow-lg z-50">
+                <div className="absolute left-0 mt-2 w-full bg-gray-900 border border-zinc-700 rounded-lg shadow-lg z-50">
                   <div className="flex justify-between items-center p-3 border-b border-neutral-700">
                     <h3 className="font-medium text-white">Filter by Research Area</h3>
                     {(selectedProfessors.length > 0 || selectedResearchAreas.length > 0) && (
@@ -484,10 +484,10 @@ export function ProfResearchArea() {
                     {researchAreasList.map((area) => (
                       <div
                         key={area}
-                        className={`p-3 cursor-pointer hover:bg-neutral-700 text-sm ${
+                        className={`p-3 cursor-pointer hover:bg-gray-800 text-sm ${
                           selectedResearchAreas.includes(area)
                             ? "bg-yellow-500 text-black"
-                            : "text-neutral-300"
+                            : "text-gray-300"
                         }`}
                         onClick={() => toggleResearchArea(area)}
                       >
@@ -515,7 +515,7 @@ export function ProfResearchArea() {
                     <span>Prof. {profName}</span>
                     <button 
                       onClick={() => removeProfessorFilter(profName)}
-                      className="hover:text-neutral-700"
+                      className="hover:text-red-500"
                     >
                       <CloseIcon />
                     </button>
@@ -526,7 +526,7 @@ export function ProfResearchArea() {
                     <span>{area}</span>
                     <button 
                       onClick={() => removeResearchAreaFilter(area)}
-                      className="hover:text-neutral-700"
+                      className="hover:text-zinc-700 "
                     >
                       <CloseIcon />
                     </button>
@@ -555,7 +555,7 @@ export function ProfResearchArea() {
                 layoutId={`card-${prof.profName}-${id}`}
                 key={`card-${prof.profName}-${id}`}
                 onClick={() => setActive(prof)}
-                className="p-5 flex flex-col justify-between hover:bg-neutral-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-neutral-850"
+                className="p-5 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-neutral-850"
                 style={{
                   background: "linear-gradient(145deg, #252525 0%, #1a1a1a 100%)"
                 }}
