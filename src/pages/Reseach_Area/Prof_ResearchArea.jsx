@@ -294,7 +294,7 @@ export function ProfResearchArea() {
                   <motion.a
                     href={active.link}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-yellow-500  text-black hover:from-yellow-400 hover:to-amber-400 transition-all"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-yellow-500  text-black hover:from-yellow-400 hover:to-amber-400 transition-all text-center"
                   >
                     View Profile
                   </motion.a>
