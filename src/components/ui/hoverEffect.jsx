@@ -102,9 +102,9 @@ export const CardDetails = ({ id, title, startDate, faculties, className }) => {
       <CardTitle>
         {title}
       </CardTitle>
-      <p className="text-zinc-300 text-sm mt-2">
+      {/* <p className="text-zinc-300 text-sm mt-2">
         <strong>Start Date:</strong> {startDate}
-      </p>
+      </p> */}
       <div className="mt-4">
         <strong className="text-zinc-300">Professors:</strong>
         <ul className="mt-2">
