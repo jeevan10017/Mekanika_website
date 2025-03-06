@@ -21,7 +21,7 @@ const BlogsIC = () => {
                     <h2 className="text-2xl lg:text-4xl font-extrabold text-gradient bg-clip-text text-transparent bg-pink-700 text-center mb-0 sm:mb-20  sm:text-left">
                         Explore Our Intern Chronicles Blog Series
                     </h2>
-                    <p className=" text-sm text-gray-400 sm:ml-4 text-center sm:text-left mt-2 mb-20 sm:mt-0">(Core)</p>
+                    <p className=" text-sm text-gray-400 sm:ml-4 text-center sm:text-left mt-2 mb-20 sm:mt-0">(non-core)</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-2">

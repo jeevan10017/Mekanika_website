@@ -14,6 +14,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Team from './pages/Team/Team';
 import NotFound from './pages/Error404/Error404';
 import ScreenSizeAlert from './components/ScreenSizeAlert'; 
+import {ProfResearchArea} from './pages/Reseach_Area/Prof_ResearchArea';
 
 // Lazy-load pages and components
 const Home = lazy(() => import('./pages/HomePage/Home'));
@@ -37,7 +38,8 @@ function AppContent() {
     '/speed-insights',
     '/team',
     '/under-construction',
-    '/gallery'
+    '/gallery',
+    '/research-areas'
   ];
 
   // Check if the current path is valid
@@ -62,6 +64,7 @@ function AppContent() {
           <Route path="/team" element={<Team />} />
           <Route path="/under-construction" element={<TextRevealDemo />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/research-areas" element={<ProfResearchArea />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

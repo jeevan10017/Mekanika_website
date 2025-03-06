@@ -39,7 +39,12 @@ const Navbar = () => {
     },
     { id: 3, text: "Events", link: "/events" },
     { id: 4, text: "Materials", link: "/course-material" },
-    { id: 5, text: "Projects", link: "/projects" },
+    { id: 5, text: "Department Projects",
+      subItems: [
+        { id: 51, text: "Research areas", link: "/research-areas" },
+        { id: 52, text: "Research Projects", link: "/projects" },
+    ]
+    },
     {
       id: 6,
       text: "more",

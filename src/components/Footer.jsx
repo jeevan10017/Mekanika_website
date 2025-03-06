@@ -22,14 +22,15 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="md:col-span-1 lg:col-span-4 flex flex-col items-center md:items-start">
             <h2 className="text-2xl font-bold text-yellow-400 mb-4">Quick Links</h2>
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-gray-300 text-center md:text-left">
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-gray-300  md:text-left"> {/*text-center */}
               <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
               <li><Link to="/core-expedition" className="hover:text-yellow-400">Core Expedition</Link></li>
               <li><Link to="/about" className="hover:text-yellow-400">About Us</Link></li>
               <li><Link to="/intern-chronicles" className="hover:text-yellow-400">Intern Chronicles</Link></li>
               <li><Link to="/events" className="hover:text-yellow-400">Events</Link></li>
               <li><Link to="/course-material" className="hover:text-yellow-400">Materials</Link></li>
-              <li><Link to="/projects" className="hover:text-yellow-400">Projects</Link></li>
+              <li><Link to="/projects" className="hover:text-yellow-400">Research Projects</Link></li>
+              <li><Link to="/research-areas" className="hover:text-yellow-400">Research Areas</Link></li>
               <li><Link to="/team" className="hover:text-yellow-400">Team</Link></li>
               <li><Link to="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
               <li><Link to="/under-construction" className="hover:text-yellow-400">Registrations</Link></li>
