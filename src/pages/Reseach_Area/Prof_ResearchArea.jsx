@@ -323,7 +323,7 @@ export function ProfResearchArea() {
                     {active.researchStatement && (
                       <>
                         <h4 className="font-medium text-lg text-white mt-4">Research Statement:</h4>
-                        <div className="max-h-64 overflow-y-auto w-full bg-gray-800/50 p-4 rounded-lg">
+                        <div className="max-h-96 overflow-y-auto w-full bg-gray-800/50 p-4 rounded-lg">
                           {active.researchStatement.split('/n/n').map((paragraph, idx) => (
                             <p key={idx} className="mb-4 last:mb-0">
                               {paragraph}
@@ -340,7 +340,7 @@ export function ProfResearchArea() {
         </AnimatePresence>
         
 
-        <div className="md:sticky top-0 z-30 bg-gray-950 md:pt-4 pb-6 border-b border-neutral-800">
+        <div className="md:sticky top-0 z-30 bg-gray-950 md:pt-2  border-b border-neutral-800">
            <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
                      <Spotlight />
                    </div> 
@@ -427,7 +427,7 @@ export function ProfResearchArea() {
                     {professorsList.map((profName) => (
                       <div
                         key={profName}
-                        className={`p-3 cursor-pointer hover:bg-gray-800 text-sm ${
+                        className={`p-4 cursor-pointer hover:bg-gray-800 text-sm ${
                           selectedProfessors.includes(profName)
                             ? "bg-yellow-500 text-black"
                             : "text-neutral-300"
@@ -484,7 +484,7 @@ export function ProfResearchArea() {
                     {researchAreasList.map((area) => (
                       <div
                         key={area}
-                        className={`p-3 cursor-pointer hover:bg-gray-800 text-sm ${
+                        className={`p-4 cursor-pointer hover:bg-gray-800 text-sm ${
                           selectedResearchAreas.includes(area)
                             ? "bg-yellow-500 text-black"
                             : "text-gray-300"
@@ -555,7 +555,7 @@ export function ProfResearchArea() {
                 layoutId={`card-${prof.profName}-${id}`}
                 key={`card-${prof.profName}-${id}`}
                 onClick={() => setActive(prof)}
-                className="p-5 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-neutral-850"
+                className="p-2 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-neutral-850"
                 style={{
                   background: "linear-gradient(145deg, #252525 0%, #1a1a1a 100%)"
                 }}
