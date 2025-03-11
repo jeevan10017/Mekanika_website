@@ -278,7 +278,7 @@ export function ProfResearchArea() {
               <motion.div
                 layoutId={`card-${active.profName}-${id}`}
                 ref={ref}
-                className="w-full min-w-full md:min-w-[800px] max-w-[90vw] h-full md:h-fit md:max-h-[90%] max-h-[80vh] flex flex-col bg-gray-900 border border-yellow-400 sm:rounded-xl overflow-hidden"
+                className="w-full min-w-full md:min-w-[800px] max-w-[90vw] h-full md:h-fit md:max-h-[90%] max-h-[70vh]  flex flex-col bg-gray-900 border border-yellow-400 rounded-xl overflow-hidden"
                 style={{
                   background: "linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%)"
                 }}
@@ -293,7 +293,7 @@ export function ProfResearchArea() {
                   <motion.a
                     href={active.link}
                     target="_blank"
-                    className="px-2 py-2 md:px-4 md:py-3 text-sm rounded-full font-bold bg-yellow-500  text-black hover:from-yellow-400 hover:to-amber-400 transition-all text-center"
+                    className="px-2 py-2 md:px-4 md:py-3 text-sm rounded-3xl font-bold bg-yellow-500  text-black hover:from-yellow-400 hover:to-amber-400 transition-all text-center"
                   >
                     View Profile
                   </motion.a>
