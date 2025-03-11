@@ -5,6 +5,7 @@ import { professors } from "../../components/assets/Prof_Data";
 import { FaFilter } from "react-icons/fa";
 import { Spotlight } from "../../components/ui/spotlight-new.jsx";
 
+
 export function ProfResearchArea() {
   const [active, setActive] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -176,7 +177,6 @@ export function ProfResearchArea() {
   // Filter professors based on search query, selected professors, and selected research areas
   const filteredProfessors = professors
     .filter(prof => {
-      // Filter by search query
       const matchesSearch = searchQuery.trim() === "" ||
         prof.profName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         prof.researchAreas.some(area => 
@@ -193,9 +193,8 @@ export function ProfResearchArea() {
       
       return matchesSearch && matchesProfessor && matchesResearchArea;
     })
-    .sort((a, b) => a.profName.localeCompare(b.profName)); // Sort alphabetically by professor name
+    .sort((a, b) => a.profName.localeCompare(b.profName)); 
 
-  // Custom checkbox component for dark mode
   const DarkModeCheckbox = ({ checked, onChange, className }) => {
     return (
       <div 
@@ -279,14 +278,14 @@ export function ProfResearchArea() {
               <motion.div
                 layoutId={`card-${active.profName}-${id}`}
                 ref={ref}
-                className="w-full min-w-full md:min-w-[800px] max-w-[90vw] h-full md:h-fit md:max-h-[90%] max-h-[80vh] flex flex-col bg-gray-900 border border-neutral-700 sm:rounded-xl overflow-hidden"
+                className="w-full min-w-full md:min-w-[800px] max-w-[90vw] h-full md:h-fit md:max-h-[90%] max-h-[80vh] flex flex-col bg-gray-900 border border-yellow-400 sm:rounded-xl overflow-hidden"
                 style={{
                   background: "linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%)"
                 }}
               >
                 <div className="flex justify-between items-start p-6 border-b border-neutral-700">
                   <div>
-                    <h3 className="font-bold text-xl text-white">
+                    <h3 className="font-extrabold text-xl text-yellow-300">
                       Prof. {active.profName}
                     </h3>
                   </div>
@@ -294,7 +293,7 @@ export function ProfResearchArea() {
                   <motion.a
                     href={active.link}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-yellow-500  text-black hover:from-yellow-400 hover:to-amber-400 transition-all text-center"
+                    className="px-2 py-2 md:px-4 md:py-3 text-sm rounded-full font-bold bg-yellow-500  text-black hover:from-yellow-400 hover:to-amber-400 transition-all text-center"
                   >
                     View Profile
                   </motion.a>
@@ -308,12 +307,12 @@ export function ProfResearchArea() {
                     exit={{ opacity: 0 }}
                     className="text-neutral-300 text-sm md:text-base flex flex-col items-start gap-4"
                   >
-                    <h4 className="font-medium text-lg text-white">Research Areas:</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                    <h4 className="font-medium text-lg text-yellow-300/85">Research Areas:</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2  w-full">
                       {active.researchAreas.map((area, idx) => (
                         <div 
                           key={idx} 
-                          className="px-4 py-3 bg-gray-800/50 rounded-lg hover:bg-gray-900 transition-colors"
+                          className="px-4 py-2  rounded-lg  transition-colors"
                         >
                           {area}
                         </div>
@@ -322,8 +321,8 @@ export function ProfResearchArea() {
                     
                     {active.researchStatement && (
                       <>
-                        <h4 className="font-medium text-lg text-white mt-4">Research Statement:</h4>
-                        <div className="max-h-96 overflow-y-auto w-full bg-gray-800/50 p-4 rounded-lg">
+                        <h4 className="font-medium text-lg text-yellow-300/85 mt-4">Research Statement:</h4>
+                        <div className="max-h-96 overflow-y-auto w-full  p-4 rounded-lg">
                           {active.researchStatement.split('/n/n').map((paragraph, idx) => (
                             <p key={idx} className="mb-4 last:mb-0">
                               {paragraph}
@@ -340,11 +339,11 @@ export function ProfResearchArea() {
         </AnimatePresence>
         
 
-        <div className="md:sticky top-0 z-30 bg-gray-950 md:pt-2  border-b border-neutral-800">
+        <div className="md:sticky -top-16 z-30 bg-gray-950 md:pt-2  border-b border-neutral-800">
            <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
                      <Spotlight />
                    </div> 
-                   <h1 className="text-3xl font-bold text-center  mb-8 text-yellow-400">
+                   <h1 className=" text-2xl md:text-3xl font-bold text-center  mb-8 text-yellow-400">
           Reseach Areas of Professors
         </h1>
           {/* Search Bar */}
@@ -355,7 +354,7 @@ export function ProfResearchArea() {
                 placeholder="Search professors or research areas..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full p-4 focus:outline-none bg-zinc-800 text-white placeholder:text-neutral-400"
+                className="w-full p-4 focus:outline-none bg-gradient-to-r from-slate-950 via-gray-900 to-slate-950 text-white placeholder:text-neutral-400"
               />
               {searchQuery && (
                 <button 
@@ -369,11 +368,11 @@ export function ProfResearchArea() {
             
             {/* Search suggestions */}
             {suggestions.length > 0 && (
-              <div className="absolute z-10 w-full mt-1 bg-neutral-800 rounded-lg shadow-xl border border-neutral-700">
+              <div className="absolute z-10 w-full mt-1 bg-gradient-to-b from-slate-900 to-zinc-950  rounded-lg shadow-xl border border-neutral-700">
                 {suggestions.map((suggestion, index) => (
                   <div 
                     key={index}
-                    className="p-4 hover:bg-neutral-700 cursor-pointer border-b last:border-b-0 border-zinc-700"
+                    className="p-4 hover:bg-gradient-to-t from-gray-950 to-slate-700 cursor-pointer border-b last:border-b-0 border-zinc-700"
                     onClick={() => {
                       setSearchQuery(suggestion.profName);
                       setSuggestions([]);
@@ -401,7 +400,7 @@ export function ProfResearchArea() {
                 className={`flex items-center justify-center gap-2 ${
                   selectedProfessors.length > 0
                     ? "bg-yellow-500 text-black"
-                    : "bg-neutral-800 text-white"
+                    : " bg-gradient-to-r bg-gray-900 text-white border border-gray-700"
                 } px-4 py-3 rounded-lg hover:bg-yellow-400 hover:text-black w-full`}
               >
                 <FaFilter />
@@ -458,7 +457,7 @@ export function ProfResearchArea() {
                 className={`flex items-center justify-center gap-2 ${
                   selectedResearchAreas.length > 0
                     ? "bg-yellow-500 text-black"
-                    : "bg-neutral-800 text-white"
+                    : "bg-gradient-to-r bg-gray-900 text-white border border-gray-700"
                 } px-4 py-3 rounded-lg hover:bg-yellow-400 hover:text-black w-full`}
               >
                 <FaFilter />
@@ -558,9 +557,9 @@ export function ProfResearchArea() {
                 layoutId={`card-${prof.profName}-${id}`}
                 key={`card-${prof.profName}-${id}`}
                 onClick={() => setActive(prof)}
-                className="p-3 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-neutral-850"
+                className="p-3 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-gradient-to-b from-gray-900 to-neutral-950"
                 style={{
-                  background: "linear-gradient(145deg, #252525 0%, #1a1a1a 100%)"
+                  background: "linear-gradient(145deg, #1b1b1b 0%, #1a1a1a 100%)"
                 }}
               >
                 <div className="w-full">

@@ -179,7 +179,7 @@ export function DepProjects() {
       `}</style>
 
         
-        <h1 className="text-3xl font-bold text-center mt-8 mb-12 text-yellow-400">
+        <h1 className="text-2xl md:text-3xl font-bold text-center mt-8 mb-12 text-yellow-400">
           Ongoing Projects in Department
         </h1>
 
@@ -212,7 +212,6 @@ export function DepProjects() {
           </div>
 
           <div className="flex flex-wrap md:flex-nowrap items-center gap-4 w-full md:w-auto">
-            {/* Professor Filter Button */}
             <div
               className="relative flex-1 md:flex-initial"
               ref={filterDropdownRef}

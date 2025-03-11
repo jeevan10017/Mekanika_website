@@ -241,7 +241,7 @@ import { time } from 'framer-motion';
             { name: "LinkedIn", link: "https://www.linkedin.com/in/k-aniruddha-bhardwaj-3374b2253/", icon: faLinkedin },
         ],
         blogTitle: "Intern @ Johnson & Johnson",
-         Link: "https://medium.com/@mekanika2022/core-expedition-dev-bhatia-itc-aea659580f3c",
+         Link: "https://medium.com/@mekanika2022/core-expedition-aniruddha-bharadwaj-johnson-johnson-cefe33b3e9d1",
         blogDescription: "asked technical questions related to materials, machines, mechanics, and core engineering concepts. Additionally, there were questions about supply chain strategies, such as planning logistics, structuring a plant layout, and managing procurement and contracts.",
         time:6
     }

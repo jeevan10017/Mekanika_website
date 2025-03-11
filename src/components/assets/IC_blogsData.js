@@ -152,8 +152,24 @@ const IC_blogsData = [
         ],
         blogTitle: "SDE intern @ Salesforce",
         Link: "https://medium.com/@mekanika2022/intern-chronicles-parijat-sutradhar-salesforce-cbedabf6b1c1",
-        blogDescription: "The Salesforce interview was much more planned and organized, from the end of the company...",
+        blogDescription: "don’t pressurise yourself to study a lot of things in a short duration because that won’t help. Last night preparation does not help the CDC.",
         time: 5
+    },
+    {
+        id: 10,
+        name: " Kashika Sharma ",
+        role: "strategy and consulting @ Accenture",
+        imageUrl:require('../../components/blog images/Kashika.jpg') ,
+        socialLinks: [
+            { name: "Instagram", link: "https://www.instagram.com/k.s._1m/", icon: faInstagram },
+            { name: "LinkedIn", link: "https://www.linkedin.com/in/kashika-sharma-a49552256/", icon: faLinkedin },
+            { name: "Facebook", link: "https://www.facebook.com/profile.php?id=100086213054547", icon: faFacebook },
+            { name: "Medium", link: "https://medium.com/@mekanika2022", icon: faMedium }
+        ],
+        blogTitle: "strategy and consulting @ Accenture",
+        Link: "https://medium.com/@mekanika2022/intern-chronicles-kashika-sharma-accenture-360f5a527f68",
+        blogDescription: "onsult CV is what typically three spikes, And, ideally like, a machine learning and AI, some technical research intern project there. So three spikes could be literally anything.",
+        time: 9
     },
     
 ];

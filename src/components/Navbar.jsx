@@ -50,7 +50,7 @@ const Navbar = () => {
       text: "more",
       subItems: [
         { id: 61, text: "Team", link: "/team" },
-        { id: 62, text: "Video", link: "/under-construction" },
+        // { id: 62, text: "Video", link: "/under-construction" },
         { id: 63, text: "gallery", link: "/gallery" },
         { id: 64, text: "registration", link: "/under-construction" },
       ],
