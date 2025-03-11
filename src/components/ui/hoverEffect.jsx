@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { cn } from "../utils/uiUtils.tsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useId } from "react";
 
-export const HoverEffect = ({ items, className }) => {
+export const HoverEffect = ({ items, className, selectedId }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
+  
+  // Reset hovered index when selectedId changes
+  useEffect(() => {
+    if (selectedId) {
+      const index = items.findIndex(item => item.uniqueId === selectedId);
+      if (index !== -1) {
+        setHoveredIndex(index);
+        // Reset the hover effect after a short delay so it's visible to the user
+        const timer = setTimeout(() => {
+          setHoveredIndex(null);
+        }, 2000);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [selectedId, items]);
 
   return (
     <div
@@ -17,7 +31,8 @@ export const HoverEffect = ({ items, className }) => {
       {items.map((item, idx) => (
         <Link
           to={item?.link}
-          key={item?.id}
+          key={item.uniqueId}
+          id={`project-${item.uniqueId}`}
           target="_blank"
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -41,7 +56,7 @@ export const HoverEffect = ({ items, className }) => {
             )}
           </AnimatePresence>
           <CardDetails
-            id={item.id}
+            id={item.id || item.uniqueId}
             title={item.title}
             startDate={item.Startdate}
             faculties={item.faculties}
@@ -102,13 +117,15 @@ export const CardDetails = ({ id, title, startDate, faculties, className }) => {
       <CardTitle>
         {title}
       </CardTitle>
-      {/* <p className="text-zinc-300 text-sm mt-2">
-        <strong>Start Date:</strong> {startDate}
-      </p> */}
+      {startDate && (
+        <p className="text-zinc-300 text-sm mt-2">
+          <strong>Start Date:</strong> {startDate}
+        </p>
+      )}
       <div className="mt-4">
         <strong className="text-zinc-300">Professors:</strong>
         <ul className="mt-2">
-          {faculties.map((faculty, idx) => (
+          {faculties && faculties.map((faculty, idx) => (
             <li key={idx} className="text-zinc-400 text-sm leading-relaxed">
               <a
                 href={faculty.link}

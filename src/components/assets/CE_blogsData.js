@@ -225,14 +225,25 @@ import { time } from 'framer-motion';
         imageUrl: require('../../components/blog images/Dev_Bhatia.jpg'),
         socialLinks: [
             { name: "Instagram", link: "https://www.instagram.com/devbhatia2613/", icon: faInstagram },
-            { name: "LinkedIn", link: "https://www.linkedin.com/in/dev-bhatia-b1342a272/", icon: faLinkedin },
-            { name: "Facebook", link: "https://www.facebook.com/mekanikaiitkgp/", icon: faFacebook },
-            { name: "Medium", link: "https://medium.com/@mekanika2022", icon: faMedium }
-        ],
+            { name: "LinkedIn", link: "https://www.linkedin.com/in/dev-bhatia-b1342a272/", icon: faLinkedin },],
         blogTitle: "Intern @ ITC",
          Link: "https://medium.com/@mekanika2022/core-expedition-dev-bhatia-itc-aea659580f3c",
         blogDescription: "Having a good base of the core subjects taught in the curriculum along with certain other skills like CAD and FEM is a must on the technical side while a good POR helps to show your capability in terms of managing people, projects, etc.",
-        time:5
+        time:7
+    },
+    {
+        id: 15,
+        name: " Aniruddha Bharadwaj",
+        role: "Intern @ Johnson & Johnson",
+        imageUrl: require('../../components/blog images/AniruddhaBharadwaj.jpg'),
+        socialLinks: [
+            { name: "Instagram", link: "https://www.instagram.com/k_aniruddha_b/", icon: faInstagram },
+            { name: "LinkedIn", link: "https://www.linkedin.com/in/k-aniruddha-bhardwaj-3374b2253/", icon: faLinkedin },
+        ],
+        blogTitle: "Intern @ Johnson & Johnson",
+         Link: "https://medium.com/@mekanika2022/core-expedition-dev-bhatia-itc-aea659580f3c",
+        blogDescription: "asked technical questions related to materials, machines, mechanics, and core engineering concepts. Additionally, there were questions about supply chain strategies, such as planning logistics, structuring a plant layout, and managing procurement and contracts.",
+        time:6
     }
 ];
 

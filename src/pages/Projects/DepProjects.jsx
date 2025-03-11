@@ -1,31 +1,58 @@
 import React, { useState, useEffect, useRef } from "react";
 import { HoverEffect } from "../../components/ui/hoverEffect.jsx";
 import projectsData from "../../components/assets/ProjectsData.js";
-import { FaSort, FaMicrophone, FaFilter } from "react-icons/fa";
+import { FaFilter } from "react-icons/fa";
 import { Spotlight } from "../../components/ui/spotlight-new.jsx";
 
 export function DepProjects() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortedProjects, setSortedProjects] = useState(projectsData);
-  const [sortOrder, setSortOrder] = useState("asc");
-  const [sortActive, setSortActive] = useState(false);
+  const [sortedProjects, setSortedProjects] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [showProfessorFilter, setShowProfessorFilter] = useState(false);
   const [selectedProfessor, setSelectedProfessor] = useState(null);
   const [professorsList, setProfessorsList] = useState([]);
   const [isMobileScreen, setIsMobileScreen] = useState(false);
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
   const filterDropdownRef = useRef(null);
+
+  useEffect(() => {
+    // Create a deep copy with unique identifiers for each project
+    const processedProjects = projectsData.map((project, index) => ({
+      ...project,
+      uniqueId: `project-${index}-${project.title.substring(0, 10).replace(/\s+/g, '-')}` 
+    }));
+    
+    const alphabeticallySorted = [...processedProjects].sort((a, b) => 
+      a.title.localeCompare(b.title)
+    );
+    setSortedProjects(alphabeticallySorted);
+  }, []);
 
   useEffect(() => {
     const uniqueProfessors = new Set();
     projectsData.forEach((project) => {
-      project.faculties.forEach((faculty) => {
-        uniqueProfessors.add(faculty.name);
-      });
+      if (project.faculties && Array.isArray(project.faculties)) {
+        project.faculties.forEach((faculty) => {
+          if (faculty && faculty.name) {
+            uniqueProfessors.add(faculty.name);
+          }
+        });
+      }
     });
-    setProfessorsList(Array.from(uniqueProfessors).sort());
+    const professorsArray = Array.from(uniqueProfessors);
+    const sortedProfessors = professorsArray.sort((a, b) => {
+      const aName = a.startsWith("Prof.") ? a.substring(5) : a;
+      const bName = b.startsWith("Prof.") ? b.substring(5) : b;
+      
+      return aName.localeCompare(bName);
+    });
+    
+    setProfessorsList(sortedProfessors);
   }, []);
 
+  
+
+  // Handle clicks outside of filter dropdown
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -53,22 +80,6 @@ export function DepProjects() {
     };
   }, []);
 
-  const handleSort = () => {
-    setSortActive(!sortActive);
-
-    const sorted = [...sortedProjects].sort((a, b) => {
-      const dateA = new Date(a.Startdate);
-      const dateB = new Date(b.Startdate);
-      return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
-    });
-    setSortedProjects(sorted);
-    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
-  };
-
-  const handleVoiceSearch = () => {
-    alert("Voice search not implemented yet!");
-  };
-
   const handleSearch = (e) => {
     const query = e.target.value.toLowerCase();
     setSearchQuery(query);
@@ -78,12 +89,13 @@ export function DepProjects() {
       return;
     }
 
-    const matches = projectsData.filter(
+    const matches = sortedProjects.filter(
       (project) =>
         project.title.toLowerCase().includes(query) ||
-        project.faculties.some((faculty) =>
-          faculty.name.toLowerCase().includes(query)
-        )
+        (project.faculties && 
+          project.faculties.some((faculty) =>
+            faculty.name.toLowerCase().includes(query)
+          ))
     );
 
     setSuggestions(matches.slice(0, 5));
@@ -107,30 +119,66 @@ export function DepProjects() {
     setSelectedProfessor(null);
   };
 
-  const filteredProjects = sortedProjects.filter((project) => {
-    const matchesSearch =
-      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      project.faculties.some((faculty) =>
-        faculty.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+  const selectSuggestion = (suggestion) => {
+    setSearchQuery(suggestion.title);
+    setSuggestions([]);
+    setSelectedProjectId(suggestion.uniqueId);
+    
+    // Scroll to the selected project
+    setTimeout(() => {
+      const element = document.getElementById(`project-${suggestion.uniqueId}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
+  };
 
-    const matchesProfessor =
-      selectedProfessor === null ||
-      project.faculties.some((faculty) => faculty.name === selectedProfessor);
+  // Filter projects based on search query and selected professor
+  const filteredProjects = sortedProjects.filter((project) => {
+    // Check if the project matches the search query
+    const matchesSearch = !searchQuery || 
+      project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (project.faculties && project.faculties.some(faculty => 
+        faculty.name.toLowerCase().includes(searchQuery.toLowerCase())
+      ));
+
+    // Check if the project matches the selected professor
+    const matchesProfessor = !selectedProfessor || 
+      (project.faculties && project.faculties.some(faculty => 
+        faculty.name === selectedProfessor
+      ));
 
     return matchesSearch && matchesProfessor;
   });
 
   return (
     <div className="relative max-w-full mx-auto bg-gray-950 text-white min-h-screen py-24">
-      {/* Conditionally render the Spotlight for non-mobile screens only */}
       {!isMobileScreen && (
         <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
           <Spotlight />
         </div>
       )}
+ <div className="relative w-full overflow-hidden mb-6">
+      <div className="flex">
+        <div 
+          className="text-neutral-400 text-sm whitespace-nowrap"
+          style={{
+            animation: 'scroll-left 15s linear infinite',
+            paddingLeft: '100%', 
+          }}
+        >
+          last updated in March 2025
+        </div>
+      </div>
+      
+      <style jsx>{`
+        @keyframes scroll-left {
+          from { transform: translateX(0); }
+          to { transform: translateX(-100%); }
+        }
+      `}</style>
 
-      <div className="relative z-20">
+        
         <h1 className="text-3xl font-bold text-center mt-8 mb-12 text-yellow-400">
           Ongoing Projects in Department
         </h1>
@@ -149,15 +197,14 @@ export function DepProjects() {
               <ul className="absolute top-14 left-0 w-full bg-gray-950 border border-gray-800 rounded-lg shadow-lg max-h-60 overflow-y-auto z-40">
                 {suggestions.map((suggestion) => (
                   <li
-                    key={suggestion.id}
+                    key={suggestion.uniqueId}
                     className="p-3 hover:bg-yellow-400 cursor-pointer text-sm hover:text-gray-950"
-                    onClick={() => {
-                      setSearchQuery(suggestion.title);
-                      setSuggestions([]);
-                    }}
+                    onClick={() => selectSuggestion(suggestion)}
                   >
-                    {suggestion.title} (by{" "}
-                    {suggestion.faculties.map((f) => f.name).join(", ")})
+                    {suggestion.title} 
+                    {suggestion.faculties && suggestion.faculties.length > 0 && (
+                      <span> (by {suggestion.faculties.map(f => f.name).join(", ")})</span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -180,7 +227,7 @@ export function DepProjects() {
               >
                 <FaFilter />
                 {selectedProfessor ? (
-                  <span> {selectedProfessor}</span>
+                  <span className="truncate max-w-32"> {selectedProfessor}</span>
                 ) : (
                   <>
                     <span className="hidden md:inline">
@@ -225,30 +272,18 @@ export function DepProjects() {
                 </div>
               )}
             </div>
-
-            {/* Sort Button */}
-            {/* <button
-              onClick={handleSort}
-              className={`flex items-center justify-center gap-2 ${
-                sortActive
-                  ? "bg-yellow-400 text-gray-950"
-                  : "bg-gray-800 text-white"
-              } px-4 py-2 rounded-lg hover:bg-yellow-300 hover:text-gray-950 flex-1 md:flex-initial h-11 whitespace-nowrap`}
-            >
-              <FaSort />
-              <span className="hidden md:inline">
-                Sort by {sortOrder === "asc" ? "Oldest" : "Newest"}
-              </span>
-              <span className="md:hidden">
-                Sort {sortOrder === "asc" ? "↑" : "↓"}
-              </span>
-            </button> */}
           </div>
         </div>
 
-        <div className="max-w-full mx-auto md:px-12 px-4">
-          <HoverEffect items={filteredProjects} />
-        </div>
+        {filteredProjects.length === 0 ? (
+          <div className="text-center py-12 text-gray-400">
+            No projects found matching your criteria. Try adjusting your search or filters.
+          </div>
+        ) : (
+          <div className="max-w-full mx-auto md:px-12 px-4">
+            <HoverEffect items={filteredProjects} selectedId={selectedProjectId} />
+          </div>
+        )}
       </div>
     </div>
   );

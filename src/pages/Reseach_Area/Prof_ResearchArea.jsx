@@ -344,6 +344,9 @@ export function ProfResearchArea() {
            <div className="fixed inset-0 pointer-events-none z-10 overflow-hidden">
                      <Spotlight />
                    </div> 
+                   <h1 className="text-3xl font-bold text-center  mb-8 text-yellow-400">
+          Reseach Areas of Professors
+        </h1>
           {/* Search Bar */}
           <div className="relative mb-4" ref={searchRef}>
             <div className="flex items-center border-2 border-gray-800 rounded-lg overflow-hidden bg-gray-800">
@@ -427,7 +430,7 @@ export function ProfResearchArea() {
                     {professorsList.map((profName) => (
                       <div
                         key={profName}
-                        className={`p-4 cursor-pointer hover:bg-gray-800 text-sm ${
+                        className={`p-2 cursor-pointer  text-sm ${
                           selectedProfessors.includes(profName)
                             ? "bg-yellow-500 text-black"
                             : "text-neutral-300"
@@ -484,7 +487,7 @@ export function ProfResearchArea() {
                     {researchAreasList.map((area) => (
                       <div
                         key={area}
-                        className={`p-4 cursor-pointer hover:bg-gray-800 text-sm ${
+                        className={`p-2 cursor-pointer  text-sm ${
                           selectedResearchAreas.includes(area)
                             ? "bg-yellow-500 text-black"
                             : "text-gray-300"
@@ -555,7 +558,7 @@ export function ProfResearchArea() {
                 layoutId={`card-${prof.profName}-${id}`}
                 key={`card-${prof.profName}-${id}`}
                 onClick={() => setActive(prof)}
-                className="p-2 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-neutral-850"
+                className="p-3 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-neutral-850"
                 style={{
                   background: "linear-gradient(145deg, #252525 0%, #1a1a1a 100%)"
                 }}
