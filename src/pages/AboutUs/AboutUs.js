@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./AboutUs.css";
 import TeamImage from "../../components/Images/mekanika_Team.jpg";
 import AOS from "aos";

@@ -1,9 +1,7 @@
 import React from "react";
 import { cn } from "../utils/uiUtils.tsx";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useId } from "react";
 

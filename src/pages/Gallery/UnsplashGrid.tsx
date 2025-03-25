@@ -98,7 +98,7 @@ function Modal({
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selected]);
+  }, [selected, setSelected]);
 
   if (!selected) return null;
 

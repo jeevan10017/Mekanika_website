@@ -1,5 +1,3 @@
-import { createTheme } from "@mui/material/styles";
-import Fuse from "fuse.js";
 
 const projectsData = [
   {
