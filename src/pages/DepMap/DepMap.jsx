@@ -184,7 +184,7 @@ const DepMap = () => {
       {/* Search Container */}
       <div 
         ref={searchRef}
-        className={`relative z-50 w-full max-w-sm md:max-w-4xl transition-all duration-300 ease-in-out 
+        className={`relative z-40 w-full max-w-[20rem] md:max-w-4xl transition-all duration-300 ease-in-out 
           ${isSearchFocused 
             ? 'scale-110 translate-y-[-50px] md:translate-y-[100px]' 
             : 'md:mt-12 mb-4'}`}
