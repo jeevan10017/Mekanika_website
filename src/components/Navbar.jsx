@@ -52,7 +52,8 @@ const Navbar = () => {
         { id: 61, text: "Team", link: "/team" },
         // { id: 62, text: "Video", link: "/under-construction" },
         { id: 63, text: "gallery", link: "/gallery" },
-        { id: 64, text: "registration", link: "/under-construction" },
+        { id: 64, text: "Dep Map", link: "/dep-map" },
+        { id: 65, text: "registration", link: "/under-construction" },
       ],
     },
   ];

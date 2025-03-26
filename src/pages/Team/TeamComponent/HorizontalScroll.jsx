@@ -490,7 +490,7 @@ const HorizontalScroll = () => {
             alt={name} 
             style={styles.facultyImage} 
             onError={handleImageError}
-            loading="eager" // Force eager loading
+            loading="eager" 
           />
         </div>
         <div style={styles.facultyInfoGradient}></div>

@@ -34,6 +34,7 @@ const Footer = () => {
               <li><Link to="/team" className="hover:text-yellow-400">Team</Link></li>
               <li><Link to="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
               <li><Link to="/under-construction" className="hover:text-yellow-400">Registrations</Link></li>
+              <li><Link to="/dep-map" className="hover:text-yellow-400">Dep Map</Link></li>
             </ul>
           </div>
 

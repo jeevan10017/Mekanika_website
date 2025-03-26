@@ -42,3 +42,11 @@ body {
   /* user-select: none;  */
   touch-action: pan-x pan-y; 
 }
+.react-transform-wrapper,
+.react-transform-component {
+  touch-action: none;
+}
+
+.react-transform-element {
+  user-select: none;
+}
