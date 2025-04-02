@@ -1464,7 +1464,7 @@ const projectsData = [
     // Startdate: "25-Jan-2017",
     faculties: [
       {
-        name: "Prof. Shanka Deb",
+        name: "Prof. Sankha Deb",
         link: "https://www.iitkgp.ac.in/department/ME/faculty/me-sankha.deb",
       },
     ],
