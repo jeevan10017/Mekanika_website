@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "../components/Images/mekalogo.png";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const navRef = useRef(null);
 
   const handleNav = () => {
     setNav(!nav);
@@ -26,6 +27,20 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Handle clicks outside the navbar to close it
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (nav && navRef.current && !navRef.current.contains(event.target)) {
+        setNav(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [nav]);
 
   const navItems = [
     { id: 1, text: "Home", link: "/" },
@@ -131,6 +146,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
+          ref={navRef}
           className={`fixed md:hidden top-0 left-0 w-[60%] h-screen z-50 border-r border-yellow-400 bg-gray-950 transform transition-transform duration-500 ease-in-out ${
             nav ? "translate-x-0" : "-translate-x-full"
           }`}
