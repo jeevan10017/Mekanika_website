@@ -13,11 +13,16 @@ module.exports = {
     },
     animation: {
       grid: "grid 15s linear infinite",
+      blink: 'blink 2s infinite',
     },
     keyframes: {
       grid: {
         "0%": { transform: "translateY(-50%)" },
         "100%": { transform: "translateY(0)" },
+      },
+      blink: {
+        '0%, 100%': { opacity: 1 },
+        '50%': { opacity: 0.5 },
       },
     },
   },
