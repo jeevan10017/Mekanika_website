@@ -1,93 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 
-    <!-- SEO Optimization Meta Tags -->
-    <meta name="theme-color" content="#8f7c04" />
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 
-    <!-- Expanded Description with Keywords -->
-    <meta
-      name="description"
-      content="Mekanika: Official Mechanical Engineering Society at IIT Kharagpur. Explore mechanical engineering, Student Organization helps students in the department and beyond. Join us for workshops, seminars, and networking opportunities. Our alumni network fosters innovation and collaboration in the field of mechanical engineering."
-    />
-    <meta
-      name="keywords"
-      content="Mekanika, IIT Kharagpur, Mechanical Engineering, KGP Mech, Mech IIT KGP, Engineering Club, Student Organization, Alumni Network, Innovation, Robotics, CAD, Research, research Areas, Workshops, Seminars, Networking, Collaboration, Mechanical Engineering Society, IIT Kharagpur Society, Student Activities, Technical Events, Engineering Community, Professor Projects, Department map"
-    />
+  <!-- SEO Optimization Meta Tags -->
+  <meta name="theme-color" content="#8f7c04" />
 
-        <!-- <a
+  <!-- Expanded Description with Keywords -->
+  <meta name="description"
+    content="Mekanika: Official Mechanical Engineering Society at IIT Kharagpur. Explore mechanical engineering, Student Organization helps students in the department and beyond. Join us for workshops, seminars, and networking opportunities. Our alumni network fosters innovation and collaboration in the field of mechanical engineering." />
+  <meta name="keywords"
+    content="Mekanika, IIT Kharagpur, Mechanical Engineering, KGP Mech, Mech IIT KGP, Engineering Club, Student Organization, Alumni Network, Innovation, Robotics, CAD, Research, research Areas, Workshops, Seminars, Networking, Collaboration, Mechanical Engineering Society, IIT Kharagpur Society, Student Activities, Technical Events, Engineering Community, Professor Projects, Department map" />
+
+  <!-- <a
       href="https://www.iitkgp.ac.in/"
       rel="noopener noreferrer"
       target="_blank"
       >Visit IIT Kharagpur</a
     > -->
 
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="MEKANIKA - IIT Kharagpur Mechanical Engineering Society" />
+  <meta property="og:description"
+    content="Discover Mekanika, the premier mechanical engineering society at IIT Kharagpur driving innovation and technical excellence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mekanikaiitkgp.com" />
+  <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+  <!--  Add  website's canonical URL -->
+  <link rel="canonical" href="https://mekanikaiitkgp.com" />
 
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta
-      property="og:title"
-      content="MEKANIKA - IIT Kharagpur Mechanical Engineering Society"
-    />
-    <meta
-      property="og:description"
-      content="Discover Mekanika, the premier mechanical engineering society at IIT Kharagpur driving innovation and technical excellence."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mekanikaiitkgp.com" />
-    <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
-    <!--  Add  website's canonical URL -->
-    <link rel="canonical" href="https://mekanikaiitkgp.com" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!-- Font Connections -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@300&display=swap"
+    rel="stylesheet" />
 
-    <!-- Font Connections -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@300&display=swap"
-      rel="stylesheet"
-    />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "MEKANIKA - IIT Kharagpur Mechanical Engineering Society",
-        "url": "https://mekanikaiitkgp.com",
-        "logo": "https://mekanikaiitkgp.com/logo512.png",
-        "description": "The official Mechanical Engineering Society at IIT Kharagpur, fostering innovation, research, and student excellence.",
-        "contactPoint": {
+  <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "MEKANIKA - IIT Kharagpur Mechanical Engineering Society",
+            "url": "https://mekanikaiitkgp.com",
+            "logo": "https://mekanikaiitkgp.com/logo512.png",
+            "description": "The official Mechanical Engineering Society at IIT Kharagpur, fostering innovation, research, and student excellence.",
+            "contactPoint": [
+        {
           "@type": "ContactPoint",
           "telephone": "+91-638-831-0750",
-          "telephone": "+91-857-090-5405",
-          "contactType": "General Secretary",
+          "contactType": "General Secretary"
         },
-        "sameAs": [
-          "https://www.facebook.com/mekanikaiitkgp/",
-          "https://www.instagram.com/mekanika_iitkgp",
-          "https://www.linkedin.com/company/mekanika-iit-kharagpur"
-          "https://medium.com/@mekanika2022"
-        ]
-      }
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-857-090-5405",
+          "contactType": "General Secretary"
+        }
+      ]
+            "sameAs": [
+              "https://www.facebook.com/mekanikaiitkgp/",
+              "https://www.instagram.com/mekanika_iitkgp",
+              "https://www.linkedin.com/company/mekanika-iit-kharagpur"
+              "https://medium.com/@mekanika2022"
+            ]
+          }
     </script>
 
-    <title>MEKANIKA - IIT Kharagpur | Mechanical Engineering Society</title>
-  </head>
-  <body>
-    <noscript></noscript>
-    <div id="root"></div>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  </body>
+  <title>MEKANIKA - IIT Kharagpur | Mechanical Engineering Society</title>
+</head>
+
+<body>
+  <noscript></noscript>
+  <div id="root"></div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</body>
+
 </html>
