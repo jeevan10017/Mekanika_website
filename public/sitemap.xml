@@ -1,0 +1,8 @@
+const { SitemapStream, streamToPromise } = require("sitemap");
+const fs = require("fs");
+
+const sitemap = new SitemapStream({ hostname: "https://mekanikaiitkgp.com" });
+
+streamToPromise(
+  sitemap.pipe(fs.createWriteStream("public/sitemap.xml"))
+).then(() => console.log("Sitemap created"));
