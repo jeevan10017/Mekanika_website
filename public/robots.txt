@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mekanikaiitkgp.com/sitemap.xml
+Sitemap: https://mekanikaiitkgp.org/sitemap.xml
