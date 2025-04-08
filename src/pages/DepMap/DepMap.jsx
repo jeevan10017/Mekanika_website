@@ -60,7 +60,7 @@ const DepMap = () => {
       { number: '34', name: 'Prof. Kingshook Bhattacharyya', keywords: ['kingshook', 'bhattacharyya'] },
       { number: '35', name: 'Prof. Suriya Kanta Pal', keywords: ['suriya', 'pal'] },
       { number: '36', name: 'Prof. Siddharth Tamang', keywords: ['siddharth', 'tamang'] },
-      { number: '37', name: 'Prof. S.Roy', keywords: ['s', 'roy'] },
+      { number: '37', name: 'Prof. Subhransu Roy', keywords: ['subhransu', 'roy'] },
       { number: '38', name: 'Prof. Partha Pratim Bandyopadhyay', keywords: ['partha', 'bandyopadhyay'] },
       { number: '39', name: 'Prof. Mihir Sarangi', keywords: ['mihir', 'sarangi'] },
       { number: '40', name: 'Prof. Partha Saha', keywords: ['partha', 'saha'] },
