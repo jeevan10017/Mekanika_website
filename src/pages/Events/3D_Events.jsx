@@ -142,7 +142,7 @@ const images = [
           <Spotlight />
        </div>
         {/* Heading */}
-        <h1 className="text-3xl font-bold text-center mt-24  text-yellow-400">
+        <h1 className="text-xl md:text-3xl font-bold text-center mt-24  text-yellow-400">
           Events Conducted by us
         </h1>
   

@@ -552,28 +552,70 @@ export function ProfResearchArea() {
           
           {/* Professors List */}
           <ul className="w-full">
-            {filteredProfessors.map((prof) => (
-              <motion.div
-                layoutId={`card-${prof.profName}-${id}`}
-                key={`card-${prof.profName}-${id}`}
-                onClick={() => setActive(prof)}
-                className="p-3 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-gradient-to-b from-gray-900 to-neutral-950"
-                style={{
-                  background: "linear-gradient(145deg, #1b1b1b 0%, #1a1a1a 100%)"
-                }}
-              >
-                <div className="w-full">
-                  <h3 className="font-medium text-lg text-white">
-                    Prof. {prof.profName}
-                  </h3>
-                  <div className="text-neutral-400 mt-2">
-                    <div>
-                      {prof.researchAreas.join(", ")}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          {filteredProfessors.map((prof) => (
+  <motion.div
+    layoutId={`card-${prof.profName}-${id}`}
+    key={`card-${prof.profName}-${id}`}
+    onClick={() => setActive(prof)}
+    className="p-3 flex flex-col justify-between hover:bg-gray-800 rounded-xl cursor-pointer border border-neutral-700 mb-4 bg-gradient-to-b from-gray-900 to-neutral-950 relative tooltip-container"
+    style={{
+      background: "linear-gradient(145deg, #1b1b1b 0%, #1a1a1a 100%)"
+    }}
+  >
+    {/* Tooltip that appears on hover */}
+    <div className="tooltip">Click to view research statement</div>
+    
+    <div className="w-full">
+      <h3 className="font-medium text-lg text-white">
+        Prof. {prof.profName}
+      </h3>
+      <div className="text-neutral-400 mt-2">
+        <div>
+          {prof.researchAreas.join(", ")}
+        </div>
+      </div>
+    </div>
+  </motion.div>
+))}
+<style jsx>{`
+  .tooltip-container {
+    position: relative;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: -40px;
+    left: 35%;
+    transform: translateX(-50%);
+    background-color: rgb(234 179 8); 
+    color: black;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+  }
+  
+  .tooltip:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(234 179 8) transparent transparent transparent;
+  }
+  
+  .tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+`}</style>
           </ul>
         </div>
       </div>

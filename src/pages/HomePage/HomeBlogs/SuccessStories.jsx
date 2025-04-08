@@ -185,7 +185,7 @@ const icItems = IC_blogsData.slice(-4).reverse();
             </>
           ) : (
             <TextRevealByWord
-              text={`The journey of a mechanical engineering student often begins withcuriosity and determination, but where it leads is a testament to hard work, adaptability, and seizing opportunities. In this blog, we celebrate the inspiring stories of students from the mechanical department who have carved remarkable paths into leading companies like Jaguar Land Rover (JLR), Microsoft, Tata Steel, and more.`}
+              text={`The journey of a mechanical engineering student often begins with curiosity and determination, but where it leads is a testament to hard work, adaptability, and seizing opportunities. In this blog, we celebrate the inspiring stories of students from the mechanical department who have carved remarkable paths into leading companies like Jaguar Land Rover (JLR), Microsoft, Tata Steel, and more.`}
               className="text-lg sm:text-xl leading-relaxed whitespace-pre-line text-center"
             />
           )}
