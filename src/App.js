@@ -10,7 +10,6 @@ import CourseMaterial from './pages/Materials/CourseMaterial';
 import { DepProjects } from './pages/Projects/DepProjects';
 import { TextRevealDemo } from './components/TextRevealDemo';
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import Team from './pages/Team/Team';
 import NotFound from './pages/Error404/Error404';
