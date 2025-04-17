@@ -16,6 +16,7 @@ import NotFound from './pages/Error404/Error404';
 import ScreenSizeAlert from './components/ScreenSizeAlert'; 
 import {ProfResearchArea} from './pages/Reseach_Area/Prof_ResearchArea';
 import DepMap from './pages/DepMap/DepMap';
+import AdminPage from './pages/AdminPage/AdminPage';
 
 // Lazy-load pages and components
 const Home = lazy(() => import('./pages/HomePage/Home'));
@@ -41,7 +42,8 @@ function AppContent() {
     '/under-construction',
     '/gallery',
     '/research-areas',
-    '/dep-map'
+    '/dep-map',
+    '/admin',
   ];
 
   // Check if the current path is valid
@@ -69,6 +71,7 @@ function AppContent() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/research-areas" element={<ProfResearchArea />} />
           <Route path="/dep-map" element={<DepMap />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

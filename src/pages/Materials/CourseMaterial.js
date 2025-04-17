@@ -5,10 +5,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { GradualSpacing } from "../../components/magicui/GradualSpacing.tsx";
 import { Spotlight } from "../../components/ui/spotlight-new.jsx";
+import { Upload } from 'lucide-react';
+import ContributeModal from './ContributeModal';
+
 
 const CourseMaterial = () => {
-  // Track which accordion is currently open (-1 means none are open)
   const [openAccordionIndex, setOpenAccordionIndex] = useState(-1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   useEffect(() => {
     AOS.init({
@@ -16,6 +20,14 @@ const CourseMaterial = () => {
       easing: 'ease-in-out',
     });
   }, []);
+  const openContributeModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Function to close the modal
+  const closeContributeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const handleAccordionToggle = (index, isChecked) => {
     setOpenAccordionIndex(isChecked ? index : -1);
@@ -210,6 +222,22 @@ const CourseMaterial = () => {
         </div>
         <p className='pt-2'>These Online Classes Resources by Jus Jaisinghani</p>
       </div>
+      <button 
+  onClick={openContributeModal}
+  className="fixed bottom-8 right-8 z-30 bg-yellow-400 hover:bg-yellow-500 text-zinc-900 font-bold rounded-full p-4 shadow-lg hover:shadow-xl transition-all flex items-center group"
+  aria-label="Contribute Material"
+>
+  <Upload size={20} className="mr-2" />
+  <span className="opacity-0 max-w-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 whitespace-nowrap overflow-hidden">
+    Contribute Material
+  </span>
+</button>
+
+{/* Contribute Modal */}
+<ContributeModal 
+  isOpen={isModalOpen} 
+  onClose={closeContributeModal} 
+/>
     </section>
   );
 };
