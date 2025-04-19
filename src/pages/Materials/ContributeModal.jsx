@@ -167,9 +167,7 @@ const modalRef = useRef(null);
               <>
                 <div className="mb-6 text-gray-300 text-sm">
                   <p>
-                    Sharing your study materials is a great way to give back to
-                    the Mechanical Engineering community at IIT Kharagpur and
-                    help build a strong culture of collaboration among peers.
+                  Sharing your study materials helps build a stronger, more collaborative our Dep at IIT Kharagpur. By contributing notes, slides, or past papers, you’re supporting your peers and future Mechies on their academic journey
                   </p>
                 </div>
 
